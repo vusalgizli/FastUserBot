@@ -16,7 +16,7 @@ LANG = get_value("purge")
 
 # ████████████████████████████████ #
 
-@register(cyber=True, pattern="^.purge$")
+@register(fast=True, pattern="^.purge$")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
     msgs = []
@@ -48,7 +48,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@register(cyber=True, pattern="^.purgeme")
+@register(fast=True, pattern="^.purgeme")
 async def purgeme(delme):
     message = delme.text
     count = int(message[9:])
@@ -73,7 +73,7 @@ async def purgeme(delme):
     i = 1
     await smsg.delete()
 
-@register(cyber=True, pattern="^.del$")
+@register(fast=True, pattern="^.del$")
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
     if delme.reply_to_msg_id:
@@ -88,7 +88,7 @@ async def delete_it(delme):
                 await delme.client.send_message(
                     BOTLOG_CHATID, "Bu mesajı silə bilmirəm.")
 
-@register(cyber=True, disable_errors=True, groups_only=True, pattern="^.purgeall$")
+@register(fast=True, disable_errors=True, groups_only=True, pattern="^.purgeall$")
 async def purgeall(event):
     if not event.is_reply:
         await event.edit("`Mesajı silmək üçün bir istifadəçinin mesajına cavab verin!`")
@@ -105,7 +105,7 @@ async def purgeall(event):
     await event.delete()
 
 
-@register(cyber=True, pattern="^.edit")
+@register(fast=True, pattern="^.edit")
 async def editer(edit):
     """ .editme """
     message = edit.text
