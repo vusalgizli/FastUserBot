@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserbBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserbBot/FastUserBot/blob/master/LICENSE/>.
 
 import os
 import sys
@@ -130,14 +130,9 @@ async def plist(event):
                 yuklenen += f"☑ {plugin.file.name}\n"
         await event.edit(yuklenen)
     else:
-        await event.edit(LANG["TEMP_PLUGIN"])           
+        await event.edit(LANG["TEMP_PLUGIN"])          
 
-       
-# bu modul CYBERUSERBOT-a özəl olaraq hazırlanmışdır yəniki
-# oğurlama atanın balası
-# modülü çalma peyser NSJDKFNDKDNKFKD
-
-@register(cyber=True, pattern="^.pinstall")
+@register(fast=True, pattern="^.pinstall")
 async def _(event):
     if event.is_reply:
         reply_message = await event.get_reply_message()
@@ -145,13 +140,13 @@ async def _(event):
         await event.edit(LANG["REPLY_TO_FILE"])
         return
     plugin_adi = reply_message.file.name
-    cyber_path = f"userbot/modules/{plugin_adi}"
+    fast_path = f"userbot/modules/{plugin_adi}"
     uzanti = plugin_adi.split(".")[1].lower()
     plugin_exe = plugin_adi.split(".")[0]
     if uzanti != "py":
         await event.edit(LANG["REPLY_PY_FILE"])
         return
-    if os.path.isfile(cyber_path):
+    if os.path.isfile(fast_path):
         await event.edit(LANG["ALREADY_INSTALLED"])
         return
     b = await event.client.download_media(await event.get_reply_message()) 
@@ -159,9 +154,9 @@ async def _(event):
     c = a.read() 
     a.close() 
     a = await event.edit(LANG["PLUGIN_SCANNING"]) 
-    for CYBER in DANGERCONFIGS:
-      if re.search(CYBER, c):
-        await event.edit(f"`Plugində` **{CYBER}** `dəyəri aşkar edildi!`\n`Plugin təhlükəli olduğundan onu sildim.`")
+    for FAST in DANGERCONFIGS:
+      if re.search(FAST, c):
+        await event.edit(f"`Plugində` **{FAST}** `dəyəri aşkar edildi!`\n`Plugin təhlükəli olduğundan onu sildim.`")
         return os.remove(b)
     else:
      await event.edit(LANG["DOWNLOADING"])
@@ -198,7 +193,7 @@ async def _(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.cyber {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.fast {cmdhelp}` __yazın.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -207,12 +202,12 @@ async def _(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.cyber {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.fast {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.cyber {dosyaAdi}` __yazın.__')
+                return await event.edit(f'**Plugin uğurla yükləndi!**\n__Pluginin istifadəsini öyrənmək üçün__ `.fast {dosyaAdi}` __yazın.__')
             
                          
                          
@@ -264,7 +259,7 @@ async def psend(event):
         return
 
     if os.path.isfile(f"./userbot/modules/{modul}.py"):
-        await event.client.send_file(event.chat_id, f"./userbot/modules/{modul}.py", caption=LANG['CYBER_PLUGIN_CAPTION'])
+        await event.client.send_file(event.chat_id, f"./userbot/modules/{modul}.py", caption=LANG['FAST_PLUGIN_CAPTION'])
         await event.delete()
     else:
         await event.edit(LANG['NOT_FOUND_PLUGIN'])
