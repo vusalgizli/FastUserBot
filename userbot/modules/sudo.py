@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 # 
 # oğurlayan peysərdi #
 
@@ -27,12 +27,12 @@ sudosiyahisi = os.environ.get("SUDO_ID", None)
 @register(outgoing=True,
           pattern=r"^.addsudo")
 async def sudoelave(event):
-    await event.edit("C Y B Ξ R\nİstifadəçi sudo olaraq qeyd edilir...")
+    await event.edit("F A S T \nİstifadəçi sudo olaraq qeyd edilir...")
     cyber = "SUDO_ID"
     if HEROKU_APPNAME is not None:
         app = Heroku.app(HEROKU_APPNAME)
     else:
-        await event.edit("`C Y B Ξ R:" "\nXahiş edirəm` **HEROKU_APPNAME** dəyərini əlavə edin.")
+        await event.edit("`F A S T:" "\nXahiş edirəm` **HEROKU_APPNAME** dəyərini əlavə edin.")
         return
     heroku_var = app.config()
     if event is None:
@@ -45,7 +45,7 @@ async def sudoelave(event):
         yenisudo = f"{cybersudo} {cybert}"
     else:
         yenisudo = f"{cybert}"
-    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nC Y B Ξ R yenidən başladılır...")
+    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nF A S T yenidən başladılır...")
     heroku_var[cyber] = yenisudo
     
 
