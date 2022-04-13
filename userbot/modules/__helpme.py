@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserbBot/FastUserBot/ >
 # PLease read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserbBot/FastUserBot/blob/master/LICENSE/>.
 
 # Thanks @Spechide.
 
@@ -21,7 +21,7 @@ async def help(event):
     if tgbotusername is not None:
         results = await event.client.inline_query(
             tgbotusername,
-            "@TheCyberUserBot"
+            "@FastUserRobot"
         )
         await results[0].click(
             event.chat_id,
