@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import ast
 import asyncio
@@ -195,7 +195,7 @@ async def terminal_runner(term):
 CmdHelp('evaluators').add_command(
     'eval', '<istək>', 'Mini ifadələri dəyərləndirin.', 'eval 2+3'
 ).add_command(
-    'exec', '<python kodu>', 'Kiçik python əmrləri işlədin.', 'exec print(\"C Y B Ξ R\")'
+    'exec', '<python kodu>', 'Kiçik python əmrləri işlədin.', 'exec print(\"F  A  S  T\")'
 ).add_command(
     'term', '<istək>', 'Serverinizdə bash komandalarını və əmr fayllarını işlədin.', 'term ls'
 ).add()
