@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserbBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserbBot/FastUserBot/blob/master/LICENSE/>.
 
 from asyncio import sleep
 from os import remove
@@ -110,22 +110,22 @@ async def ekle(event):
 @register(outgoing=True, pattern="^.unpin(?: |$)(.*)")
 @register(incoming=True, from_users=SUDO_ID, pattern="^.cunpin(?: |$)(.*)")
 async def unpin(event):
-    CyberUserBot = await event.edit("`C Y B Ξ R`")
+    FastUserBot = await event.edit("`𝙵𝙰𝚂𝚃`")
     match = (event.pattern_match.group(1)).strip()
     msg = None
     if event.is_reply:
         msg = event.reply_to_msg_id
     elif match != "all":
-        return await CyberUserBot.edit(LANG["REPLY_UNPIN_MESSAGE"])
+        return await FastUserBot.edit(LANG["REPLY_UNPIN_MESSAGE"])
 
     try:
         await event.client.unpin_message(event.chat_id, msg)
     except BadRequestError:
-        return await CyberUserBot.edit(NO_PERM)
+        return await FastUserBot.edit(NO_PERM)
 
-    await CyberUserBot.edit(LANG["MESSAGE_UNPIN"])
+    await FastUserBot.edit(LANG["MESSAGE_UNPIN"])
     await sleep(5)
-    await CyberUserBot.delete()
+    await FastUserBot.delete()
 
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
@@ -235,7 +235,7 @@ async def ungban(un_gban):
     if ungban(user.id) is False:
         await un_gban.edit(LANG['NO_BANNED'])
     else:
-        # Başarı olursa bilgi ver
+        #ugurlu
         await un_gban.edit(LANG['UNGBANNED'])
 
         if BOTLOG:
