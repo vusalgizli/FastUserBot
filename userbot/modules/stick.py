@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -84,7 +84,7 @@ async def tweet(event):
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
-                caption=f"Tweet by @TheCyberUserBot",
+                caption=f"Tweet by @FastSupp",
             )
             await event.client.send_read_acknowledge(conv.chat_id)
 
@@ -124,7 +124,7 @@ async def png(event):
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
-                caption=f"@TheCyberUserBot ilə PNG-yə çevrildi",
+                caption=f"@FastSupp ilə PNG-yə çevrildi",
             )
             await event.client.send_read_acknowledge(conv.chat_id)
 
