@@ -22,7 +22,7 @@ from userbot.cmdhelp import CmdHelp
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
-@register(cyber=True, pattern=r"^\.echo(?: |$)(.*)")
+@register(cfast=True, pattern=r"^\.echo(?: |$)(.*)")
 async def echo(event):
     if event.fwd_from:
         return
@@ -44,8 +44,8 @@ async def echo(event):
     else:
         await event.edit("**Echo aktiv olunacaq istifadəçinin mesajına cavab verin.**")
 
-@register(cyber=True, pattern=r"^\.rmecho(?: |$)(.*)")
-@register(cyber=True, pattern=r"^\.echosil(?: |$)(.*)")
+@register(fast=True, pattern=r"^\.rmecho(?: |$)(.*)")
+@register(fast=True, pattern=r"^\.echosil(?: |$)(.*)")
 async def echosil(event):
     if event.fwd_from:
         return
