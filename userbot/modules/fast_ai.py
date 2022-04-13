@@ -1,9 +1,9 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
-# Bu modulu götürən liçni peysərdi varyoxunu sikim #
+# modul cybere mexsusdur
 
 import os
 import requests
@@ -14,13 +14,13 @@ from userbot.cmdhelp import CmdHelp
 # ---------------------------------- #
 
 from userbot.language import get_value
-LANG = get_value("cyberlangs")
+LANG = get_value("fastlangs")
 
 # ---------------------------------- #
 
 
 # ------------------------------------------------------ #
-#CYBER_AI_DE = sb(os.environ.get("CYBER_AI_DE", "False"))#
+#FAST_AI_DE = sb(os.environ.get("FAST_AI_DE", "False"))#
 CYBER_AI_KEY = "82cb8992-fe1e-4924-8299-7f55dd6e40c3"    
 # ------------------------------------------------------ #
 
@@ -66,5 +66,5 @@ async def detect(event):
 
 Help = CmdHelp('deepai')
 Help.add_command('detect', '<Bir mediaya cavab>', 'Cavab verdiyiniz medianın 18+ məzmun olub olmadığını aşkar etmək üçün.')
-Help.add_info('@TheCyberUserBot')
+Help.add_info('@FastUserBot')
 Help.add() 
