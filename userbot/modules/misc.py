@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from random import randint
 from asyncio import sleep
@@ -153,17 +153,17 @@ async def raw(event):
         
 
 CmdHelp('misc').add_command(
-    'random', '<əşya1> <əşya2> ... <əşya3>', 'Əşya listindən təsadufi bir əşya seçər', 'random uniborg userge cyber'
+    'random', '<əşya1> <əşya2> ... <əşya3>', 'Əşya listindən təsadufi bir əşya seçər', 'random uniborg userge fast'
 ).add_command(
     'sleep', '<vaxt>', 'Bot da bir insandır, o da yorulur. Ara bir biraz yatmağına icazə ver.', 'sleep 30'
 ).add_command(
     'shutdown', None, 'Nostaljik bir şəkildə botunuzu söndürər.'
 ).add_command(
-    'repo', None, 'C Y B Ξ R botunun GitHub\'dakı reposuna gedən bir link.'
+    'repo', None, 'F A S T botunun GitHub\'dakı reposuna gedən bir link.'
 ).add_command(
-    'readme', None, 'C Y B Ξ R botunun GitHub\'dakı README.md faylına gedən bir link.'
+    'readme', None, 'F A S T botunun GitHub\'dakı README.md faylına gedən bir link.'
 ).add_command(
-    'creator', None, 'C Y B Ξ R botunu kimin yaratdığını öyrən :)'
+    'creator', None, 'F A S T botunu kimin yaratdığını öyrən :)'
 ).add_command(
     'repeat', '<rəqəm> <mətin>', 'Bir mətini bəlli bir sayıda təkrar edər. Spam əmri ilə qarışdırmayın.'
 ).add_command(
