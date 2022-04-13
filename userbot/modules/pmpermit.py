@@ -1,7 +1,7 @@
-# Copyright (C) 2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 """ PM Permit """
 
@@ -44,24 +44,21 @@ SEÇİMLƏR = ["True", "False"]
 # Başqa botlarda istifadəsi qadağandır!
 # © https://t.me/FVREED
 
-@register(cyber=True, pattern="^.pmautoban ?(.*)")
+@register(fast=True, pattern="^.pmautoban ?(.*)")
 async def pm_auto_ban(cyber):
-    secimler = cyber.pattern_match.group(1)
+    secimler = fast.pattern_match.group(1)
     if not secimler in SEÇİMLƏR:
-        await cyber.edit("**İstifadəsi:** `.pmautoban True və ya False`")
+        await fast.edit("**İstifadəsi:** `.pmautoban True və ya False`")
         return
     if secimler == '':
-        await cyber.edit("**İstifadəsi:** `.pmautoban True və ya False`")
+        await fast.edit("**İstifadəsi:** `.pmautoban True və ya False`")
         return
-    await cyber.edit(f"**PM_AUTO_BAN** `{secimler}` **olaraq ayarlandı!**")
+    await fast.edit(f"**PM_AUTO_BAN** `{secimler}` **olaraq ayarlandı!**")
     try:
         heroku_var["PM_AUTO_BAN"] = secimler
     except:
-        await cyber.edit("`Bilinməyən bir xəta baş verdi!`")
+        await fast.edit("`Bilinməyən bir xəta baş verdi!`")
 
-# The codes belong entirely to https://github.com/FaridDadashzade. Reuse is not allowed.
-# Başqa botlarda istifadəsi qadağandır!
-# © https://t.me/FVREED
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
@@ -359,7 +356,7 @@ async def blockpm(block):
         replied_user = await block.client.get_entity(reply.from_id)
         if replied_user.id in BRAIN_CHECKER or replied_user.id in WHITELIST:
             await block.edit(
-                "`C Y B E R İdarəçisini bloklaya bilmərəm.`"
+                "`F A S T  Adminini bloklaya bilmərəm.`"
             )
             return
 
@@ -383,7 +380,7 @@ async def blockpm(block):
     else:
         if block.chat_id in BRAIN_CHECKER:
             await block.edit(
-                "`C Y B E R İdarəçisini bloklaya bilmərəm.`"
+                "`F A S T  Adminini bloklaya bilmərəm.`"
             )
             return
 
