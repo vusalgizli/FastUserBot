@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import asyncio
 import math
@@ -226,10 +226,10 @@ async def show_current_gdrove_folder(event):
     if parent_id:
         folder_link = f"https://drive.google.com/drive/folders/" + parent_id
         await event.edit(
-            f"CYBER faylları [buraya]({folder_link}) uploadlıyır.")
+            f"FAST faylları [buraya]({folder_link}) uploadlıyır.")
     else:
         await event.edit(
-            f"CYBER faylları Google Drive'ın kök qovluğuna uploadlıyır.\
+            f"FAST faylları Google Drive'ın kök qovluğuna uploadlıyır.\
             \nUploadlanan fayllar [burada](https://drive.google.com/drive/my-drive)"
         )
 
