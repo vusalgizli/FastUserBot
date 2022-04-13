@@ -1,7 +1,7 @@
 # Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# This file is a part of < https://github.com/FastUserbBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserbBot/FastUserBot/blob/master/LICENSE/>.
 
 # CODER tg/@TheMiri github/@WhoMiri#
 # PLEASE DON'T DELETE THIS LINES (IF YOU KANG) #
