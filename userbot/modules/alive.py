@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import time
 import heroku3
@@ -14,7 +14,7 @@ from asyncio.subprocess import PIPE as asyncPIPE
 from shutil import which
 from os import remove
 from userbot import (
-    CYBER_VERSION,
+    FAST_VERSION,
     StartTime,
     JARVIS,
     SUPPORT,
@@ -32,11 +32,11 @@ from telethon import version
 
 # ---------------------------------- #
 from userbot.language import get_value
-LANG = get_value("cyberlangs")
+LANG = get_value("fastlangs")
 # ---------------------------------- #
 
 LOGO_ALIVE = PLUGIN_MESAJLAR['salive']
-CYBER_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
+FAST_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None:
@@ -86,7 +86,7 @@ async def salive(alive):
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
         f"┗━━━━━━━━━━━━━━━━━━━━\n"
-        f"**C Y B Ξ R Version:** `{CYBER_VERSION}`"
+        f"**𝙵𝙰𝚂𝚃 Version:** `{FAST_VERSION}`"
     )
     if LOGO_ALIVE:
         try:
@@ -119,12 +119,12 @@ async def jarvisalive(jarvis):
         reply_user = await jarvis.client.get_entity(reply.from_id)
         ren = reply_user.id
         if jarvis.sender_id == 1527722982:
-            xitab = CYBER_NAME
+            xitab = FAST_NAME
         else:
-            xitab = CYBER_NAME
+            xitab = FAST_NAME
         if ren == MYID:
-            Version = str(CYBER_VERSION.replace("v","")) 
-            await jarvis.reply(f"**{CYBER_NAME} C Y B Ξ R işlədir...**\n**C Y B Ξ R:** `{CYBER_VERSION}`")
+            Version = str(FAST_VERSION.replace("v","")) 
+            await jarvis.reply(f"**{FAST_NAME} 𝙵𝙰𝚂𝚃 işlədir...**\n**𝙵𝙰𝚂𝚃:** `{FAST_VERSION}`")
         else:
             return
     else:
