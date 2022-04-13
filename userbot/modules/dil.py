@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 
 from userbot.cmdhelp import CmdHelp
@@ -42,13 +42,13 @@ async def dil(event):
             reply = await event.get_reply_message()
             dosya = await reply.download_media()
 
-            if ((len(reply.file.name.split(".")) >= 2) and (not reply.file.name.split(".")[1] == "cyberjson")):
-                return await event.edit("`Xahiş edirəm bir` **CYBERJSON** `faylına cavab verin!`")
+            if ((len(reply.file.name.split(".")) >= 2) and (not reply.file.name.split(".")[1] == "fastjson")):
+                return await event.edit("`Xahiş edirəm bir` **FASTJSON** `faylına cavab verin!`")
 
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Xahiş edirəm bir` **CYBERJSON** `faylına cavab verin!`")
+                return await event.edit("`Xahiş edirəm bir` **FASTJSON** `faylına cavab verin!`")
 
             await event.edit(f"`{dosya['LANGUAGE']}` `dili yüklənir...`")
             pchannel = await event.client.get_entity(PLUGIN_CHANNEL_ID)
@@ -65,15 +65,15 @@ async def dil(event):
         await event.edit("`Dil faylı haqqında məlumatlar gətirilir.`")
         if event.is_reply:
             reply = await event.get_reply_message()
-            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "cyberjson")):
-                return await event.edit("`Xahiş edirəm bir` **CYBERJSON** `faylına cavab verin!`")
+            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "fastjson")):
+                return await event.edit("`Xahiş edirəm bir` **FASTJSON** `faylına cavab verin!`")
 
             dosya = await reply.download_media()
 
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Xahiş edirəm bir` **CYBERJSON** `faylına cavab verin!`")
+                return await event.edit("`Xahiş edirəm bir` **FASTJSON** `faylına cavab verin!`")
 
             await event.edit(
                 f"**Dil: **`{dosya['LANGUAGE']}`\n"
@@ -90,32 +90,32 @@ async def dil(event):
             f"**Dil kodu: **`{LANGUAGE_JSON['LANGCODE']}`\n"
             f"**Tərcümə edən: **`{LANGUAGE_JSON ['AUTHOR']}`\n"
 
-            f"\n\n**C Y B Ξ R USERBOT**"
+            f"\n\n**F A S T  USERBOT**"
         )
 
 # The codes belong entirely to https://github.com/FaridDadashzade. Reuse is not allowed.
 # Başqa botlarda istifadəsi qadağandır!
-# © https://t.me/FVREED 
+# © https://t.me/DeveloperSH
 
-@register(cyber=True, pattern="^.dil deyis ?(.*)")
-@register(cyber=True, pattern="^.dil değiş ?(.*)")
-async def dil_deyis(cyber):
-    dil_adi = cyber.pattern_match.group(1)
+@register(fast=True, pattern="^.dil deyis ?(.*)")
+@register(fast=True, pattern="^.dil değiş ?(.*)")
+async def dil_deyis(fast):
+    dil_adi = fast.pattern_match.group(1)
     if not dil_adi in DIL_SIYAHISI: # yazdiginiz dil adi dil siyahisinda yoxdursa return
-        await cyber.edit("**Xahiş edirəm düzgün bir dil adı qeyd edin!**\n**Dil siyahısı:** `AZ, TR, EN, IN, UZ`")
+        await fast.edit("**Xahiş edirəm düzgün bir dil adı qeyd edin!**\n**Dil siyahısı:** `AZ, TR, EN, IN, UZ`")
         return
     if dil_adi == '': # dil adi qeyd olunmayibsa return
-        await cyber.edit("**Xahiş edirəm düzgün bir dil adı qeyd edin!**\n**Dil siyahısı:** `AZ, TR, EN, IN, UZ`")
+        await fast.edit("**Xahiş edirəm düzgün bir dil adı qeyd edin!**\n**Dil siyahısı:** `AZ, TR, EN, IN, UZ`")
         return
-    await cyber.edit(f"**Botunuzun dili** `{dil_adi}` **olaraq ayarlandı!**")
+    await fast.edit(f"**Botunuzun dili** `{dil_adi}` **olaraq ayarlandı!**")
     try:
         heroku_var["LANGUAGE"] = dil_adi
     except:
-        await cyber.edit("`Dil dəyişdirmə prosesi zamanı xəta baş verdi!`")
+        await fast.edit("`Dil dəyişdirmə prosesi zamanı xəta baş verdi!`")
 
 # The codes belong entirely to https://github.com/FaridDadashzade. Reuse is not allowed.
 # Başqa botlarda istifadəsi qadağandır!
-# © https://t.me/FVREED 
+# © https://t.me/DeveloperSH
 
 CmdHelp('dil').add_command(
     'dil', None, 'Yüklədiyiniz dil haqqında məlumat verər.'
