@@ -1,14 +1,14 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import asyncio
 import os
 import time
 import zipfile
 from userbot.cmdhelp import CmdHelp
-from userbot import CYBER_VERSION, DEFAULT_NAME
+from userbot import FAST_VERSION, DEFAULT_NAME
 from datetime import date
 
 from userbot import TEMP_DOWNLOAD_DIRECTORY, ZIP_DOWNLOAD_DIRECTORY, bot
@@ -22,7 +22,7 @@ today = date.today()
 
 @register(outgoing=True, pattern=r"^\.sıxışdır(?: |$)(.*)")
 async def _(event):
-    # CYBERUSERBOT #
+    # FASTUSERBOT #
     if event.is_channel and not event.is_group:
         await event.edit("**Bu əmr kanallarda işləmir!**")
         return
@@ -139,7 +139,7 @@ async def remove_dir(rm):
 
 
 def zipdir(path, ziph):
-    # CYBERUSERBOT #
+    # FASTUSERBOT #
     for root, _, files in os.walk(path):
         for file in files:
             ziph.write(os.path.join(root, file))
