@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 
 from telethon.tl.types import ChannelParticipantsAdmins as cp
@@ -12,7 +12,7 @@ from time import sleep
 
 # ------------------------------------ #
 from userbot.language import get_value
-LANG = get_value("cyberlangs")
+LANG = get_value("fastlangs")
 # ------------------------------------ #
 
 dayandir = False
