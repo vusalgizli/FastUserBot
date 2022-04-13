@@ -1,7 +1,7 @@
 # Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# This file is a part of < https://github.com/FastUserbBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserbBot/FastUserBot/blob/master/LICENSE/>.
 
 from userbot.cmdhelp import CmdHelp
 from userbot import cmdhelp
@@ -11,11 +11,11 @@ from userbot.events import register
 # ██████ LANGUAGE CONSTANTS ██████ #
 
 from userbot.language import get_value
-LANG = get_value("__cyber")
+LANG = get_value("__fast")
 
 # ████████████████████████████████ #
 
-@register(cyber=True, pattern="^.cyber(?: |$)(.*)")
+@register(cyber=True, pattern="^.fast(?: |$)(.*)")
 async def cyber(event):
     args = event.pattern_match.group(1).lower()
     if args:
