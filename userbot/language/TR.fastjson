@@ -1,8 +1,8 @@
 {
-    "__CYBERJSON__": true,
+    "__FASTJSON__": true,
     "LANGUAGE": "Türkçe",
     "LANGCODE": "tr",
-    "AUTHOR": "@FVREED",
+    "AUTHOR": "@DeveloperSH",
     "STRINGS": {
         "__plugin": {
             "REPLY_FOR_PORT": "`Plugin-Port için lütfen bir dosyaya yanıt verin.`",
@@ -30,16 +30,16 @@
             "ALREADY_DELETED": "`Plugin dosyası zaten silinmiş.`",
             "NOT_FOUND_PLUGIN": "`Böyle bir plugin belki vardı, belki de yoktu. Ama şu an olmadığı kesin.`",
             "PLUG_DELETED": "`Plugin başarıyla silindi!` **Botunuz otomatik yenidan başlatılacak.**",
-            "CYBER_PLUGIN_CAPTION": "Bu bir [C Y B Ξ R](https://t.me/TheCyberUserBot) pluginidir.",
+            "FAST_PLUGIN_CAPTION": "Bu bir [𝙵𝙰𝚂𝚃](https://t.me/FastSupp) pluginidir.",
             "REPLY_PY_FILE": "`Lütfen bir Python dosyasını yanıtlayın!`",
             "ALREADY_INSTALLED": "`Bu eklenti zaten indirildi!\nBunu tekrar yüklemeyeceğim.`",
             "PLUGIN_SCANNING": "`Plugin skanlanıyor...`\n`Biraz bekleyin...`",
             "TEMP_DOWNLOAD": "__Modül başarıyla indirildi!__\n__Modülü test ede bilirsiniz.__\n__Botu yeniden başlatdığınızda eklenti çalışmayacaktır.__"
         },
         
-        "__cyber": {
-            "NEED_PLUGIN": "Lütfen bir C Y B Ξ R modülü adı belirtin.",
-            "NEED_MODULE": "**C Y B Ξ R USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Kullanımı:** `.cyber <plugin adı>`"
+        "__fast": {
+            "NEED_PLUGIN": "Lütfen bir 𝙵𝙰𝚂𝚃 modülü adı belirtin.",
+            "NEED_MODULE": "**𝙵𝙰𝚂𝚃 USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Kullanımı:** `.fast <plugin adı>`"
         },
 
         "__helpme": {
@@ -57,7 +57,7 @@
             "INVALID_MEDIA": "```Medya geçerli değil.```",
             "PRIVATE": "`Bu komut özel mesajda kullanılamaz!`",
             "EKLE": "`Başarıyla eklendi`",
-            "BRAIN": "`Hata!\nBu işlemi C Y B Ξ R yetkilisine yapamam.`",
+            "BRAIN": "`Hata!\nBu işlemi 𝙵𝙰𝚂𝚃 yetkilisine yapamam.`",
             "BANNING": "`Kullanıcı yasaklanıyor...`",
             "ALREADY_GBANNED": "`Hata! Kullanıcı zaten küresel olarak yasaklanmış.`",
             "GBANNED_REASON": "`Kullanıcı küresel olarak yasaklandı!`\n**Nedeni:**",
@@ -121,7 +121,7 @@
             "ALREADY": "`Görünüşe göre %s zaten otomatik olarak değişiyor.`",
             "SETTING": "`%s ayarlanıyor...`",
             "BIO": "🇹🇷 Tarih: {tarih} | ⌚️ Saat: {saat} | ",
-            "NICK": "@TheCyberUserBot",
+            "NICK": "@FastSupp",
             "SETTED": "`%s ayarlandı :)`",
             "NAME": "⏰%s"
         },
@@ -160,8 +160,8 @@
             "EFECTING": "`Efekt uygulanıyor...`",
             "NOT_FOUND_EFECT": "**Belirttiğiniz efekt bulunamadı! **`Kullanılabileceğiniz efektler: ``çocuk/robot/earrape/hızlı/parazit/yankı`",
             "NEED_VIDEO": "`Lütfen bir videoya yanıt verin!`",
-            "WITH_CYBER":"@TheCyberUserBot `ile efekt uygulandı.`",
-            "WITH_CYBER_GIF": "@TheCyberUserBot `ile Gif'e çevirildi.`",
+            "WITH_FAST":"@FastSupp `ile efekt uygulandı.`",
+            "WITH_FAST_GIF": "@FastSupp `ile Gif'e çevirildi.`",
             "CONVERTING_TO_GIF": "Gif'e çeviriliyor...",
             "UPLOADING_GIF": "`Gif yükleniyor...`",
             "ERROR": "Gif'e çeviremedim :/"
@@ -187,9 +187,9 @@
             "SETTED": "Plugin(`{plu}`) için mesajınız(`{msj}`) ayarlandı."
         },
 
-        "cyberlangs": {
+        "fastlangs": {
             "SALIVE": "`Gif-li alive mesajı.`",
-	    "PROHIBITED_COMMAND": "```Bunu C Y B Ξ R Support 🇦🇿 grubunda yapamazsınız.```",
+	    "PROHIBITED_COMMAND": "```Bunu 𝙵𝙰𝚂𝚃 Support grubunda yapamazsınız.```",
             "CHATBOT_DEACTIVE": "```Chatbot başarıyla kapatıldı.```",
             "CHATBOT_ACTIVE": "```Chatbot aktif.```",
             "CHATBOT_MANUAL": "```**Kullanımı:**\n.chatbot <on/off>```"
@@ -361,11 +361,11 @@
             "SLEEPING": "`Horlayarak uyuyorum...`",
             "GOODMORNIN_YALL": "`Günaydın!`",
             "GOODBYE_MFRS": "`Görüşürüz... *Windows XP kapanma sesi*`",
-            "RESTARTING": "**C Y B Ξ R:**\n`Bot yeniden başlatılıyor..`",
-            "SUPPORT_GROUP": "[Buradan](http://t.me/TheCyberSupport) destek grubumuza ulaşabilirsiniz.",
-            "CREATOR": "Bu bot \n[Luciferxz](https://t.me/luciferxz) tarafından geliştirilmiştir. \n",
-            "README": "[C Y B Ξ R README.md](https://github.com/CyberUserBot/CyberUserBot/blob/master/README.md)",
-            "REPO": "[C Y B Ξ R Repo](https://github.com/CyberUserBot/CyberUserBot)",
+            "RESTARTING": "**𝙵𝙰𝚂𝚃:**\n`Bot yeniden başlatılıyor..`",
+            "SUPPORT_GROUP": "[Buradan](http://t.me/FastSupp) destek grubumuza ulaşabilirsiniz.",
+            "CREATOR": "Bu bot \n[SAKO](https://t.me/DeveloperSH) tarafından geliştirilmiştir. \n",
+            "README": "[𝙵𝙰𝚂𝚃 README.md](https://github.com/FastrUserBot/FastUserBot/blob/master/README.md)",
+            "REPO": "[𝙵𝙰𝚂𝚃 Repo](https://github.com/FastUserBot/FastUserBot)",
             "CHECK_LOGS": "`Çözülmüş mesaj için userbot loglarını kontrol et!`"
         },
 
@@ -522,12 +522,12 @@
         },
 
         "song": {
-            "GIVE_ME_SONG": "**Bana bir şarkı ver!** `Kullanım: .deez şarkı ismi/youtube/spotify/soundcloud`",
+            "GIVE_ME_SONG": "**Bana bir şarkı ver!** `Kullanım: .fast şarkı ismi/youtube/spotify/soundcloud`",
             "SEARCHING": "`Şarkı aranıyor...`",
-            "BLOCKED_DEEZER": "`Mmmh sanırım` @DeezerMusicBot `engellemişsin. Lütfen engeli aç.",
+            "BLOCKED_DEEZER": "`Mmmh sanırım` @CreatorMusicAZBot `engellemişsin. Lütfen engeli aç.",
             "NOT_FOUND": "`Aradığınız şarkı bulunamadı! Üzgünüm.`",
-            "UPLOADED_WITH": "@TheCyberUserBot ile yüklendi.",
-            "USAGE": "`Kullanım:` `.song şarkı ismi/youtube url/spotify url`",
+            "UPLOADED_WITH": "@FastSupp ile yüklendi.",
+            "USAGE": "`Kullanı:` `.song şarkı ismi/youtube url/spotify url`",
             "SEARCHING_SPOT": "`Şarkı aranıyor ve indiriliyor lütfen bekleyin!",
             "DOWNLOADED": "`İndirme işlemi başarılı lütfen bekleyiniz.`",
             "UPLOADING": "Şarkı yükleniyor!",
@@ -586,18 +586,18 @@
             "NOT_FOUND": "dosyayı bulamadı",
             "GIT_ERROR": "Git hatası!",
             "NOT_GIT": "klasörü bir git reposu gibi görünmüyor. \nFakat bu sorunu .update now komutuyla botu zorla güncelleyerek çözebilirsin.",
-            "INVALID_BRANCH": "**[C Y B Ξ R GÜNCELLEYİCİ]:**` Düşünürəm ki, C Y B Ξ R botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan C Y B Σ R Botunu istifadə edin.`",
-            "UPDATE": "\n`C Y B Ξ R` **en son versiyonda!** `Branch:` **{}**\n",
+            "INVALID_BRANCH": "**[𝙵𝙰𝚂𝚃 GÜNCELLEYİCİ]:**` Düşünürəm ki, 𝙵𝙰𝚂𝚃 botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan 𝙵𝙰𝚂𝚃 Botunu istifadə edin.`",
+            "UPDATE": "\n`𝙵𝙰𝚂𝚃` **en son versiyonda!** `Branch:` **{}**\n",
             "WAS_UPDATE": "**{} için yeni güncelleme mevcut!\n\nDeğişiklikler:**\n`{}`",
             "BIG": "`Değişiklik listesi çok büyük, dosya olarak görüntülemelisin.`",
             "DO_UPDATE": "`Güncellemeyi yapmak için \".update now\" komutunu kullan.`",
             "FORCE_UPDATE": "`Güncel stabil userbot kodu zorla eşitleniyor...`",
-            "UPDATING": "`🔄 C Y B Ξ R Güncelleniyor...`",
-	        "INVALID_APPNAME": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🛠️**Hata:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
+            "UPDATING": "`🔄 𝙵𝙰𝚂𝚃 Güncelleniyor...`",
+	        "INVALID_APPNAME": "**𝙵𝙰𝚂𝚃 UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🛠️**Hata:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
 	        "INVALID_HEROKU": "{}\n`Heroku değişkenleri yanlış veya eksik tanımlanmış.`",
-            "HEROKU_UPDATING": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇹🇷**Durum:** __Güncelleniyor...\nBu işlem maksimum 200 saniye sürmektedir.__",
+            "HEROKU_UPDATING": "**𝙵𝙰𝚂𝚃 UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇹🇷**Durum:** __Güncelleniyor...\nBu işlem maksimum 200 saniye sürmektedir.__",
             "ERRORS": "Karşılaşılan hatalar burada",
-            "SUCCESSFULLY": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇹🇷**Durum:** __Güncelleme başarıyla bitdi!\nYeniden başlatılıyor...__"
+            "SUCCESSFULLY": "**𝙵𝙰𝚂𝚃 UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇹🇷**Durum:** __Güncelleme başarıyla bitdi!\nYeniden başlatılıyor...__"
         },
 
         "upload_download": {
