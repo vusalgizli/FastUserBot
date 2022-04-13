@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from pydub import AudioSegment
 from json import dumps
@@ -143,5 +143,5 @@ async def _(event):
 Help = CmdHelp('shazam')
 Help.add_command('shazam', '<cavab>', 'Cavab verdiyiniz səs faylını Shazamda axtarar.')
 Help.add_command('shazam2', '<cavab>', 'Cavab verdiyiniz səs faylını @auddbot-da axtarar.')
-Help.add_info('@TheCyberUserBot')
+Help.add_info('@FastSupp')
 Help.add()
