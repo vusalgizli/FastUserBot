@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -15,7 +15,7 @@ from os import (remove, path)
 @register(outgoing=True, pattern="^.ses(?: |$)(.*)")
 @register(outgoing=True, pattern="^.unvoice(?: |$)(.*)")
 async def seslimuzik(event):
-    caption = "@TheCyberUserBot ilə səsli mesaja çevirildi."
+    caption = "@FastSupp ilə səsli mesaja çevirildi."
     if event.fwd_from:
         return
     sarki = event.pattern_match.group(1)
@@ -52,7 +52,7 @@ async def seslimuzik(event):
         caption = ""
 
     await event.edit(f"__Yazdığınız musiqi axtarılır..: {sarki}__")
-    chat = "@DeezerMusicBot"
+    chat = "@CreatorMusicAZBot"
     async with bot.conversation(chat) as conv:
         try:     
             await conv.send_message(sarki)
@@ -105,7 +105,7 @@ async def seslimuzik(event):
 Help = CmdHelp('unvoice')
 Help.add_command('ses',
     '<musiqi>',
-    '@DeezerMusicBot da musiqi axtarar, taparsa səsli mesaj olaraq göndərər',
+    '@CreatorMusicAZbot musiqi axtarar, taparsa səsli mesaj olaraq göndərər',
     'ses RZZA - Çək Mənim Yanımda'
     )
 Help.add_command('ses',
@@ -113,6 +113,6 @@ Help.add_command('ses',
     'Əgər bu əmri mp3ü yanıtlayaraq etsəniz yanıtladığınız mp3ü səsli mesaj olaraq atar',
     'ses'
     )
-Help.add_warning('@TheCyberUserBot')
-Help.add_info('(Sonuna  {n} yazsanız səsli mesajı "@TheCyberUserBot ilə yükləndi" yazısını qaldırar.)')
+Help.add_warning('@FastSupp
+Help.add_info('()')
 Help.add()
