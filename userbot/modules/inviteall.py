@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from telethon.errors import (
     ChannelInvalidError,
@@ -20,7 +20,7 @@ from userbot import bot, BLACKLIST_CHAT
 # ---------------------------------- #
 
 from userbot.language import get_value
-LANG = get_value("cyberlangs")
+LANG = get_value("fastlangs")
 
 # ---------------------------------- #
 
@@ -69,43 +69,43 @@ def user_full_name(user):
     return full_name
 
 
-@cyber(outgoing=True, disable_errors=True, pattern=r"^\.inviteall (.*)")
+@fast(outgoing=True, disable_errors=True, pattern=r"^\.inviteall (.*)")
 async def get_users(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await event.edit(LANG["PROHIBITED_COMMAND"])
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        cyber = await event.edit("`Qrupu axtarıram...`")
+        fast = await event.edit("`Qrupu axtarıram...`")
     else:
-        cyber = await event.edit("`İstifadəçilər əlavə edilir...`")
+        fast = await event.edit("`İstifadəçilər əlavə edilir...`")
     farid = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await cyber.edit("`Bağışlayın qeyd etdiyiniz qrupda istifadəçi yoxdur.`")
+        return await fast.edit("`Bağışlayın qeyd etdiyiniz qrupda istifadəçi yoxdur.`")
     s = 0
     f = 0
     error = "None"
 
-    await cyber.edit("**C Y B Ξ R SCRAPER**\n\n`İstifadəçilər əlavə edilir...`")
+    await fast.edit("**F A S T **\n\n`İstifadəçilər əlavə edilir...`")
     async for user in event.client.iter_participants(farid.full_chat.id):
         try:
             if error.startswith("Too"):
                 return await cyber.edit(
-                    f"**C Y B Ξ R**\n `Böyük ehtimalla spam olmusunuz @spambot-a /start yazın.` \nXəta: \n`{error}` \n\n `{s}` istifadəçi əlavə edildi.\n `{f}` istifadəçini əlavə etmək olmadı."
+                    f"**F A S T**\n `Böyük ehtimalla spam olmusunuz @spambot-a /start yazın.` \nXəta: \n`{error}` \n\n `{s}` istifadəçi əlavə edildi.\n `{f}` istifadəçini əlavə etmək olmadı."
                 )
             await event.client(
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
-            await cyber.edit(
-                f"**C Y B Ξ R**\n\n`{s}` istifadəçi əlavə edildi.\n`{f}` istifadəçini əlavə etmək olmadı\n\n**Xəta:** `{error}`"
+            await fast.edit(
+                f"**F A S T**\n\n`{s}` istifadəçi əlavə edildi.\n`{f}` istifadəçini əlavə etmək olmadı\n\n**Xəta:** `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await cyber.edit(
-        f"**C Y B Ξ R** \n\nUğurla `{s}` istifadəçi əlavə edildi.\nUğursuz olan istifadəçilərin sayı: `{f}`"
+    return await fast.edit(
+        f"**F A S T** \n\nUğurla `{s}` istifadəçi əlavə edildi.\nUğursuz olan istifadəçilərin sayı: `{f}`"
     )
 
 
