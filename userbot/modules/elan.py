@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 # CODER tg/@FUSUF github/@Quiec #
 # PLEASE DON'T DELETE THIS LINES (IF YOU KANG) #
@@ -44,7 +44,7 @@ async def elan(event):
         else:
             link = "[" + user.first_name + "](" + str(user.id) + ")"
         try:
-            await event.client.send_message(uid, mesaj + "\n\n@TheCyberUserBot ilə göndərildi.")
+            await event.client.send_message(uid, mesaj + "\n\n@FastSupp ilə göndərildi.")
             son = f"**Son elan göndərilən istifadəçi:** {link}"
         except:
             son = f"**Son elan göndərilən istifadəçi:** **Göndərilə bilmədi!**"
@@ -57,5 +57,5 @@ async def elan(event):
     
 Help = CmdHelp('elan')
 Help.add_command('elan', '<admin və ya sahibi olduğunuz qrupda yazın>', 'Admini və ya sahibi olduğunuz qrupda yazdığınız mesajı istifadəçilərə göndərər.')
-Help.add_info('@TheCyberUserBot')
+Help.add_info('@FastSupp')
 Help.add()    
