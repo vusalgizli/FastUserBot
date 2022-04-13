@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from asyncio import create_subprocess_shell as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -9,7 +9,7 @@ from platform import uname
 from shutil import which
 import time
 from os import remove
-from userbot import (CMD_HELP, CYBER_VERSION, DEFAULT_NAME, StartTime, ALIVE_NAME)
+from userbot import (CMD_HELP, FAST_VERSION, DEFAULT_NAME, StartTime, ALIVE_NAME)
 from userbot.events import register
 from userbot.main import PLUGIN_MESAJLAR
 from telethon import version
@@ -103,7 +103,7 @@ async def bot_ver(event):
                          "`")
     else:
         await event.edit(
-            "C Y B Ξ R"
+            "F A S T"
         )
 
 
@@ -158,7 +158,7 @@ async def amialive(e):
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
-                cyber=CYBER_VERSION,
+                fast=FAST_VERSION,
                 vaxt=islememuddeti,
                 ad=ALIVE_NAME,
                 plugin=len(CMD_HELP),
@@ -167,7 +167,7 @@ async def amialive(e):
                 first_name=me.first_name,
                 last_name=me.last_name if me.last_name else '',
                 mention=f'[{me.first_name}](tg://user?id={me.id})',
-                cybersahib = sahibb
+                fastsahib = sahibb
             ))
         else:
             await e.delete()
@@ -175,7 +175,7 @@ async def amialive(e):
                 PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
                     telethon=version.__version__,
                     python=python_version(),
-                    cyber=CYBER_VERSION,
+                    fast=FAST_VERSION,
                     ad=ALIVE_NAME,
                     vaxt=islememuddeti,
                     plugin=len(CMD_HELP),
@@ -184,7 +184,7 @@ async def amialive(e):
                     first_name=me.first_name,
                     last_name=me.last_name if me.last_name else '',
                     mention=f'[{me.first_name}](tg://user?id={me.id})',
-                    cybersahib = sahibb
+                    fastsahib = sahibb
                 )
             if e.is_reply:
                 await e.respond(PLUGIN_MESAJLAR['alive'], reply_to=e.message.reply_to_msg_id)
@@ -199,5 +199,5 @@ CmdHelp('system_stats').add_command(
 ).add_command(
     'pip', '<modül(ler)>', 'Pip modullarında axtarış edər.'
 ).add_command(
-    'alive', None, 'C Y B Ξ R botunun işləyib işləmədiyini kontrol etmək üçün.'
+    'alive', None, 'F A S T  botunun işləyib işləmədiyini kontrol etmək üçün.'
 ).add()
