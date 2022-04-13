@@ -187,7 +187,7 @@
             "SETTED": "Plugin(`{plu}`) üçün mesajınız(`{msj}`) təsdiqləndi."
         },
 
-        "cyberlangs": {
+        "fastlangs": {
             "SALIVE": "Gif-li alive mesajı",
 	    "PROHIBITED_COMMAND": "```Bunu 𝙵𝙰𝚂𝚃 Support qrupunda edə bilməzsiniz.```",
 	    "CHATBOT_DEACTIVE": "```Chatbot deaktivdir.```",
