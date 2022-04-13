@@ -1,7 +1,7 @@
-# Copyright (C) 2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import json
 import requests
@@ -40,5 +40,5 @@ async def github(event):
     
 
 CmdHelp('git').add_command(
-    'git', '<istifadəçi adı>', 'Seçilən istifadəçinin GitHub məlumatlarını göstərər.', 'git FaridDadashzade'
+    'git', '<istifadəçi adı>', 'Seçilən istifadəçinin GitHub məlumatlarını göstərər.',
 ).add()
