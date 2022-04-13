@@ -1,9 +1,9 @@
 <div align="center">
   <a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg" width="500"></a>
-  <h1> C Y B Ξ R USΞRBOT 🇦🇿 </h1>
+  <h1> USΞRBOT  </h1>
 </div>
 <p align="center">
-    C Y B Ξ R UserBot is a project that simplifies the use of Telegram. All rights reserved.
+    UserBot is a project that simplifies the use of Telegram. All rights reserved.
     <br>
         <a href="https://t.me/TheCyberUserBot">Yeniliklər kanalı.</a> |
         <a href="https://t.me/TheCyberSupport">Support.</a> 
