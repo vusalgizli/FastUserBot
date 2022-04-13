@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from asyncio import sleep
 from json import loads
@@ -203,22 +203,22 @@ def get_spotify_info(TIME=5):
         totaltime = int(item['duration_ms'])
         if len(item['album']['images']) > 0:
             telegraph.create_account(short_name='spotify')
-            if path.exists("@TheCyberUserBot-Spotify.jpg"):
-                remove("@TheCyberUserBot-Spotify.jpg")          
+            if path.exists("@FastSupp-Spotify.jpg"):
+                remove("@FastSupp-Spotify.jpg")          
             try:
                 r = get(str(item['album']['images'][0]['url']))
-                with open("@TheCyberUserBot-Spotify.jpg", 'wb') as f:
+                with open("@FastSupp-Spotify.jpg", 'wb') as f:
                     f.write(r.content)    
 
-                with open('@TheCyberUserBot-Spotify.jpg', 'rb') as f:
+                with open('@FastSupp-Spotify.jpg', 'rb') as f:
                     req = post('https://telegra.ph/upload', 
                     files={'Hey': ('Hey', f, 'image/jpeg')}  # image/gif, image/jpeg, image/jpg, image/png, video/mp4
                     ).json()
                     image = "[🔄](https://telegra.ph"+req[0]['src']+")"
             except Exception:
                 pass
-        if path.exists("@TheCyberUserBot-Spotify.jpg"):
-            remove("@TheCyberUserBot-Spotify.jpg") 
+        if path.exists("@FastSupp-Spotify.jpg"):
+            remove("@FastSupp-Spotify.jpg") 
         art = []
         message = ""
         Stop = False
@@ -298,7 +298,7 @@ async def getmp3(event):
         songinfo = info[1]         
         msgs = info[2]
         try:
-            chat = "@DeezerMusicBot"
+            chat = "@CreatorMusicAZBot"
             async with bot.conversation(chat) as conv:
                 try:     
                     await conv.send_message(songinfo)
