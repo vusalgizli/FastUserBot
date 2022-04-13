@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import requests
 import re
@@ -170,16 +170,16 @@ async def pm(event):
     mssg = await event.get_reply_message() 
     if event.reply_to_msg_id:
         await event.client.send_message(chat_id, mssg)
-        await event.edit("**C Y B Ξ R mesajınızı göndərdi ✔️**")
+        await event.edit("**𝙵𝙰𝚂𝚃 mesajınızı göndərdi ✔️**")
     for i in m[1:]:
         msg += i + " "
     if msg == "":
         return
     try:
         await event.client.send_message(chat_id, msg)
-        await event.edit("**C Y B Ξ R mesajınızı göndərdi ✔️**")
+        await event.edit("**𝙵𝙰𝚂𝚃 mesajınızı göndərdi ✔️**")
     except BaseException:
-        await event.edit("@TheCyberUserBot mesajınızı göndərə bilmədi :(")
+        await event.edit("@FastSupp mesajınızı göndərə bilmədi :(")
 	
 	
 @register(outgoing=True, pattern=r"^\.tik(?: |$)(.*)")
@@ -208,7 +208,7 @@ async def _(event):
                 f"**Xəta:** `{chat} blokunu açın və yenidən yoxlayın!`"
             )
             return
-        await bot.send_file(event.chat_id, video, caption="Downloaded by [C Y B Ξ R](https://t.me/TheCyberUserBot)")
+        await bot.send_file(event.chat_id, video, caption="Downloaded by [𝙵 𝙰 𝚂 𝚃](https://t.me/FastSupp)")
         await event.client.delete_messages(
             conv.chat_id, [msg_start.id, r.id, msg.id, details.id, video.id]
         )
@@ -239,7 +239,7 @@ async def _(event):
                 f"**Xəta:** `{chat} blokunu açın və yenidən yoxlayın!`"
             )
             return
-        await bot.send_file(event.chat_id, video, caption="Downloaded by [C Y B Ξ R](https://t.me/TheCyberUserBot)")
+        await bot.send_file(event.chat_id, video, caption="Downloaded by [𝙵 𝙰 𝚂 𝚃](https://t.me/FastSupp)")
         await event.client.delete_messages(
             conv.chat_id, [msg_start.id, r.id, msg.id, details.id, video.id]
         )
@@ -270,7 +270,7 @@ async def _(event):
                 f"**Xəta:** `{chat} blokunu açın və yenidən yoxlayın!`"
             )
             return
-        await bot.send_file(event.chat_id, video, caption="Downloaded by [C Y B Ξ R](https://t.me/TheCyberUserBot)")
+        await bot.send_file(event.chat_id, video, caption="Downloaded by [𝙵 𝙰 𝚂 𝚃](https://t.me/FastSupp)")
         await event.client.delete_messages(
             conv.chat_id, [msg_start.id, r.id, msg.id, details.id, video.id]
         )
@@ -372,7 +372,7 @@ async def _(event):
                 confirm = await conv.get_response()
                 editfilename = await conv.send_message("Yes")
                 enterfilename = await conv.get_response()
-                filename = await conv.send_message("@thecyberuserbot")
+                filename = await conv.send_message("@fastsupp")
                 started = await conv.get_response()
                 pdf = await conv.get_response()
                 await bot.send_read_acknowledge(conv.chat_id)
@@ -403,15 +403,15 @@ async def _(event):
 	
 @register(outgoing=True, pattern="^.sendbot (.*)")
 async def sendbot(cyber):
-    if cyber.fwd_from:
+    if fast.fwd_from:
         return
-    chat = str(cyber.pattern_match.group(1).split(' ', 1)[0])
-    link = str(cyber.pattern_match.group(1).split(' ', 1)[1])
+    chat = str(fast.pattern_match.group(1).split(' ', 1)[0])
+    link = str(fast.pattern_match.group(1).split(' ', 1)[1])
     if not link:
-        return await cyber.edit("`Bağışlayın, heçnə tapa bilmədim.`")
+        return await fast.edit("`Bağışlayın, heçnə tapa bilmədim.`")
      
-    botid = await cyber.client.get_entity(chat)
-    await cyber.edit("```Hazırlanır...```")
+    botid = await fast.client.get_entity(chat)
+    await fast.edit("```Hazırlanır...```")
     async with bot.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=botid))
@@ -419,19 +419,19 @@ async def sendbot(cyber):
               response = await response
               await bot.send_read_acknowledge(conv.chat_id)
           except YouBlockedUserError: 
-              await cyber.reply(f"`Xahiş edirəm` {chat} `-u blokdan çıxarın və yenidən yoxlayın.`")
+              await fast.reply(f"`Xahiş edirəm` {chat} `-u blokdan çıxarın və yenidən yoxlayın.`")
               return
           except :
-              await cyber.edit("`Belə bir bot yoxdur :(`")
+              await fast.edit("`Belə bir bot yoxdur :(`")
               await sleep(2)
               return await cyber.delete()
          
-          await cyber.edit(f"`Göndərilən mesaj` : {link}"
+          await fast.edit(f"`Göndərilən mesaj` : {link}"
                                f"\n`Kimə` : {chat}")
-          await bot.send_message(cyber.chat_id, response.message)
-          await bot.send_read_acknowledge(cyber.chat_id)
+          await bot.send_message(fast.chat_id, response.message)
+          await bot.send_read_acknowledge(fast.chat_id)
           """ prosesi yerine yetirdikden sonra silmesi ucun """
-          await cyber.client.delete_messages(conv.chat_id,
+          await fast.client.delete_messages(conv.chat_id,
                                                 [msg.id, response.id])
 
 		
@@ -458,7 +458,7 @@ Help = CmdHelp('social')
 Help.add_command('tik', '<link>', 'TikTok-dan video yükləyər.')
 Help.add_command('insta', '<link>', 'Instagram-dan video və ya şəkil yükləyər.')
 Help.add_command('pinterest', '<link>', 'Pinterest-dən video və ya şəkil yükləyər.')
-Help.add_info('@TheCyberUserBot')
+Help.add_info('@FastSupp')
 Help.add()
 
 Help = CmdHelp('files')
