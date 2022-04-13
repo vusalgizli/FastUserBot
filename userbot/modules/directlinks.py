@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from os import popen
 import re
@@ -19,7 +19,7 @@ from userbot.events import register
 
 @register(cyber=True, pattern=r"^\.direct(?: |$)([\s\S]*)")
 async def directlinks(request):
-    """ CyberUserBot """
+    """ FastUserBot """
     await request.edit("`Hazırlanır biraz gözləyin...`")
     textx = await request.get_reply_message()
     mesaj = request.pattern_match.group(1)
@@ -30,34 +30,34 @@ async def directlinks(request):
     else:
         await request.edit("`İstifadəsi: .direct <link>`")
         return
-    cyber = ''
+    fast = ''
     links = re.findall(r'\bhttps?://.*\.\S+', mesaj)
     if not links:
-        cyber = "`Bağışlayın, heç nə tapa bilmədim!`"
+        fast = "`Bağışlayın, heç nə tapa bilmədim!`"
         await request.edit(cyber)
     for link in links:
         if 'drive.google.com' in link:
-            cyber += gdrive(link)
+            fast += gdrive(link)
         elif 'zippyshare.com' in link:
-            cyber += zippy_share(link)
+            fast += zippy_share(link)
         elif 'mega.' in link:
-            cyber += mega_dl(link)
+            fast += mega_dl(link)
         elif 'yadi.sk' in link:
-            cyber += yandex_disk(link)
+            fast += yandex_disk(link)
         elif 'cloud.mail.ru' in link:
-            cyber += cm_ru(link)
+            fast += cm_ru(link)
         elif 'mediafire.com' in link:
-            cyber += mediafire(link)
+            fast += mediafire(link)
         elif 'sourceforge.net' in link:
-            cyber += sourceforge(link)
+            fast += sourceforge(link)
         elif 'osdn.net' in link:
-            cyber += osdn(link)
+            fast += osdn(link)
         elif 'github.com' in link:
-            cyber += github(link)
+            fast += github(link)
         elif 'androidfilehost.com' in link:
-            cyber += androidfilehost(link)
+            fast += androidfilehost(link)
         else:
-            cyber += re.findall(r"\bhttps?://(.*?[^/]+)",
+            fast += re.findall(r"\bhttps?://(.*?[^/]+)",
                                 link)[0] + ' dəstəklənmir!'
     await request.edit(cyber)
 
@@ -68,10 +68,10 @@ def gdrive(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://drive\.google\.com\S+', url)[0]
     except IndexError:
-        cyber = "`Google Drive linki tapılmadı!`\n"
-        return cyber
+        fast = "`Google Drive linki tapılmadı!`\n"
+        return fast
     file_id = ''
-    cyber = ''
+    fast = ''
     if link.find("view") != -1:
         file_id = link.split('/')[-2]
     elif link.find("open?id=") != -1:
@@ -85,7 +85,7 @@ def gdrive(url: str) -> str:
         # In case of small file size, Google downloads directly
         dl_url = download.headers["location"]
         if 'accounts.google.com' in dl_url:  # non-public file
-            cyber += '`Link açıq deyil!`\n'
+            fast += '`Link açıq deyil!`\n'
             return reply
         name = 'Birbaşa yükləmə linki'
     except KeyError:
@@ -108,12 +108,12 @@ def gdrive(url: str) -> str:
 def zippy_share(url: str) -> str:
     """ ZippyShare birbasa yukleme linki
     credits: https://github.com/LameLemon/ziggy"""
-    cyber = ''
+    fast = ''
     dl_url = ''
     try:
         link = re.findall(r'\bhttps?://.*zippyshare\.com\S+', url)[0]
     except IndexError:
-        cyber = "`ZippyShare linki aşkar edilmədi!`\n"
+        fast = "`ZippyShare linki aşkar edilmədi!`\n"
         return reply
     session = requests.Session()
     base_url = re.search('http.+.com', link).group()
@@ -141,28 +141,28 @@ def yandex_disk(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://.*yadi\.sk\S+', url)[0]
     except IndexError:
-        cyber = "`Yandex.Disk linki aşkar edilmədi!`\n"
-        return cyber
+        fast = "`Yandex.Disk linki aşkar edilmədi!`\n"
+        return fast
     api = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key={}'
     try:
         dl_url = requests.get(api.format(link)).json()['href']
         name = dl_url.split('filename=')[1].split('&disposition')[0]
-        cyber += f'[{name}]({dl_url})\n'
+        fast += f'[{name}]({dl_url})\n'
     except KeyError:
-        cyber += '`Xəta: Fayl tapılmadı / Endirmə həddinə çatdı.`\n'
-        return cyber
-    return cyber
+        fast += '`Xəta: Fayl tapılmadı / Endirmə həddinə çatdı.`\n'
+        return fast
+    return fast
 
 
 def mega_dl(url: str) -> str:
     """ MEGA.nz ucun
     credits: https://github.com/tonikelope/megadown"""
-    cyber = ''
+    fast = ''
     try:
         link = re.findall(r'\bhttps?://.*mega.*\.nz\S+', url)[0]
     except IndexError:
-        cyber = "`MEGA.nz linki aşkar edilmədi!`\n"
-        return cyber
+        fast = "`MEGA.nz linki aşkar edilmədi!`\n"
+        return fast
     command = f'bin/megadown -q -m {link}'
     result = popen(command).read()
     try:
@@ -170,12 +170,12 @@ def mega_dl(url: str) -> str:
         print(data)
     except json.JSONDecodeError:
         reply += "`Xəta: Bağlantı çıxarıla bilmir`\n"
-        return cyber
+        return fast
     dl_url = data['url']
     name = data['file_name']
     size = naturalsize(int(data['file_size']))
-    cyber += f'[{name} ({size})]({dl_url})\n'
-    return cyber
+    fast += f'[{name} ({size})]({dl_url})\n'
+    return fast
 
 
 def cm_ru(url: str) -> str:
@@ -207,16 +207,16 @@ def mediafire(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://.*mediafire\.com\S+', url)[0]
     except IndexError:
-        cyber = "`MediaFire linki aşkar edilmədi!`\n"
-        return cyber
-    cyber = ''
+        fast = "`MediaFire linki aşkar edilmədi!`\n"
+        return fast
+    fast = ''
     page = BeautifulSoup(requests.get(link).content, 'lxml')
     info = page.find('a', {'aria-label': 'Download file'})
     dl_url = info.get('href')
     size = re.findall(r'\(.*\)', info.text)[0]
     name = page.find('div', {'class': 'filename'}).text
-    cyber += f'[{name} {size}]({dl_url})\n'
-    return cyber
+    fast += f'[{name} {size}]({dl_url})\n'
+    return fast
 
 
 def sourceforge(url: str) -> str:
@@ -224,10 +224,10 @@ def sourceforge(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://.*sourceforge\.net\S+', url)[0]
     except IndexError:
-        cyber = "`SourceForge linki aşkar edilmədi!`\n"
-        return cyber
+        fast = "`SourceForge linki aşkar edilmədi!`\n"
+        return fast
     file_path = re.findall(r'files(.*)/download', link)[0]
-    cyber = f" __{file_path.split('/')[-1]}__ üçün\n"
+    fast = f" __{file_path.split('/')[-1]}__ üçün\n"
     project = re.findall(r'projects?/(.*?)/files', link)[0]
     mirrors = f'https://sourceforge.net/settings/mirror_choices?' \
         f'projectname={project}&filename={file_path}'
@@ -236,8 +236,8 @@ def sourceforge(url: str) -> str:
     for mirror in info[1:]:
         name = re.findall(r'\((.*)\)', mirror.text.strip())[0]
         dl_url = f'https://{mirror["id"]}.dl.sourceforge.net/project/{project}/{file_path}'
-        cyber += f'[{name}]({dl_url}) '
-    return cyber
+        fast += f'[{name}]({dl_url}) '
+    return fast
 
 
 def osdn(url: str) -> str:
@@ -246,20 +246,20 @@ def osdn(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://.*osdn\.net\S+', url)[0]
     except IndexError:
-        cyber = "`OSDN linki aşkar edilmədi!`\n"
-        return cyber
+        fast = "`OSDN linki aşkar edilmədi!`\n"
+        return fast
     page = BeautifulSoup(
         requests.get(link, allow_redirects=True).content, 'lxml')
     info = page.find('a', {'class': 'mirror_link'})
     link = urllib.parse.unquote(osdn_link + info['href'])
-    cyber = f" __{link.split('/')[-1]}__ üçün\n"
+    fast = f" __{link.split('/')[-1]}__ üçün\n"
     mirrors = page.find('form', {'id': 'mirror-select-form'}).findAll('tr')
     for data in mirrors[1:]:
         mirror = data.find('input')['value']
         name = re.findall(r'\((.*)\)', data.findAll('td')[-1].text.strip())[0]
         dl_url = re.sub(r'm=(.*)&f', f'm={mirror}&f', link)
-        cyber += f'[{name}]({dl_url}) '
-    return cyber
+        fast += f'[{name}]({dl_url}) '
+    return fast
 
 
 def github(url: str) -> str:
@@ -267,18 +267,18 @@ def github(url: str) -> str:
     try:
         link = re.findall(r'\bhttps?://.*github\.com.*releases\S+', url)[0]
     except IndexError:
-        cyber = "`Heç bir GitHub Buraxılış əlaqəsi tapılmadı.`\n"
-        return cyber
-    cyber = ''
+        fast = "`Heç bir GitHub Buraxılış əlaqəsi tapılmadı.`\n"
+        return fast
+    fast = ''
     dl_url = ''
     download = requests.get(url, stream=True, allow_redirects=False)
     try:
         dl_url = download.headers["location"]
     except KeyError:
-        cyber += "`Xəta: Linki açmaq olmur`\n"
+        fast += "`Xəta: Linki açmaq olmur`\n"
     name = link.split('/')[-1]
-    cyber += f'[{name}]({dl_url}) '
-    return cyber
+    fast += f'[{name}]({dl_url}) '
+    return fast
 
 
 def androidfilehost(url: str) -> str:
