@@ -1,14 +1,14 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import os
 import time
 from datetime import datetime
 
 from userbot.cmdhelp import CmdHelp
-from userbot import CYBER_VERSION
+from userbot import FAST_VERSION
 from datetime import date
 from userbot import TEMP_DOWNLOAD_DIRECTORY, bot
 from userbot.events import register
