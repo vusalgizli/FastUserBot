@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import io
 import re
@@ -19,7 +19,7 @@ LANG = get_value("blacklist")
 
 # ████████████████████████████████ #
 
-SOYUSLER = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/forbidden.json').json()
+SOYUSLER = get('https://raw.githubusercontent.com/FastUserBot/deploy/main/forbidden.json').json()
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def on_new_message(event):
