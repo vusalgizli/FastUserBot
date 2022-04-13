@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import os
 from telethon.tl.types import InputMessagesFilterDocument
@@ -25,22 +25,22 @@ LANG = get_value("__plugin")
 @register(outgoing=True, pattern="^.ma[gğ]aza ?(.*)")
 async def magaza(event):
     plugin = event.pattern_match.group(1)
-    await event.edit('**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n`🔎 Plugin\'i axtarıram... Biraz gözlə`')
+    await event.edit('**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n`🔎 Plugin\'i axtarıram... Biraz gözlə`')
     split = plugin.split()
     if plugin == '':
         plugin = 'Son Yüklənən'
-        plugins = await event.client.get_messages('@TheCyberPlugin', limit=15, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@FastPlugins', limit=15, filter=InputMessagesFilterDocument)
     elif len(split) >= 1 and split[0] in ('random', 'rastgele'):
         plugin = 'Rastgele'
-        plugins = await event.client.get_messages('@TheCyberPlugin', limit=None, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@FastPlugins', limit=None, filter=InputMessagesFilterDocument)
         plugins = sample(plugins, int(split[1]) if len(split) == 2 else 5)
     else:
-        plugins = await event.client.get_messages('@TheCyberPlugin', limit=None, search=plugin, filter=InputMessagesFilterDocument)
-        random = await event.client.get_messages('@TheCyberPlugin', limit=None, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@FastPlugins', limit=None, search=plugin, filter=InputMessagesFilterDocument)
+        random = await event.client.get_messages('@FastPlugins', limit=None, filter=InputMessagesFilterDocument)
         random = choice(random)
         random_file = random.file.name
 
-    result = f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n**🔎 Axtarış:** `{plugin}`\n**🔢 Nəticə: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
+    result = f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**🔎 Axtarış:** `{plugin}`\n**🔢 Nəticə: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
     
     if len(plugins) == 0:
         result += f'**Bu barədə heçnə tapa bilmədim...**\n`{random_file}` __bəs bu plugini yükləmək istəyirsən?__'
@@ -63,13 +63,13 @@ async def sinstall(event):
     try:
         plugin = int(plugin)
     except:
-        return await event.edit('**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n**⚠️ Xəta:** `Xaiş edirəmki sadəcə say yazın əgər axtarış isdəsəniz .store yazın`')
+        return await event.edit('**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**⚠️ Xəta:** `Xaiş edirəmki sadəcə say yazın əgər axtarış isdəsəniz .store yazın`')
     
-    await event.edit('**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n`🔎 Plugin\'i getirirəm...`')
-    plugin = await event.client.get_messages('@TheCyberPlugin', ids=plugin)
-    await event.edit(f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n`✅ {plugin.file.name} plugini gətirildi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
+    await event.edit('**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n`🔎 Plugin\'i getirirəm...`')
+    plugin = await event.client.get_messages('@FastPlugins', ids=plugin)
+    await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n`✅ {plugin.file.name} plugini gətirildi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
-    await event.edit(f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n`✅ {plugin.file.name} uğurla yükləndi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
+    await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n`✅ {plugin.file.name} uğurla yükləndi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
     
     try:
         spec = importlib.util.spec_from_file_location(dosya, dosya)
@@ -77,7 +77,7 @@ async def sinstall(event):
         spec.loader.exec_module(mod)
     except Exception as e:
         os.remove("./userbot/modules/" + dosya)
-        return await event.edit(f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n**⚠️ Xəta:** `Plugin xətalıdır. {e}`\n**XAİŞ EDİRİK BUNU ADMİNLERE BİLDİRİN!**')
+        return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**⚠️ Xəta:** `Plugin xətalıdır. {e}`\n**XAİŞ EDİRİK BUNU ADMİNLERE BİLDİRİN!**')
 
     dosy = open(dosya, "r").read()
     if re.search(r"@tgbot\.on\(.*pattern=(r|)\".*\".*\)", dosy):
@@ -106,12 +106,12 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçün__ `.cyber {cmdhelp}` __yazınız.__')
+                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçün__ `.cyber {cmdhelp}` __yazınız.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**🇦🇿 C Y B Ξ R Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçÜN__ `.cyber {dosyaAdi}` __yazınız.__')
+                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçÜN__ `.cyber {dosyaAdi}` __yazınız.__')
 
             
 userbot.cmdhelp.CmdHelp('store').add_command(
