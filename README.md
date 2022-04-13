@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/a44cc6cb6eab362e771a7.jpg" width="500"></a>
+  <a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg" width="500"></a>
   <h1> C Y B Ξ R USΞRBOT 🇦🇿 </h1>
 </div>
 <p align="center">
