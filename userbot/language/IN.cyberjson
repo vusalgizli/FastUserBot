@@ -1,7 +1,7 @@
 {
     "LANGUAGE": "Indian",
     "LANGCODE": "in",
-    "AUTHOR": "@FVREED",
+    "AUTHOR": "@DeveloperSH",
     "STRINGS": {
         "__plugin": {
             "REPLY_FOR_PORT": "`Please give a file for Plugin-Port`",
@@ -29,15 +29,15 @@
             "ALREADY_DELETED": "`The Plugin file has already deleted.`",
             "NOT_FOUND_PLUGIN": "`Maybe there was such a plugin, maybe there wasn't. But it's definitely not right now.`",
             "PLUG_DELETED": "`Plugin deleted successfully!` '**Wait a while for your bot to start again.**",
-            "CYBER_PLUGIN_CAPTION": "This is a plugin of [C Y B Ξ R](https://t.me/TheCyberUserBot).",
+            "FAST_PLUGIN_CAPTION": "This is a plugin of [C Y B Ξ R](https://t.me/TheCyberUserBot).",
             "REPLY_PY_FILE": "`Please reply to a Python file!`",
             "ALREADY_INSTALLED": "`This plugin is already downloaded!\nI will not upload it again.`",
             "PLUGIN_SCANNING": "`The plugin is scanned...`\n`Wait a bit...`",
             "TEMP_DOWNLOAD": "__The module has been successfully downloaded!__\n__You can check the module.__\n__The plugin will not work when you restart the bot.__"
         },
-        "__cyber": {
-            "NEED_PLUGIN": "Please specify an C Y B Ξ R module name.",
-            "NEED_MODULE": "**C Y B Ξ R USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Use:** `.cyber <module name>`"
+        "__fast": {
+            "NEED_PLUGIN": "Please specify an F A S T module name.",
+            "NEED_MODULE": "** F A S T USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Use:** `.fast <module name>`"
         },
         "__helpme": {
             "NO_BOT": "`The Bot doesn't work! Please set the Bot token and Username correctly. Module aborted.`"
@@ -53,7 +53,7 @@
             "INVALID_MEDIA": "```Invalid media.```",
             "PRIVATE": "`This command cannot be used in a private message!`",
             "EKLE": "`Added successfully`",
-            "BRAIN": "`Error! I can't do this to the C Y B Ξ R Admin.`",
+            "BRAIN": "`Error! I can't do this to the F A S T Admin.`",
             "BANNING": "`User banning...`",
             "ALREADY_GBANNED": "`Error! User already globally banned.`",
             "GBANNED_REASON": "`The user is banned globally!`\n**Cause:**",
@@ -115,7 +115,7 @@
             "ALREADY": "`It looks like %s is already changing automatically. `",
             "SETTING": "`%s setting...`",
             "BIO": "📅 Date: {tarih} | ⌚️ Time: {saat} | ",
-            "NICK": "@TheCyberUserBot",
+            "NICK": "@FastSuppTheCyberUserBot",
             "SETTED": "`%s set :)`",
             "NAME": "⏰%s"
         },
@@ -151,8 +151,8 @@
             "EFECTING": "`Applying effect...`",
             "NOT_FOUND_EFECT": "**The effect you specified was not found! ** `Effects you can use:\" çocuk/robot/earrape/fast/interference/echo`",
             "NEED_VIDEO": "`Please reply to a Video!`",
-            "WITH_CYBER": "`Effect applied with` @TheCyberUserbot",
-            "WITH_CYBER_GIF": "`Turned to Gif with` @TheCyberUserBot",
+            "WITH_FAST": "`Effect applied with` @TheCyberUserbot",
+            "WITH_FAST_GIF": "`Turned to Gif with` @TheCyberUserBot",
             "CONVERTING_TO_GIF": "Turning to gif ...",
             "UPLOADING_GIF": "` Loading Gif ... `",
             "ERROR": "I couldn't turn it into a gif :/"
@@ -175,9 +175,9 @@
             "CANNOT_EMPTY": "Plugin message cannot be empty.",
             "SETTED": "Your message (`{msj}`) has been set for Plugin (`{plu}`)"
         },
-        "cyberlangs": {
+        "fastlangs": {
             "SALIVE": "`Alive message with Gif.`",
-            "PROHIBITED_COMMAND": "```You cannot do this in the C Y B Ξ R Support 🇦🇿 group.```",
+            "PROHIBITED_COMMAND": "```You cannot do this in the F A S T Support group.```",
             "CHATBOT_DEACTIVE": "```Chatbot has been shut down.```",
             "CHATBOT_ACTIVE": "```Chatbot is active.```",
             "CHATBOT_MANUAL": "```**Usage:**\n.chatbot <on/off>```"
@@ -335,11 +335,11 @@
             "SLEEPING": "`I sleep with the snorkhead ...`",
             "GOODMORNIN_YALL": "`Good Morning!`",
             "GOODBYE_MFRS": "`I'll see you... *Windows XP shutdown sound* `",
-            "RESTARTING": "**C Y B Ξ R:**\n`The bot is restarting..`",
-            "SUPPORT_GROUP": "[From Here](http://t.me/TheCyberSupport) you can contact our support group.",
-            "CREATOR": "This bot was developed by\n[Luciferxz](https://t.me/Luciferxz)",
-            "README": "[C Y B Ξ R README.md](https://github.com/CyberUserBot/CyberUserBot/blob/master/README.md)",
-            "REPO": "[C Y B Ξ R Repo](https://github.com/CyberUserBot/CyberUserBot)",
+            "RESTARTING": "**F A S T:**\n`The bot is restarting..`",
+            "SUPPORT_GROUP": "[From Here](http://t.me/FastSupp) you can contact our support group.",
+            "CREATOR": "This bot was developed by\n[SAKO](https://t.me/DeveloperSH)",
+            "README": "[F A S T README.md](https://github.com/FastUserBot/FastUserBot/blob/master/README.md)",
+            "REPO": "[F A S T Repo](https://github.com/FastUserBot/FastUserBot)",
             "CHECK_LOGS": "`Check userbot logs for decoded message!`"
         },
         "notes": {
@@ -485,9 +485,9 @@
         "song": {
             "GIVE_ME_SONG": "** Give me a song! ** ` Usage: .deez song name/youtube/spotify/soundcloud `",
             "SEARCHING": "`Song searching...`",
-            "BLOCKED_DEEZER": "`Mmmh, I think you blocked` @DeezerMusicBot `Please open the block.`",
+            "BLOCKED_DEEZER": "`Mmmh, I think you blocked` @CreatorMusicAZBot `Please open the block.`",
             "NOT_FOUND": "` The song you were looking for was not found! I'm sorry.`",
-            "UPLOADED_WITH": "Upload with @TheCyberUserbot",
+            "UPLOADED_WITH": "Upload with @FastSupp",
             "USAGE": "`Usage:` `.song song name/youtube url/spotify url`",
             "SEARCHING_SPOT": "Song searching and downloading please wait!",
             "DOWNLOADED": "`Download is successfully please wait.`",
@@ -541,7 +541,7 @@
             "NOT_FOUND": "folder not found.",
             "GIT_ERROR": "Git error!",
             "NOT_GIT": "folder does not look like a git repo. \nBut you can solve this problem by forcibly updating the bot with the .update now command.",
-            "INVALID_BRANCH": "**[UPDATER]: * * ` I think you've modified the C Y B Ξ R bot and you're using your own branch.\nThis confuses the Updater,\nWhere will the update be pulled?\nPlease use the C Y B Σ R bot from the official repo.`",
+            "INVALID_BRANCH": "**[UPDATER]: * * ` I think you've modified the F A S T bot and you're using your own branch.\nThis confuses the Updater,\nWhere will the update be pulled?\nPlease use the F A S T bot from the official repo.`",
             "UPDATE": "\n`Your bot` **completely up to date!** `Branch:` **{}**\n",
             "WAS_UPDATE": "New update available for ** {}!\n\nChanges: **\n ` {} `",
             "BIG": "`The change list is too large, you should display it as a file.`",
