@@ -64,9 +64,9 @@ async def sudosil(event):
     op = re.search(str(id), str(sudosiyahisi))
     if op:
       i = ""
-      faridxz = sudosiyahisi.split(" ")
-      faridxz.remove(str(id))
-      i += str(faridxz)
+      sakoxz = sudosiyahisi.split(" ")
+      sakoxz.remove(str(id))
+      i += str(sakoxz)
       x = i.replace("[", "")
       xx = x.replace("]", "")
       xxx = xx.replace(",", "")
