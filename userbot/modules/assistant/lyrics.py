@@ -1,11 +1,10 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
-# Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# Get 
+# Osdur
+# Ala
 
 from telethon import events
 from telethon.events import *
-from . import tgbot, CYBER_VERSION, DEFAULT_NAME
+from . import tgbot, FAST_VERSION, DEFAULT_NAME
 import requests 
 import os
 
@@ -29,5 +28,5 @@ def sozler(mahni_adi):
         fin = axtar(mahni_adi)
         text = f'**🎶 {mahni_adi} adlı mahnının sözləri:**\n\n\n\n'
         text += f'`{fin["lyrics"]}`'
-        text += '\n\n\n**Powered by @CyberSpaceAZ.**'
+        text += '\n\n\n**Rəsmi ❗ @FastSupp.**'
         return text
