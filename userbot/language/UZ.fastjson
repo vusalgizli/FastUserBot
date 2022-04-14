@@ -176,7 +176,7 @@
             "CANNOT_EMPTY": "Plugin xabari bo'sh bo'lishi mumkin emas.",
             "SETTED": "Plugin(`{}`) uchun xabaringiz(`{}`) sozlandı."
         },
-        "cyberlangs": {
+        "fastlangs": {
             "SALIVE": "`Gif bilan jonli xabar.`",
             "PROHIBITED_COMMAND": "```Siz buni C Y B E R qo'llab quvvatlash guruhida qila olmaysiz.```",
             "CHATBOT_DEACTIVE": "```Chatbot muvaffaqiyatli yopildi.```",
