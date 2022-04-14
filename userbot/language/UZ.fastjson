@@ -523,7 +523,7 @@
             "QUERY": "So'rov",
             "RESULT": "Natija",
             "NOT_FOUND": "Biron nima topilmadi😔",
-            "EXAMPLE": "`Foydalanish uchun .cyber pip buyruqni bajaring`"
+            "EXAMPLE": "`Foydalanish uchun .fast pip buyruqni bajaring`"
         },
         "time": {
             "CLOCK": "Bu yerda soat",
@@ -542,7 +542,7 @@
             "NOT_FOUND": "Topilmadi.",
             "GIT_ERROR": "Git xatosi!",
             "NOT_GIT": "papka git omboriga o'xshamaydi. \nAmmo bu muammoni botni .update now buyrug'i bilan kuch bilan yangilash orqali hal qilishingiz mumkin..",
-            "INVALID_BRANCH": "**[UPDATER]:**` O'ylaymanki siz Cyber yuklashingizni o'zgartirgansiz va o'zingizning filialingizdan foydalanasiz.\nUshbu holat yangilanuvchini chalkashtirib yuboradi,\nYangilanish qayerdan olinadi?\nIltimos, rasmiy repodan Fast botidan foydalaning.`",
+            "INVALID_BRANCH": "**[UPDATER]:**` O'ylaymanki siz FAST yuklashingizni o'zgartirgansiz va o'zingizning filialingizdan foydalanasiz.\nUshbu holat yangilanuvchini chalkashtirib yuboradi,\nYangilanish qayerdan olinadi?\nIltimos, rasmiy repodan Fast botidan foydalaning.`",
             "UPDATE": "\n`Botingiz:` **butunlay yangi!** `Daraja:` **{}**\n",
             "WAS_UPDATE": "**{} uchun yangi yangilanish mavjud!\n\nO'zgarishlar:**\n`{}`",
             "BIG": "`O'zgarishlar ro'yxati juda katta uni fayl sifatida ko'rishingiz kerak.`",
