@@ -259,7 +259,7 @@
             "NEED_NUMBER": "Please indicate the order of the image. Example:",
             "WORKING": "`The gallery is already working.`",
             "STARTED": "`The gallery is working`",
-            "NEED_PHOTO": "You need to add photos for the gallery work. If you do not know how to add it, you may know about use with the .cyber galeri",
+            "NEED_PHOTO": "You need to add photos for the gallery work. If you do not know how to add it, you may know about use with the .fast galeri",
             "STOPPED": "`The Gallery is stopped!`",
             "ALREADY_STOP": "`Gallery isn't working anyway. `",
             "INVALID": "**Unknown command** Usage:\n\nAdd a photo to the Gallery: `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`\nSee the gallery list: `.galeri liste `\nDeleting an ordinary photograph: `.galeri sil <number>`"
@@ -522,7 +522,7 @@
             "QUERY": "Query",
             "RESULT": "Result",
             "NOT_FOUND": "Nothing found",
-            "EXAMPLE": "`Use the .cyber pip command to see an example. `"
+            "EXAMPLE": "`Use the .fast pip command to see an example. `"
         },
         "time": {
             "CLOCK": "Time here",
