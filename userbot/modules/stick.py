@@ -44,7 +44,7 @@ async def stick(event):
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
-                caption=f"@TheCyberUserBot ilə stickerə çevrildi",
+                caption=f"@FastUserBot ilə stickerə çevrildi",
             )
             await event.client.send_read_acknowledge(conv.chat_id)
 
