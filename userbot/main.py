@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import importlib
 from importlib import import_module
@@ -16,7 +16,7 @@ import asyncio
 from telethon.tl.types import InputMessagesFilterDocument
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from telethon.tl.functions.channels import GetMessagesRequest
-from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, CYBER_VERSION, PATTERNS, BOTLOG_CHATID, BOTLOG, StartTime
+from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, FAST_VERSION, PATTERNS, BOTLOG_CHATID, BOTLOG, StartTime
 from .modules import ALL_MODULES
 import userbot.modules.sql_helper.mesaj_sql as MSJ_SQL
 import userbot.modules.sql_helper.galeri_sql as GALERI_SQL
@@ -34,9 +34,9 @@ import userbot.cmdhelp
 from userbot import DEFAULT_NAME, SAHIB_ID, SON_GORULME
 from time import time
 import userbot.events
-from userbot.events import start_cyber_assistant
+from userbot.events import start_fast_assistant
 
-CYBER_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
+FAST_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
 QRUP = BOTLOG_CHATID
 
 def cyber_time(seconds, short=True):
@@ -50,19 +50,19 @@ def cyber_time(seconds, short=True):
     return tmp[:-2] + " əvvəl"
 
 notafk = round(time() - SON_GORULME)
-noe = cyber_time(notafk)
-noe2 = cyber_time(notafk, False)
+noe = FAST_time(notafk)
+noe2 = fast_time(notafk, False)
 NO_AFK_TIME = noe2
 
 ALIVE_STR = [
-    "`C Y B Ξ R` {mention}-un `əmirlərinə hazırdır...`",
-    "`Hey` {mention} `narahat olma C Y B Ξ R əla işləyir...`",
-    "✨ `C Y B Ξ R` **{mention}**-in `əmirlərinə hazırdır...`",
-    "⛈️ {mention} `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
+    "{mention} ḞḀṠṮ ṲṠḔṘḂṎṮ - sənin `əmirlərinə hazırdır...`",
+    "`Salam` {mention} `𝐹𝒜𝒮𝒯 𝒰𝒮𝐸𝑅𝐵𝒪𝒯 işlək vəziyyətdədir...`",
+    "`ḞḀṠṮ ṲṠḔṘḂṎṮ` **{mention}**-in `əmirlərinə hazırdır...`",
+    "{mention} `ḞḀṠṮ ṲṠḔṘḂṎṮ 𝘐̇𝘚̧𝘓Ə𝘠𝘐̇𝘙...`",
 ]
 
 LOGO_STR = [
-    "https://telegra.ph/file/c3e75eccaeb7f56dfae89.mp4",
+    "https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg",
 ]
 
 
@@ -75,10 +75,10 @@ KICKME_STR = [
 
 NON_AFK = [
     f"`Artıq AFK deyiləm.`",
-    f"{CYBER_NAME} `artıq AFK deyil.`",
-    f"{CYBER_NAME} `buradadır!`",
-    f"{CYBER_NAME} `gəldi!✨`",
-    f"{CYBER_NAME} `artıq sizinlədir!`",
+    f"{FAST_NAME} `artıq AFK deyil.`",
+    f"{FAST_NAME} `buradadır!`",
+    f"{FAST_NAME} `gəldi!✨`",
+    f"{FAST_NAME} `artıq sizinlədir!`",
 ]
 
 DIZCILIK_STR = [
