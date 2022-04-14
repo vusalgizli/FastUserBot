@@ -1,7 +1,11 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
-# Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# Reponu şifrələ
+# Repoda İnstallerdə Şifrəlidi❗
+# Sikdir başqa qapıya 😃
+
+    fastrobot = 'Hkxo89dbHNmsy9G8J4nmYnma1G3b2zSjnlHhapNkJSK27Akx='
+    fastrobot2 = fastrobot.encode('sikdir')
+    fastbytes = base64.b64decode(fastrobot2)
+    fastbt = fastbytes.decode('sikdir')
 
 if __name__ == '__main__':
     from userbot import main
