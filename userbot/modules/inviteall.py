@@ -14,7 +14,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
-from userbot.events import register as cyber
+from userbot.events import register as fast
 from userbot import bot, BLACKLIST_CHAT
 
 # ---------------------------------- #
@@ -91,7 +91,7 @@ async def get_users(event):
     async for user in event.client.iter_participants(farid.full_chat.id):
         try:
             if error.startswith("Too"):
-                return await cyber.edit(
+                return await fast.edit(
                     f"**F A S T**\n `Böyük ehtimalla spam olmusunuz @spambot-a /start yazın.` \nXəta: \n`{error}` \n\n `{s}` istifadəçi əlavə edildi.\n `{f}` istifadəçini əlavə etmək olmadı."
                 )
             await event.client(
