@@ -18,7 +18,7 @@ async def play_store(message):
             await message.edit("`Xahiş edirik bir proqram adı yazın. Məsələn: ``.playstore telegram`")
             return
             
-        remove_cyber = app_name.split(' ')
+        remove_fast = app_name.split(' ')
         final_name = '+'.join(remove_cyber)
         page = requests.get(f"https://play.google.com/store/search?q={final_name}&c=apps")
         soup = bs4.BeautifulSoup(page.content, 'lxml', from_encoding='utf-8')
