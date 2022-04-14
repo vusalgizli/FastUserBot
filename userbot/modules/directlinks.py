@@ -17,7 +17,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(cyber=True, pattern=r"^\.direct(?: |$)([\s\S]*)")
+@register(fast=True, pattern=r"^\.direct(?: |$)([\s\S]*)")
 async def directlinks(request):
     """ FastUserBot """
     await request.edit("`Hazırlanır biraz gözləyin...`")
@@ -34,7 +34,7 @@ async def directlinks(request):
     links = re.findall(r'\bhttps?://.*\.\S+', mesaj)
     if not links:
         fast = "`Bağışlayın, heç nə tapa bilmədim!`"
-        await request.edit(cyber)
+        await request.edit(fast)
     for link in links:
         if 'drive.google.com' in link:
             fast += gdrive(link)
