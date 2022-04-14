@@ -402,7 +402,7 @@ async def _(event):
         )	
 	
 @register(outgoing=True, pattern="^.sendbot (.*)")
-async def sendbot(cyber):
+async def sendbot(fast):
     if fast.fwd_from:
         return
     chat = str(fast.pattern_match.group(1).split(' ', 1)[0])
