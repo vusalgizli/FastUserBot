@@ -7,7 +7,7 @@ from covid import Covid
 from userbot.cmdhelp import CmdHelp 
 from userbot.events import register
 
-@register(cyber=True, pattern="^.covid (.*)")
+@register(fast=True, pattern="^.covid (.*)")
 async def corona(event):
     await event.edit("`Məlumatlar alınır...`")
     country = event.pattern_match.group(1)
