@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from . import LANGUAGE, LOGS, bot, PLUGIN_CHANNEL_ID
 from json import loads, JSONDecodeError
@@ -13,7 +13,7 @@ LOGS.info("The language file is being downloaded..")
 LANGUAGE_JSON = None
 
 for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
-    if ((len(dil.file.name.split(".")) >= 2) and (dil.file.name.split(".")[1] == "cyberjson")):
+    if ((len(dil.file.name.split(".")) >= 2) and (dil.file.name.split(".")[1] == "fastjson")):
         if path.isfile(f"./userbot/language/{dil.file.name}"):
             try:
                 LANGUAGE_JSON = loads(open(f"./userbot/language/{dil.file.name}", "r").read())
@@ -21,9 +21,9 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
                 dil.delete()
                 remove(f"./userbot/language/{dil.file.name}")
 
-                if path.isfile("./userbot/language/DEFAULT.cyberjson"):
+                if path.isfile("./userbot/language/DEFAULT.fastjson"):
                     LOGS.warn("Default dil istifadə edilir...")
-                    LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.cyberjson", "r").read())
+                    LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.fastjson", "r").read())
                 else:
                     raise Exception("Your language file is invalid")
         else:
@@ -32,23 +32,23 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
                 LANGUAGE_JSON = loads(open(DOSYA, "r").read())
             except JSONDecodeError:
                 dil.delete()
-                if path.isfile("./userbot/language/DEFAULT.cyberjson"):
+                if path.isfile("./userbot/language/DEFAULT.fastjson"):
                     LOGS.warn("The default language file is used..")
-                    LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.cyberjson", "r").read())
+                    LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.fastjson", "r").read())
                 else:
                     raise Exception("Your language file is invalid")
         break
 
 if LANGUAGE_JSON == None:
-    if path.isfile(f"./userbot/language/{LANGUAGE}.cyberjson"):
+    if path.isfile(f"./userbot/language/{LANGUAGE}.fastjson"):
         try:
-            LANGUAGE_JSON = loads(open(f"./userbot/language/{LANGUAGE}.cyberjson", "r").read())
+            LANGUAGE_JSON = loads(open(f"./userbot/language/{LANGUAGE}.fastjson", "r").read())
         except JSONDecodeError:
             raise Exception("Invalid json file")
     else:
-        if path.isfile("./userbot/language/DEFAULT.cyberjson"):
+        if path.isfile("./userbot/language/DEFAULT.fastjson"):
             LOGS.warn("Default dil faylı istifadə edilir...")
-            LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.cyberjson", "r").read())
+            LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.fastjson", "r").read())
         else:
             raise Exception(f"Didn't find {LANGUAGE} file")
 
