@@ -67,8 +67,8 @@ async def echosil(event):
     else:
         await event.edit("`Echo siyahısından silə bilməyim üçün bir istifadəçinin mesajına cavab verin.`")
 
-@register(cyber=True, pattern=r"^\.echolist(?: |$)(.*)")
-@register(cyber=True, pattern="^.echosiyahi ?(.*)")
+@register(fast=True, pattern=r"^\.echolist(?: |$)(.*)")
+@register(fast=True, pattern="^.echosiyahi ?(.*)")
 async def echosiyah(event):
     if event.fwd_from:
         return
