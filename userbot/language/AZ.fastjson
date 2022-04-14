@@ -30,7 +30,7 @@
             "ALREADY_DELETED": "`Plugin faylı artıq silinib.`",
             "NOT_FOUND_PLUGIN": "`Belə bir plugin bəlkə var idi, bəlkədə yox. Ancaq hazırda olmadığı dəqiqdir.`",
             "PLUG_DELETED": "`Plugin uğurla silindi!` **Botunuz avtomatik yenidən başladılacaq.**",
-            "CYBER_PLUGIN_CAPTION": "Bu [F A S T](https://t.me/FastSupp) pluginidir.",
+            "FAST_PLUGIN_CAPTION": "Bu [F A S T](https://t.me/FastSupp) pluginidir.",
             "REPLY_PY_FILE": "`Xahiş edirəm bir Python faylına cavab verin!`",
             "ALREADY_INSTALLED": "`Bu plugin onsuzda yüklənib!\nOnu təkrar yükləməyəcəyəm.`",
             "PLUGIN_SCANNING": "`Plugin skan edilir...`\n`Biraz gözləyin...`",
@@ -564,7 +564,7 @@
             "QUERY": "Sorğu",
             "RESULT": "Nəticə",
             "NOT_FOUND": "Heçnə tapılmadı",
-            "EXAMPLE": "`Bir nümunə görmək üçün .cyber pip əmrindən istifadə edin.`"
+            "EXAMPLE": "`Bir nümunə görmək üçün .fast pip əmrindən istifadə edin.`"
 
         },
 
