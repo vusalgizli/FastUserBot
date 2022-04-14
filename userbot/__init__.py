@@ -489,7 +489,7 @@ if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None:
 else:
     app = None
      
-async def cyberasistan():
+async def fastasistan():
     if BOT_TOKEN:
         return
     await bot.start()
