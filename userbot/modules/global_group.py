@@ -69,7 +69,7 @@ async def get_user_from_id(user, event):
 
   
 
-@register(cyber=True, pattern="^.gpromote(?: |$)(.*)")
+@register(fast=True, pattern="^.gpromote(?: |$)(.*)")
 async def gben(userbot):
     mb = event = userbot
     i = 0
@@ -121,7 +121,7 @@ async def gben(userbot):
     )
   
   
-@register(cyber=True, pattern="^.gdemote(?: |$)(.*)")
+@register(fast=True, pattern="^.gdemote(?: |$)(.*)")
 async def gben(userbot):
     mb = event = userbot
     i = 0
