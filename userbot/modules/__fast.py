@@ -5,18 +5,18 @@
 
 from userbot.cmdhelp import CmdHelp
 from userbot import cmdhelp
-from userbot import CMD_HELP, CYBER_EMOJI
+from userbot import CMD_HELP, FAST_EMOJI
 from userbot.events import register
 
 # ██████ LANGUAGE CONSTANTS ██████ #
 
 from userbot.language import get_value
-LANG = get_value("__cyber")
+LANG = get_value("__fast")
 
 # ████████████████████████████████ #
 
-@register(cyber=True, pattern="^.fast(?: |$)(.*)")
-async def cyber(event):
+@register(fast=True, pattern="^.fast(?: |$)(.*)")
+async def fast(event):
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
@@ -28,7 +28,7 @@ async def cyber(event):
         sayfa = [sorted(list(CMD_HELP))[i:i + 5] for i in range(0, len(sorted(list(CMD_HELP))), 5)]
         
         for i in sayfa:
-            string += f'{CYBER_EMOJI} '
+            string += f'{FAST_EMOJI} '
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
