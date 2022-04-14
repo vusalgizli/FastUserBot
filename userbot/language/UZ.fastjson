@@ -54,7 +54,7 @@
             "INVALID_MEDIA": "```Mediya yaroqsiz.```",
             "PRIVATE": "`Ushbu buyruqni shaxsiy xabarda ishlatib bolmaydi!`",
             "EKLE": "`Muvaffaqiyatli yuklandi`",
-            "BRAIN": "`Xato!  Men buni Cyber rasmiysiga qila olmayman.`",
+            "BRAIN": "`Xato!  Men buni Fast rasmiysiga qila olmayman.`",
             "BANNING": "`Foydalanuvchiga taqiq qoyilmoqda...`",
             "ALREADY_GBANNED": "`Xato! Global miqyosda foydalanuvchi allaqachon taqiqlangan.`",
             "GBANNED_REASON": "`Foydalanuvchi global miqyosda taqiqlangan!`\n**Sabab:**",
@@ -252,7 +252,7 @@
         },
         "galeri": {
             "ADDED_LIST": "`Surat navbatga qo'yildi.`",
-            "INVALID_URL": "`Siz yaroqsiz rasmning URL manzilini kiritdingiz.  Agar siz foydalanish haqida hech qanday tasavvurga ega bo'lmasangiz: ` `.cyber galeri` `yozing.`",
+            "INVALID_URL": "`Siz yaroqsiz rasmning URL manzilini kiritdingiz.  Agar siz foydalanish haqida hech qanday tasavvurga ega bo'lmasangiz: ` `.fast galeri` `yozing.`",
             "EXAMPLE": "`Iltimos hohlagan bir rasm manziliga kiring. Misol uchun: ` `.galeriyaga qo'shish https://i.resimyukle.xyz/7Qbbc9.jpeg`",
             "LIST": "Siz navbatga qo'yilgan fotosuratlar",
             "REMOVED": "**Keyingi rasm muvaffaqiyatli olib tashlandi**",
