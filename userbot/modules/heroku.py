@@ -20,7 +20,7 @@ from userbot import (
     WHITELIST,
     MYID,
     BOTLOG_CHATID,
-    CYBER_VERSION,
+    FAST_VERSION,
     bot
 )
 
@@ -181,7 +181,7 @@ async def dyno_usage(dyno):
     minutes_remaining = remaining_quota / 60
     hours = math.floor(minutes_remaining / 60)
     minutes = math.floor(minutes_remaining % 60)
-    cybergun = math.floor(hours / 24) 
+    fastgun = math.floor(hours / 24) 
 
     """ - Current - """
     App = result['apps']
@@ -200,7 +200,7 @@ async def dyno_usage(dyno):
 
     return await dyno.edit(
                 "╭┈─╼━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│                  **CYBΞRUSERBOT DYNO**  \n"
+                "│                  **ғᴀsᴛ ᴜsᴇʀʙᴏᴛ ᴅʏɴᴏ**  \n"
                 "├┈─╼━━━━━━━━━━━━━━╾─┈╯ \n"
                 "│ Bu ay üçün istifadə etdiyiniz dyno saatı: \n"
                 f"│  ▸ `{AppHours}` saat - `{AppMinutes}` dəqiqə. \n"
@@ -210,13 +210,13 @@ async def dyno_usage(dyno):
                 "│ Bu ay üçün qalan dyno saatı: \n"
                 f"│  ▸ `{hours}` saat - `{minutes}` dəqiqə. \n"
                 f"│  ▸ Faizlə: `{percentage}%` \n"
-                f"│  ▸ `{cybergun}` gün sonra dyno bitəcək. \n"
+                f"│  ▸ `{fastgun}` gün sonra dyno bitəcək. \n"
                 "╰┈──────────────────┈╯ \n"
                 f"🧞‍♂️ **Sahibim:** `{istifadeci.first_name}` \n"
             )
 
 
-@register(cyber=True, pattern=r"^.hlog")  # cr: @fvreed
+@register(fast=True, pattern=r"^.hlog")  # cr: @DeveloperSH
 async def _(dyno):
     try:
         Heroku = heroku3.from_key(HEROKU_APIKEY)
@@ -226,16 +226,16 @@ async def _(dyno):
             "`Xahiş edirəm biraz gözləyin..`"
         )
     await dyno.edit("`Log göndərilir..`")
-    with open("cyberlog.txt", "w") as log:
+    with open("fastlog.txt", "w") as log:
         log.write(app.get_log())
     await dyno.client.send_file(
         dyno.chat_id,
-        "cyberlog.txt",
+        "fastlog.txt",
         reply_to=dyno.id,
-        caption="[C Y B Ξ R](https://t.me/TheCyberUserBot) Heroku Log.",
+        caption="[ғᴀsᴛ ᴜsᴇʀʙᴏᴛ](https://t.me/FastUserBot) Heroku Log.",
     )
     await dyno.delete()
-    return os.remove("cyberlog.txt")
+    return os.remove("fastlog.txt")
 
 
 CmdHelp('heroku').add_command(
