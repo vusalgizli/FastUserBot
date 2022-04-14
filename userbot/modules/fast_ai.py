@@ -1,9 +1,5 @@
 # Copyright (C) 2021-2022 FastUserBot
-# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
-# Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
-
-# modul cybere mexsusdur
+# AY UÇAN QUŞLAR
 
 import os
 import requests
@@ -21,20 +17,20 @@ LANG = get_value("fastlangs")
 
 # ------------------------------------------------------ #
 #FAST_AI_DE = sb(os.environ.get("FAST_AI_DE", "False"))#
-CYBER_AI_KEY = "82cb8992-fe1e-4924-8299-7f55dd6e40c3"    
+FAST_AI_KEY = "82cb8992-fe1e-4924-8299-7f55dd6e40c3"    
 # ------------------------------------------------------ #
 
-@register(cyber=True, pattern=r"^\.scan(?: |$)(.*)")
-@register(cyber=True, pattern=r"^\.detect(?: |$)(.*)")
+@register(fast=True, pattern=r"^\.scan(?: |$)(.*)")
+@register(fast=True, pattern=r"^\.detect(?: |$)(.*)")
 async def detect(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await event.edit(LANG["PROHIBITED_COMMAND"])
     reply = await event.get_reply_message()
     if not reply:
         return await event.edit("`Xahiş edirəm bir mediaya cavab verin!`")
-    cyber = await event.edit("`Fayl endirilir...`")
+    fast = await event.edit("`Fayl endirilir...`")
     media = await event.client.download_media(reply)
-    cyber2 = await event.edit("`Media skan edilir...`")
+    fast2 = await event.edit("`Media skan edilir...`")
     r = requests.post(
         "https://api.deepai.org/api/nsfw-detector",
         files={
