@@ -5,12 +5,12 @@
 
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from userbot.events import register as cyber
+from userbot.events import register as fast
 from userbot.cmdhelp import CmdHelp
 from userbot import bot
 
 
-@cyber(outgoing=True, pattern="^.tagall ?(.*)$")
+@fast(outgoing=True, pattern="^.tagall ?(.*)$")
 async def _(event):
     if event.fwd_from:
         return
@@ -22,7 +22,7 @@ async def _(event):
     await event.delete()
 
 
-@cyber(outgoing=True, pattern="^.admin ?(.*)$")
+@fast(outgoing=True, pattern="^.admin ?(.*)$")
 async def _(event):
     if event.fwd_from:
         return
