@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import sys
 import datetime
@@ -20,7 +20,7 @@ import inspect
 from traceback import format_exc
 from telethon import events
 import importlib
-from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS, JARVIS, MYID, SUDO_ID, tgbot
+from userbot import bot, BOTLOG_CHATID, FAST_VERSION, LOGSPAMMER, PATTERNS, JARVIS, MYID, SUDO_ID, tgbot
 
 
 def register(**args):
@@ -28,7 +28,7 @@ def register(**args):
     disable_edited = args.get('disable_edited', False)
     groups_only = args.get('groups_only', False)
     insecure = args.get("insecure", False)
-    cyber = args.get('cyber', False)
+    fast = args.get('fast', False)
     jarvis = args.get('jarvis', False)
     trigger_on_fwd = args.get('trigger_on_fwd', False)
     trigger_on_inline = args.get('trigger_on_inline', False)
@@ -58,7 +58,7 @@ def register(**args):
     if "trigger_on_inline" in args:
         del args['trigger_on_inline']
         
-    if 'cyber' in args:
+    if 'fast' in args:
         del args['cyber']
         args['outgoing'] = True      
         
@@ -104,8 +104,8 @@ def register(**args):
 
                     eventtext = str(check.text)
                     xetametni = str(sys.exc_info()[1])
-                    text = "**=== ✘ C Y B Ξ R ERROR LOG ✘ ===**\n"
-                    link = "[CYBΞR Dəstək Qrupuna](https://t.me/TheCyberSupport)"
+                    text = "**=== F A S T LOG  ===**\n"
+                    link = "[FAST Dəstək Qrupuna](https://t.me/FastSupp)"
                     if len(eventtext)<10:
                         text += f"\n**⚙ Səbəb:** `{eventtext}`\n"
                     text += "\nℹ️ **Bir xəta baş verdi❗️**"
@@ -118,7 +118,7 @@ def register(**args):
                     ftext += "\nGizliliyiniz bizim üçün önəmlidir,"
                     ftext += "\nBurada hər hansı bir gizli məlumat olarsa"
                     ftext += "\nBu xəta bildirişi olmaz, heç kəs sizin məlumatlarınızı oğurlaya bilməz.\n"
-                    ftext += "--------C Y B Ξ R ERROR LOG--------\n"
+                    ftext += "--------F A S T LOG--------\n"
                     ftext += "\nTarix: " + date
                     ftext += "\nQrup ID: " + str(check.chat_id)
                     ftext += "\nGöndərənin ID: " + str(check.sender_id)
@@ -128,9 +128,9 @@ def register(**args):
                     ftext += str(sys.exc_info()[1])
                     ftext += "\n\n\nDaha ətraflı:\n"
                     ftext += str(format_exc())
-                    ftext += "\n\n--------C Y B Ξ R ERROR LOG--------"
+                    ftext += "\n\n--------F A S T  LOG--------"
                     ftext += "\n\n================================\n"
-                    ftext += f"====== ⚠️ Version : {CYBER_VERSION} ======\n"
+                    ftext += f"====== ⚠️ Version : {FAST_VERSION} ======\n"
                     ftext += "================================"
 
                     command = "git log --pretty=format:\"%an: %s\" -5"
@@ -146,7 +146,7 @@ def register(**args):
 
                     ftext += result
 
-                    file = open("cyber.log", "w+")
+                    file = open("fast.log", "w+")
                     file.write(ftext)
                     file.close()
 
@@ -156,10 +156,10 @@ def register(**args):
                         except:
                             pass
                     await check.client.send_file(send_to,
-                                                 "cyber.log",
+                                                 "fast.log",
                                                  caption=text)
 
-                    remove("cyber.log")
+                    remove("fast.log")
             else:
                 pass
         if not disable_edited:
@@ -171,7 +171,7 @@ def register(**args):
     return decorator
 
 
-def start_cyber_assistant(shortname):
+def start_fast_assistant(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
