@@ -29,7 +29,7 @@
             "ALREADY_DELETED": "`The Plugin file has already deleted.`",
             "NOT_FOUND_PLUGIN": "`Maybe there was such a plugin, maybe there wasn't. But it's definitely not right now.`",
             "PLUG_DELETED": "`Plugin deleted successfully!` '**Wait a while for your bot to start again.**",
-            "FAST_PLUGIN_CAPTION": "This is a plugin of [C Y B Ξ R](https://t.me/TheCyberUserBot).",
+            "FAST_PLUGIN_CAPTION": "This is a plugin of [F A S T](https://t.me/FastSupp).",
             "REPLY_PY_FILE": "`Please reply to a Python file!`",
             "ALREADY_INSTALLED": "`This plugin is already downloaded!\nI will not upload it again.`",
             "PLUGIN_SCANNING": "`The plugin is scanned...`\n`Wait a bit...`",
@@ -115,7 +115,7 @@
             "ALREADY": "`It looks like %s is already changing automatically. `",
             "SETTING": "`%s setting...`",
             "BIO": "📅 Date: {tarih} | ⌚️ Time: {saat} | ",
-            "NICK": "@FastSuppTheCyberUserBot",
+            "NICK": "@FastSupp",
             "SETTED": "`%s set :)`",
             "NAME": "⏰%s"
         },
