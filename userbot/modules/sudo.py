@@ -3,7 +3,9 @@
 # Please read the GNU General Public License v3.0 in
 # <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 # 
-# oğurlayan peysərdi #
+# Qəhibə #
+#Naxuy
+#Dalbayov 
 
 import os
 import re
@@ -40,7 +42,7 @@ async def sudoelave(event):
     try:
         fastt = await get_user(event)
     except Exception:
-        await event.edit("Xahiş edirəm hir istifadəçiyə cavab verin.")
+        await event.edit("Xahiş edirəm bir istifadəçiyə cavab verin.")
     if fastsudo:
         yenisudo = f"{fastsudo} {fastt}"
     else:
