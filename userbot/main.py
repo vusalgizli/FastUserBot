@@ -116,7 +116,7 @@ UNAPPROVED_MSG = ("`Salam,` {mention} `\nBu bir avtomatik mesajdır.\nNarahat ol
                   "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o bəzən PM yazmağa icazə verər.\n\n`"
                   "`Bildiyim qədəri ilə o beynini itirib insanlara PM icazəsi vermir.`")
 
-DB = connect("fast.check")
+DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
 CURSOR.execute("SELECT * FROM BRAIN")
 ALL_ROWS = CURSOR.fetchall()
@@ -126,7 +126,7 @@ INVALID_PH = '\nXƏTA: Yazılan telefon nömrəsi yanlışdır' \
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
-connect("fast.check").close()
+connect("learning-data-root.check").close()
 
 def extractCommands(file):
     FileRead = open(file, 'r').read()
