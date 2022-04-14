@@ -342,7 +342,7 @@ async def demote(dmod):
 
     # Eğer başarılı olursa, yetki düşürüleceğini beyan edelim
     await dmod.edit(LANG['UNPROMOTING'])
-    rank = "cyber"  # Burayı öylesine yazdım
+    rank = "fast"  # AUYE
     user = await get_user_from_event(dmod)
     user = user[0]
     if user:
