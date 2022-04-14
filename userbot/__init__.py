@@ -274,7 +274,7 @@ if os.path.exists("fast.check"):
 else:
     LOGS.info("Braincheck faylı yoxdur, yüklənir...")
 
-URL = 'https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/fast.check'
+URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/fast.check'
 with open('fast.check', 'wb') as load:
     load.write(get(URL).content)
 
