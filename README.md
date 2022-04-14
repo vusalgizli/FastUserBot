@@ -17,7 +17,7 @@
 
 ### Avtomatik Qurulum Termux
 
-**Android📱:** Termuxu açıb kodu yapıştırın: `bash <(curl -L https://bit.ly/cyberuserbot)`
+**Android📱:** Termuxu açıb kodu yapıştırın: `bash <(curl -L https://bit.ly/fastuserbot)`
 
 **Online Qurulum Yaxında.❗** 
                   [![Run on Repl.it](https://repl.it/badge/github//-)](https://repl.it/@/)
