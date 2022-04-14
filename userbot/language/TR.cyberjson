@@ -1,8 +1,8 @@
 {
-    "__CYBERJSON__": true,
+    "__FASTJSON__": true,
     "LANGUAGE": "Türkçe",
     "LANGCODE": "tr",
-    "AUTHOR": "@FVREED",
+    "AUTHOR": "@DeveloperSH",
     "STRINGS": {
         "__plugin": {
             "REPLY_FOR_PORT": "`Plugin-Port için lütfen bir dosyaya yanıt verin.`",
@@ -30,16 +30,16 @@
             "ALREADY_DELETED": "`Plugin dosyası zaten silinmiş.`",
             "NOT_FOUND_PLUGIN": "`Böyle bir plugin belki vardı, belki de yoktu. Ama şu an olmadığı kesin.`",
             "PLUG_DELETED": "`Plugin başarıyla silindi!` **Botunuz otomatik yenidan başlatılacak.**",
-            "CYBER_PLUGIN_CAPTION": "Bu bir [C Y B Ξ R](https://t.me/TheCyberUserBot) pluginidir.",
+            "FAST_PLUGIN_CAPTION": "Bu bir [F A S T](https://t.me/FastSupp) pluginidir.",
             "REPLY_PY_FILE": "`Lütfen bir Python dosyasını yanıtlayın!`",
             "ALREADY_INSTALLED": "`Bu eklenti zaten indirildi!\nBunu tekrar yüklemeyeceğim.`",
             "PLUGIN_SCANNING": "`Plugin skanlanıyor...`\n`Biraz bekleyin...`",
             "TEMP_DOWNLOAD": "__Modül başarıyla indirildi!__\n__Modülü test ede bilirsiniz.__\n__Botu yeniden başlatdığınızda eklenti çalışmayacaktır.__"
         },
         
-        "__cyber": {
-            "NEED_PLUGIN": "Lütfen bir C Y B Ξ R modülü adı belirtin.",
-            "NEED_MODULE": "**C Y B Ξ R USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Kullanımı:** `.cyber <plugin adı>`"
+        "__fast": {
+            "NEED_PLUGIN": "Lütfen bir F A S T modülü adı belirtin.",
+            "NEED_MODULE": "**F A S T USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Kullanımı:** `.fast <plugin adı>`"
         },
 
         "__helpme": {
@@ -104,7 +104,7 @@
             "UNWARN": "uyarın kaldırıldı ama gene de dikkatli ol lütfen! Yeni durum:",
             "WARNING": "`Uyarı atılıyor...`",
             "WARN": "kere uyarıldı; dikkatli ol lütfen!",
-	        "PLEASE_REPLY": "`Lütfen kullanıcıya yanıt verin ve ya kullanıcı adı yazın!`",
+	    "PLEASE_REPLY": "`Lütfen kullanıcıya yanıt verin ve ya kullanıcı adı yazın!`",
             "MESSAGE_UNPIN": "`Mesaj, sabitlenen mesajlardan kaldırıldı!`",
             "REPLY_UNPIN_MESSAGE": "Lütfen sabitlenmiş bir mesajı yanıtlayın veya `.unpin all` yazın."
         },
@@ -121,7 +121,7 @@
             "ALREADY": "`Görünüşe göre %s zaten otomatik olarak değişiyor.`",
             "SETTING": "`%s ayarlanıyor...`",
             "BIO": "🇹🇷 Tarih: {tarih} | ⌚️ Saat: {saat} | ",
-            "NICK": "@TheCyberUserBot",
+            "NICK": "@FastSupp",
             "SETTED": "`%s ayarlandı :)`",
             "NAME": "⏰%s"
         },
@@ -187,9 +187,9 @@
             "SETTED": "Plugin(`{plu}`) için mesajınız(`{msj}`) ayarlandı."
         },
 
-        "cyberlangs": {
+        "fastlangs": {
             "SALIVE": "`Gif-li alive mesajı.`",
-	    "PROHIBITED_COMMAND": "```Bunu C Y B Ξ R Support 🇦🇿 grubunda yapamazsınız.```",
+	    "PROHIBITED_COMMAND": "```Bunu F A S T Support 🇦🇿 grubunda yapamazsınız.```",
             "CHATBOT_DEACTIVE": "```Chatbot başarıyla kapatıldı.```",
             "CHATBOT_ACTIVE": "```Chatbot aktif.```",
             "CHATBOT_MANUAL": "```**Kullanımı:**\n.chatbot <on/off>```"
