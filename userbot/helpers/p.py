@@ -38,11 +38,11 @@ async def _(fast):
 	text= " "
 	for i in a:
 		text+=i+"\\n"
-		await cyber.edit(text)
+		await fast.edit(text)
 		sleep({slep})
 
 Help = CmdHelp("fastuserbot{fayl_adi}")
-Help.add_command("{name}", None, "Bu Plugin @TheCyberUserbot ilə hazırlanmışdır...")
+Help.add_command("{name}", None, "Bu Plugin @FastSupp ilə hazırlanmışdır...")
 Help.add()
 								""")
 	return f.close()
@@ -104,7 +104,7 @@ async def fastmusic(fast):
                 netice = True
 
 Help = CmdHelp("fastuserbot{fayl_adi}")
-Help.add_command("{name}", None, "Bu Plugin @TheCyberUserBot Tərəfindən Hazırlanmışdır..")
+Help.add_command("{name}", None, "Bu Plugin @FastSupp Tərəfindən Hazırlanmışdır..")
 Help.add()
 
 		""".format(
