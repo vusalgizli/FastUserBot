@@ -97,7 +97,7 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modul uğurla yükləndi!**\n__Modulun istifadəsi barədə məlumat üçün__ `.cyber {cmdhelp}` __yazın.__')
+                return await event.edit(f'**Modul uğurla yükləndi!**\n__Modulun istifadəsi barədə məlumat üçün__ `.fast {cmdhelp}` __yazın.__')
             else:
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Ərmlər tapılmadı!').add()
@@ -106,12 +106,12 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçün__ `.cyber {cmdhelp}` __yazınız.__')
+                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçün__ `.fast {cmdhelp}` __yazınız.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçÜN__ `.cyber {dosyaAdi}` __yazınız.__')
+                return await event.edit(f'**𝐅𝐀𝐒𝐓 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Plugin Mağazası**\n__Versiya 2.0__\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun istifadəsi barədə məlumat üçÜN__ `.fast {dosyaAdi}` __yazınız.__')
 
             
 userbot.cmdhelp.CmdHelp('store').add_command(
