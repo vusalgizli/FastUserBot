@@ -21,14 +21,14 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 Heroku = heroku3.from_key(HEROKU_APIKEY)
 heroku_api = "https://api.heroku.com"
-cybersudo = os.environ.get("SUDO_ID", None)
+fastsudo = os.environ.get("SUDO_ID", None)
 sudosiyahisi = os.environ.get("SUDO_ID", None)
 
 @register(outgoing=True,
           pattern=r"^.addsudo")
 async def sudoelave(event):
     await event.edit("F A S T \nİstifadəçi sudo olaraq qeyd edilir...")
-    cyber = "SUDO_ID"
+    fast = "SUDO_ID"
     if HEROKU_APPNAME is not None:
         app = Heroku.app(HEROKU_APPNAME)
     else:
@@ -38,15 +38,15 @@ async def sudoelave(event):
     if event is None:
         return
     try:
-        cybert = await get_user(event)
+        fastt = await get_user(event)
     except Exception:
         await event.edit("Xahiş edirəm hir istifadəçiyə cavab verin.")
-    if cybersudo:
-        yenisudo = f"{cybersudo} {cybert}"
+    if fastsudo:
+        yenisudo = f"{fastsudo} {fastt}"
     else:
-        yenisudo = f"{cybert}"
+        yenisudo = f"{fastt}"
     await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nF A S T yenidən başladılır...")
-    heroku_var[cyber] = yenisudo
+    heroku_var[fast] = yenisudo
     
 
     
@@ -72,7 +72,7 @@ async def sudosil(event):
       xxx = xx.replace(",", "")
       hazir = xxx.replace("'", "")
       heroku_var["SUDO_ID"] = hazir
-      await event.edit(f"`{ad}` adlı istifadəçinin icazəsi alındı.\nC Y B Ξ R yenidən başladılır...")
+      await event.edit(f"`{ad}` adlı istifadəçinin icazəsi alındı.\nF A S T yenidən başladılır...")
     else:
       await event.edit(f"Bağışlayın, `{ad}` istifadəçi sudo olaraq qeyd olunmayıb!")
     if heroku_var["SUDO_ID"] == None:
@@ -90,8 +90,8 @@ async def get_user(event):
             replied_user = await event.client(
                 GetFullUserRequest(previous_message.sender_id)
             )
-    cybert = replied_user.user.id
-    return cybert
+    fastt = replied_user.user.id
+    return fastt
     
     
 Help = CmdHelp('sudo')
