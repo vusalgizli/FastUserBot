@@ -36,7 +36,7 @@ async def detect(event):
         files={
             "image": open(media, "rb"),
         },
-        headers={"api-key": CYBER_AI_KEY},
+        headers={"api-key": FAST_AI_KEY},
     )
     os.remove(media)
     if "status" in r.json():
