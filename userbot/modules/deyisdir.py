@@ -72,7 +72,7 @@ async def degistir(event):
 CmdHelp('deyisdir').add_command(
     'deyisdir', '<modul> <mesaj/cavab>', 'Dəyişdir, botdakı plugin-mesajlarını dəyişdirmənizə yarayır. Əgər mesaj yazmazsanız Plugin mesajını orijinal halına döndərər.', '.deyisdir afk \"İndi burada deiləm... Bəlkə heç vaxt gəlmədim\"'
 ).add_info(
-    '**Dəstəklənən Pluginlər:** `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block/nonafk`\n**Alive Dəyişkənləri:** `{plugin}, {telethon}, {cyber}, {python}, {ad}, {vaxt}`\n\
+    '**Dəstəklənən Pluginlər:** `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block/nonafk`\n**Alive Dəyişkənləri:** `{plugin}, {telethon}, {fast}, {python}, {ad}, {vaxt}`\n\
 **Ban/Mute Dəyişkənləri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n\
 **AFK Dəyişkənləri:** `{username}, {mention}, {first_name}, {last_name}, {last_seen_seconds}, {last_seen}, {last_seen_long}`\n\
 **PMpermit Dəyişkənlər(pm, block, approve, disapprove):** `{id}, {username}, {mention}, {first_name}, {last_name}`\
