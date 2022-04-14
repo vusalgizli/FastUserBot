@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserBot/FastUserBott/blob/master/LICENSE/>.
 
 import asyncio
 import os
@@ -42,7 +42,7 @@ class InteractiveTelegramClient(TelegramClient):
             proxy=proxy
         )
         self.found_media = {}
-        print('@TheCyberUserBot String Alıcıya Xoş Gəldiniz!')
+        print('@FastUserBot String Alıcıya Xoş Gəldiniz!')
         print('[i] Telegramın Serverlərinə bağlanılır...')
         try:
             loop.run_until_complete(self.connect())
@@ -83,7 +83,7 @@ class InteractiveTelegramClient(TelegramClient):
 
 
 if __name__ == '__main__':
-   print("[i] C Y B Σ R String V3\n@TheCyberUserBot\n\n")
+   print("[i] F A S T String Yeni\n@FastUserBot\n\n")
    print("[1] Avtomatik API ID/HASH Almaq")
    print("[2] String Almaq\n")
    
@@ -125,8 +125,8 @@ if __name__ == '__main__':
          hashh = soup.find("input", {"name": "hash"}).get("value")
          AppInfo = {
             "hash": hashh,
-            "app_title":"CYBERUSERBOT",
-            "app_shortname": "cyber" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
+            "app_title":"FASTUSERBOT",
+            "app_shortname": "fast" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
             "app_url": "",
             "app_platform": "android",
             "app_desc": ""
