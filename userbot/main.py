@@ -39,7 +39,7 @@ from userbot.events import start_fast_assistant
 FAST_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
 QRUP = BOTLOG_CHATID
 
-def cyber_time(seconds, short=True):
+def fast_time(seconds, short=True):
     minutes, seconds = divmod(int(seconds), 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
@@ -50,7 +50,7 @@ def cyber_time(seconds, short=True):
     return tmp[:-2] + " əvvəl"
 
 notafk = round(time() - SON_GORULME)
-noe = FAST_time(notafk)
+noe = fast_time(notafk)
 noe2 = fast_time(notafk, False)
 NO_AFK_TIME = noe2
 
