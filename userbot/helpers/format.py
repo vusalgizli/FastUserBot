@@ -11,7 +11,7 @@ from telethon.tl.tlobject import TLObject
 from telethon.tl.types import MessageEntityPre
 from telethon.utils import add_surrogate
 
-from userbot.helpers.cyber import utc_to_local
+from userbot.helpers.fast import utc_to_local
 from userbot.helpers.paste import pastetext
 
 
