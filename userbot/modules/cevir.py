@@ -93,7 +93,7 @@ async def cevir(event):
         await event.edit(f"`{LANG['UPLOADING_GIF']}`")
 
         try:
-            await event.client.send_file(event.chat_id, "out.gif",reply_to=rep_msg, caption=LANG['WITH_CYBER_GIF'])
+            await event.client.send_file(event.chat_id, "out.gif",reply_to=rep_msg, caption=LANG['WITH_FAST_GIF'])
         except:
             await event.edit(LANG['ERROR'])
             await event.delete()
