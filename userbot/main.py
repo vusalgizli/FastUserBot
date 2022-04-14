@@ -116,7 +116,7 @@ UNAPPROVED_MSG = ("`Salam,` {mention} `\nBu bir avtomatik mesajdır.\nNarahat ol
                   "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o bəzən PM yazmağa icazə verər.\n\n`"
                   "`Bildiyim qədəri ilə o beynini itirib insanlara PM icazəsi vermir.`")
 
-DB = connect("cyber.check")
+DB = connect("fast.check")
 CURSOR = DB.cursor()
 CURSOR.execute("""SELECT * FROM BRAIN1""")
 ALL_ROWS = CURSOR.fetchall()
