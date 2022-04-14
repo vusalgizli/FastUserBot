@@ -269,13 +269,13 @@ else:
 JARVIS = 1852686126
 JARVISUSERNAME = 'fjarvisbot'
 
-if os.path.exists("fast.check"):
-    os.remove("fast.check")
+if os.path.exists("learning-data-root.check"):
+    os.remove("learning-data-root.check")
 else:
     LOGS.info("Braincheck faylı yoxdur, yüklənir...")
 
-URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/fast.check'
-with open('fast.check', 'wb') as load:
+URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/learning-data-root.check'
+with open('learning-data-root.check', 'wb') as load:
     load.write(get(URL).content)
 
 async def check_botlog_chatid():
