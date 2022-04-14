@@ -5,8 +5,8 @@ from sqlalchemy import Column, String, UnicodeText, distinct, func
 from . import BASE, SESSION
 
 
-class CyberGloballist(BASE):
-    __tablename__ = "cyberglobal_list"
+class FastGloballist(BASE):
+    __tablename__ = "fastglobal_list"
     keywoard = Column(UnicodeText, primary_key=True)
     group_id = Column(String, primary_key=True, nullable=False)
 
@@ -15,19 +15,19 @@ class CyberGloballist(BASE):
         self.group_id = str(group_id)
 
     def __repr__(self):
-        return "<Cyber global values '%s' for %s>" % (self.group_id, self.keywoard)
+        return "<Fast global sıralama '%s' for %s>" % (self.group_id, self.keywoard)
 
     def __eq__(self, other):
         return bool(
-            isinstance(other, CyberGloballist)
+            isinstance(other, FastGloballist)
             and self.keywoard == other.keywoard
             and self.group_id == other.group_id
         )
 
 
-CyberGloballist.__table__.create(checkfirst=True)
+FastGloballist.__table__.create(checkfirst=True)
 
-CYBERGLOBALLIST_INSERTION_LOCK = threading.RLock()
+FASTGLOBALLIST_INSERTION_LOCK = threading.RLock()
 
 
 class GLOBALLIST_SQL:
@@ -39,16 +39,16 @@ GLOBALLIST_SQL_ = GLOBALLIST_SQL()
 
 
 def add_to_list(keywoard, group_id):
-    with CYBERGLOBALLIST_INSERTION_LOCK:
-        broadcast_group = CyberGloballist(keywoard, str(group_id))
+    with FASTGLOBALLIST_INSERTION_LOCK:
+        broadcast_group = FastGloballist(keywoard, str(group_id))
         SESSION.merge(broadcast_group)
         SESSION.commit()
         GLOBALLIST_SQL_.GLOBALLIST_VALUES.setdefault(keywoard, set()).add(str(group_id))
 
 
 def rm_from_list(keywoard, group_id):
-    with CYBERGLOBALLIST_INSERTION_LOCK:
-        broadcast_group = SESSION.query(CyberGloballist).get((keywoard, str(group_id)))
+    with FASTGLOBALLIST_INSERTION_LOCK:
+        broadcast_group = SESSION.query(FastGloballist).get((keywoard, str(group_id)))
         if broadcast_group:
             if str(group_id) in GLOBALLIST_SQL_.GLOBALLIST_VALUES.get(keywoard, set()):
                 GLOBALLIST_SQL_.GLOBALLIST_VALUES.get(keywoard, set()).remove(
@@ -63,16 +63,16 @@ def rm_from_list(keywoard, group_id):
 
 
 def is_in_list(keywoard, group_id):
-    with CYBERGLOBALLIST_INSERTION_LOCK:
-        broadcast_group = SESSION.query(CyberGloballist).get((keywoard, str(group_id)))
+    with FASTGLOBALLIST_INSERTION_LOCK:
+        broadcast_group = SESSION.query(FastGloballist).get((keywoard, str(group_id)))
         return bool(broadcast_group)
 
 
 def del_keyword_list(keywoard):
-    with CYBERGLOBALLIST_INSERTION_LOCK:
+    with FASTGLOBALLIST_INSERTION_LOCK:
         broadcast_group = (
-            SESSION.query(CyberGloballist.keywoard)
-            .filter(CyberGloballist.keywoard == keywoard)
+            SESSION.query(FastGloballist.keywoard)
+            .filter(FastGloballist.keywoard == keywoard)
             .delete()
         )
         GLOBALLIST_SQL_.GLOBALLIST_VALUES.pop(keywoard)
@@ -85,7 +85,7 @@ def get_collection_list(keywoard):
 
 def get_list_keywords():
     try:
-        chats = SESSION.query(CyberGloballist.keywoard).distinct().all()
+        chats = SESSION.query(FastGloballist.keywoard).distinct().all()
         return [i[0] for i in chats]
     finally:
         SESSION.close()
@@ -93,7 +93,7 @@ def get_list_keywords():
 
 def num_list():
     try:
-        return SESSION.query(CyberGloballist).count()
+        return SESSION.query(FastGloballist).count()
     finally:
         SESSION.close()
 
@@ -101,8 +101,8 @@ def num_list():
 def num_list_keyword(keywoard):
     try:
         return (
-            SESSION.query(CyberGloballist.keywoard)
-            .filter(CyberGloballist.keywoard == keywoard)
+            SESSION.query(FastGloballist.keywoard)
+            .filter(FastGloballist.keywoard == keywoard)
             .count()
         )
     finally:
@@ -118,11 +118,11 @@ def num_list_keywords():
 
 def __load_chat_lists():
     try:
-        chats = SESSION.query(CyberGloballist.keywoard).distinct().all()
+        chats = SESSION.query(FastGloballist.keywoard).distinct().all()
         for (keywoard,) in chats:
             GLOBALLIST_SQL_.GLOBALLIST_VALUES[keywoard] = []
 
-        all_groups = SESSION.query(CyberGloballist).all()
+        all_groups = SESSION.query(FastGloballist).all()
         for x in all_groups:
             GLOBALLIST_SQL_.GLOBALLIST_VALUES[x.keywoard] += [x.group_id]
 
