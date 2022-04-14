@@ -111,7 +111,7 @@ def num_list_keyword(keywoard):
 
 def num_list_keywords():
     try:
-        return SESSION.query(func.count(distinct(CyberGloballist.keywoard))).scalar()
+        return SESSION.query(func.count(distinct(FastGloballist.keywoard))).scalar()
     finally:
         SESSION.close()
 
