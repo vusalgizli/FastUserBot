@@ -19,7 +19,7 @@ async def play_store(message):
             return
             
         remove_fast = app_name.split(' ')
-        final_name = '+'.join(remove_cyber)
+        final_name = '+'.join(remove_fast)
         page = requests.get(f"https://play.google.com/store/search?q={final_name}&c=apps")
         soup = bs4.BeautifulSoup(page.content, 'lxml', from_encoding='utf-8')
         results = soup.findAll("div", "ZmHEEd")
