@@ -36,7 +36,7 @@
       "required": false
     },
     "STRING_SESSION": {
-      "description": "Get this value from https://replit.com/@FaridDadashzade/Cyber",
+      "description": "Get this value from https://replit.com/@FastUserBot/Fast",
       "required": true
     },
     "HEROKU_MEMEZ": {
