@@ -45,7 +45,7 @@ SEÇİMLƏR = ["True", "False"]
 # © https://t.me/FVREED
 
 @register(fast=True, pattern="^.pmautoban ?(.*)")
-async def pm_auto_ban(cyber):
+async def pm_auto_ban(fast):
     secimler = fast.pattern_match.group(1)
     if not secimler in SEÇİMLƏR:
         await fast.edit("**İstifadəsi:** `.pmautoban True və ya False`")
