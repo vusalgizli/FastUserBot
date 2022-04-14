@@ -59,7 +59,7 @@ def register(**args):
         del args['trigger_on_inline']
         
     if 'fast' in args:
-        del args['cyber']
+        del args['fast']
         args['outgoing'] = True      
         
     if 'jarvis' in args:
