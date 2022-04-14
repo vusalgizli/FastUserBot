@@ -105,15 +105,15 @@ async def upstream(ups):
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:
             await ups.edit(LANG['BIG'])
-            file = open("cyber.txt", "w+")
+            file = open("fast.txt", "w+")
             file.write(changelog_str)
             file.close()
             await ups.client.send_file(
                 ups.chat_id,
-                "cyber.txt",
+                "fast.txt",
                 reply_to=ups.id,
             )
-            remove("cyber.txt")
+            remove("fast.txt")
         else:
             await ups.edit(changelog_str)
         await ups.respond(LANG['DO_UPDATE'])
