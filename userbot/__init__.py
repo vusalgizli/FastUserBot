@@ -228,7 +228,7 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "@TheCyberUserBot Paketi")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "@FastUserBot Paketi")
 
 # Avtomatik qatılma
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
@@ -274,7 +274,7 @@ if os.path.exists("fast.check"):
 else:
     LOGS.info("Braincheck faylı yoxdur, yüklənir...")
 
-URL = 'https://raw.githubusercontent.com/FastUserBot/deploy/main/cyber.check'
+URL = 'https://raw.githubusercontent.com/FastUserBot/deploy/main/fast.check'
 with open('fast.check', 'wb') as load:
     load.write(get(URL).content)
 
