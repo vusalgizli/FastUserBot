@@ -118,7 +118,7 @@ UNAPPROVED_MSG = ("`Salam,` {mention} `\nBu bir avtomatik mesajdır.\nNarahat ol
 
 DB = connect("fast.check")
 CURSOR = DB.cursor()
-CURSOR.execute("""SELECT * FROM BRAIN""")
+CURSOR.execute("SELECT * FROM BRAIN")
 ALL_ROWS = CURSOR.fetchall()
 INVALID_PH = '\nXƏTA: Yazılan telefon nömrəsi yanlışdır' \
              '\n  Tips: Ölkə kodunu istifadə edərək yenidən yaz' \
