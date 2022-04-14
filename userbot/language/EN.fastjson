@@ -35,7 +35,7 @@
             "PLUGIN_SCANNING": "`The plugin is scanned...`\n`Wait a bit...`",
             "TEMP_DOWNLOAD": "__The module has been successfully downloaded!__\n__You can check the module.__\n__The plugin will not work when you restart the bot.__"
         },
-        "__cyber": {
+        "__fast": {
             "NEED_PLUGIN": "Please specify an F A S T module name.",
             "NEED_MODULE": "**F A S T USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**Use:** `.fast <module name>`"
         },
@@ -251,7 +251,7 @@
         },
         "galeri": {
             "ADDED_LIST": "`The photo has been queued.`",
-            "INVALID_URL": "`You have entered an invalid image URL. If you have no idea of usage,` `.cyber galeri` `please write.`",
+            "INVALID_URL": "`You have entered an invalid image URL. If you have no idea of usage,` `.fast galeri` `please write.`",
             "EXAMPLE": "`Please enter a picture address. As an example: ` `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`",
             "LIST": "Queued Photos",
             "REMOVED": "** The next photo was successfully removed **",
