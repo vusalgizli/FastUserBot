@@ -303,21 +303,21 @@ async def _(event):
 	
 
 @register(outgoing=True, groups_only=True, disable_errors=True, pattern=r"^\.unbanall(?: |$)(.*)")
-async def _(cyber):
-    await cyber.edit("`Qadağan olunmuş istifadəçiləri axtarıram...`")
+async def _(fast):
+    await fast.edit("`Qadağan olunmuş istifadəçiləri axtarıram...`")
     p = 0
-    (await cyber.get_chat()).title
+    (await fast.get_chat()).title
     async for i in cyber.client.iter_participants(
         cyber.chat_id,
 	filter=ChannelParticipantsKicked,
         aggressive=True,
     ):
         try:
-            await cyber.client.edit_permissions(cyber.chat_id, i, view_messages=True)
+            await fast.client.edit_permissions(fast.chat_id, i, view_messages=True)
             p += 1
         except BaseException:
             pass
-    await cyber.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")
+    await fast.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")
 	
 	
 	
@@ -424,7 +424,7 @@ async def sendbot(cyber):
           except :
               await fast.edit("`Belə bir bot yoxdur :(`")
               await sleep(2)
-              return await cyber.delete()
+              return await fast.delete()
          
           await fast.edit(f"`Göndərilən mesaj` : {link}"
                                f"\n`Kimə` : {chat}")
@@ -450,7 +450,7 @@ Help.add()
 
 Help = CmdHelp('banall')
 Help.add_command('banall', None, 'Admin olduğunuz qrupda insanları qrupdan avtomatik ban edər.')
-Help.add_info('@TheCyberUserBot məsuliyyət daşımır.')
+Help.add_info('@FastUserBot məsuliyyət daşımır.')
 Help.add()
 
 
