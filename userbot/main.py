@@ -126,7 +126,7 @@ INVALID_PH = '\nXƏTA: Yazılan telefon nömrəsi yanlışdır' \
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
-connect("cyber.check").close()
+connect("fast.check").close()
 
 def extractCommands(file):
     FileRead = open(file, 'r').read()
@@ -166,10 +166,10 @@ def extractCommands(file):
                         Komutlar.append(KomutStr)
 
            
-            Cyberpy = re.search('\"\"\"CYBERPY(.*)\"\"\"', FileRead, re.DOTALL)
-            if not Cyberpy is None:
-                Cyberpy = Cyberpy.group(0)
-                for Satir in Cyberpy.splitlines():
+            Fastpy = re.search('\"\"\"FASTPY(.*)\"\"\"', FileRead, re.DOTALL)
+            if not Fastpy is None:
+                Fastpy = Fastpy.group(0)
+                for Satir in Fastpy.splitlines():
                     if (not '"""' in Satir) and (':' in Satir):
                         Satir = Satir.split(':')
                         Isim = Satir[0]
@@ -190,9 +190,9 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    cyberbl = requests.get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/cyberbl.json').json()
-    if idim in cyberbl:
-        bot.send_message("me", "**C Y B Ξ R adminləri tərəfindən botdan istifadə haqqınız alındı.**\n**Səbəb:** `None`")
+    fastbl = requests.get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/fastbl.json').json()
+    if idim in fastbl:
+        bot.send_message("me", "**F A S T USERBOT  adminləri tərəfindən botdan istifadə haqqınız alındı.**\n**Səbəb:** `None`")
         bot.disconnect()
 
     
@@ -205,7 +205,7 @@ try:
     GALERI = {}
 
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"{str(choice(KICKME_STR))}", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, artıq mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artıq mənə mesaj göndərə bilməzsən!`", "block": "{mention}`, səni əngəllədim!`", "nonafk": f"{str(choice(NON_AFK))}", "salive": "https://telegra.ph/file/c3e75eccaeb7f56dfae89.mp4"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"{str(choice(KICKME_STR))}", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, artıq mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artıq mənə mesaj göndərə bilməzsən!`", "block": "{mention}`, səni əngəllədim!`", "nonafk": f"{str(choice(NON_AFK))}", "salive": "https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block", "nonafk", "salive"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -288,12 +288,12 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-async def startupcyber():
+async def startupfast():
     try:
         if QRUP != 0:
             await bot.send_message(
                 QRUP,
-                f"**Salam! Mən C Y B Ξ R UserBot**\n**Botumuzu qurduğunuz üçün təşəkkür edirəm!**\n**Botunuz aktivdir.**\n\n**C Y B Ξ R Version:** **{CYBER_VERSION}**\n**Plugin sayı: {len(CMD_HELP)}**\n**Sahib: {CYBER_NAME}**\n**Plugin kanalı:** @TheCyberPlugin\n**Guides:** @TheCyberGuides\n\n**Yardıma ehtiyyacınız olarsa @TheCyberSupport qrupuna yazın :)**",
+                f"**Salam! Mən F A S T UserBot**\n**Botumuzu qurduğunuz üçün təşəkkür edirəm!**\n**Botunuz aktivdir.**\n\n**F A S T Version:** **{FAST_VERSION}**\n**Plugin sayı: {len(CMD_HELP)}**\n**Sahib: {FAST_NAME}**\n**Plugin kanalı:** @FastPlugins\n**Rəsmi:** @FastResmi\n\n**Yardıma ehtiyyacınız olarsa @FastSupp qrupuna yazın :)**",
             )
     except Exception as e:
         LOGS.info(str(e))
@@ -326,7 +326,7 @@ async def asistan_aktiv_et():
             with open(name) as f:
                 path1 = Path(f.name)
                 shortname = path1.stem
-                start_cyber_assistant(shortname.replace(".py", ""))
+                start_fast_assistant(shortname.replace(".py", ""))
     else:
         print("Asistan qurularkən xəta baş verdi.")
 
@@ -336,9 +336,9 @@ for module_name in ALL_MODULES:
     
 
 loop = asyncio.get_event_loop()
-LOGS.info("C Y B Ξ R is working now.")
-LOGS.info("Köməyə ehtiyacınız olarsa, @TheCyberSupport qrupuna yazın.")
-LOGS.info(f"C Y B Ξ R Version: {CYBER_VERSION}")
-bot.loop.create_task(startupcyber())
+LOGS.info("F A S T is working now.")
+LOGS.info("Köməyə ehtiyacınız olarsa, @FastSupp qrupuna yazın.")
+LOGS.info(f"F A S T Version: {FAST_VERSION}")
+bot.loop.create_task(startupfast())
 bot.loop.create_task(asistan_aktiv_et())
 bot.run_until_disconnected()
