@@ -59,7 +59,7 @@ async def directlinks(request):
         else:
             fast += re.findall(r"\bhttps?://(.*?[^/]+)",
                                 link)[0] + ' dəstəklənmir!'
-    await request.edit(cyber)
+    await request.edit(fast)
 
 
 def gdrive(url: str) -> str:
