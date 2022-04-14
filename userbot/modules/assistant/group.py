@@ -7,7 +7,7 @@ from . import tgbot
 from telethon.utils import pack_bot_file_id
 
 @tgbot.on(events.NewMessage(pattern="^/id"))
-async def cyber_id(event):
+async def fast_id(event):
     if event.reply_to_msg_id:
         await event.get_input_chat()
         r_msg = await event.get_reply_message()
