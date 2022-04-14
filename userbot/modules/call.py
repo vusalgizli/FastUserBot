@@ -18,7 +18,7 @@ def user_list(l, n):
         yield l[i : i + n]
 
         
-@register(cyber=True, disable_errors=True, pattern="^.vcbaslat$")
+@register(fast=True, disable_errors=True, pattern="^.vcbaslat$")
 async def start_voice(c):
     chat = await c.get_chat()
     admin = chat.admin_rights
@@ -36,7 +36,7 @@ async def start_voice(c):
 
         
         
-@register(cyber=True, disable_errors=True, pattern="^.vctitle$")
+@register(fast=True, disable_errors=True, pattern="^.vctitle$")
 async def change_vc_title(e):
     title = e.pattern_match.group(1).lower()
     chat = await e.get_chat()
@@ -54,7 +54,7 @@ async def change_vc_title(e):
         await e.edit(f"**Bir xəta baş verdi\nXəta:** `{ex}`")    
         
 
-@register(cyber=True, disable_errors=True, pattern="^.vcbagla$")
+@register(fast=True, disable_errors=True, pattern="^.vcbagla$")
 async def stop_voice(c):
     chat = await c.get_chat()
     admin = chat.admin_rights
@@ -72,7 +72,7 @@ async def stop_voice(c):
 
 
 
-@register(cyber=True, disable_errors=True, pattern="^.tagvc")
+@register(fast=True, disable_errors=True, pattern="^.tagvc")
 async def _(c):
     await c.edit("`İstifadəçilər səsli söhbətə çağrılır...`")
     users = []
@@ -80,8 +80,8 @@ async def _(c):
     async for x in c.client.iter_participants(c.chat_id):
         if not x.bot:
             users.append(x.id)
-    cyber = list(user_list(users, 6))
-    for p in cyber:
+    fast = list(user_list(users, 6))
+    for p in fast:
         try:
             await c.client(invitetovc(call=await get_call(c), users=p))
             z += 6
@@ -95,5 +95,5 @@ Help.add_command('vcbaslat', None, 'Bir qrupda səsli söhbət başladar.')
 Help.add_command('vcbagla', None, 'Səsli söhbəti sonlandırar.')
 Help.add_command('vctitle', None, 'Səsli söhbətin başlığını dəyişdirmək üçün.')
 Help.add_command('tagvc', None, 'Qrupdaki istifadəçiləri səsli söhbətə dəvət edər.')
-Help.add_info('@TheCyberUserBot')
+Help.add_info('@FastSupp')
 Help.add()    
