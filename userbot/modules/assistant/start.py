@@ -40,7 +40,7 @@ help_text = (
         )
 
 @tgbot.on(events.NewMessage(pattern="^/start"))
-async def start_cyber_bot(event):
+async def start_fast_bot(event):
     await tgbot.send_file(event.chat_id, ALIVE_LOGO, caption=alive_text)
 
 
