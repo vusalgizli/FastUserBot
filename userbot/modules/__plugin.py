@@ -29,7 +29,7 @@ LANG2 =  get_value("misc")
 # ████████████████████████████████ #
 
 # Plugin Porter - UniBorg
-@register(cyber=True, pattern="^.pport")
+@register(fast=True, pattern="^.pport")
 async def pport(event):
     if event.is_reply:
         reply_message = await event.get_reply_message()
@@ -211,7 +211,7 @@ async def _(event):
             
                          
                          
-@register(cyber=True, pattern="^.premove ?(.*)")
+@register(fast=True, pattern="^.premove ?(.*)")
 async def premove(event):
     modul = event.pattern_match.group(1).lower()
     if len(modul) < 1:
@@ -251,7 +251,7 @@ async def premove(event):
             pass
         os.execl(sys.executable, sys.executable, *sys.argv)
 
-@register(cyber=True, pattern="^.psend ?(.*)")
+@register(fast=True, pattern="^.psend ?(.*)")
 async def psend(event):
     modul = event.pattern_match.group(1)
     if len(modul) < 1:
@@ -265,7 +265,7 @@ async def psend(event):
         await event.edit(LANG['NOT_FOUND_PLUGIN'])
 
 
-@register(cyber=True, pattern="^.ptest")
+@register(fastTrue, pattern="^.ptest")
 async def ptest(event):
     if event.is_reply:
         reply_message = await event.get_reply_message()
