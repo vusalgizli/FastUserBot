@@ -151,8 +151,8 @@
             "EFECTING": "`Applying effect...`",
             "NOT_FOUND_EFECT": "**The effect you specified was not found! ** `Effects you can use:\" çocuk/robot/earrape/fast/interference/echo`",
             "NEED_VIDEO": "`Please reply to a Video!`",
-            "WITH_FAST": "`Effect applied with` @TheCyberUserbot",
-            "WITH_FAST_GIF": "`Turned to Gif with` @TheCyberUserBot",
+            "WITH_FAST": "`Effect applied with` @FastSupp",
+            "WITH_FAST_GIF": "`Turned to Gif with` @FastSupp",
             "CONVERTING_TO_GIF": "Turning to gif ...",
             "UPLOADING_GIF": "` Loading Gif ... `",
             "ERROR": "I couldn't turn it into a gif :/"
