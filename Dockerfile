@@ -1,5 +1,5 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FatsUserBot/FastUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < # <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 # Please read the GNU General Public License v3.0 in
 # <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
