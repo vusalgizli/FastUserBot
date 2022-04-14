@@ -57,7 +57,7 @@
             "INVALID_MEDIA": "```Medya geçerli değil.```",
             "PRIVATE": "`Bu komut özel mesajda kullanılamaz!`",
             "EKLE": "`Başarıyla eklendi`",
-            "BRAIN": "`Hata!\nBu işlemi C Y B Ξ R yetkilisine yapamam.`",
+            "BRAIN": "`Hata!\nBu işlemi F A S T yetkilisine yapamam.`",
             "BANNING": "`Kullanıcı yasaklanıyor...`",
             "ALREADY_GBANNED": "`Hata! Kullanıcı zaten küresel olarak yasaklanmış.`",
             "GBANNED_REASON": "`Kullanıcı küresel olarak yasaklandı!`\n**Nedeni:**",
