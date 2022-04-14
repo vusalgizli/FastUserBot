@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://t.me/FastSupp"><img src="https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg" width="500"></a>
-  <h1> USΞRBOT  </h1>
+  <h1>ғ ᴀ s ᴛ USΞRBOT  </h1>
 </div>
 <p align="center">
     UserBot is a project that simplifies the use of Telegram. All rights reserved.
