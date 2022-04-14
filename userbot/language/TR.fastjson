@@ -356,7 +356,7 @@
             "REPLY_TO_FILE": "`Bir dosyaya yanıt ver.`",
             "QUERY": "Sorgu",
             "RESULT": "Çıktı",
-            "NEED_MUCH_DATA_FOR_RANDOM": "`2 veya daha fazla eşya gerekli. Daha fazla bilgi için .cyber random komutunu gir.`",
+            "NEED_MUCH_DATA_FOR_RANDOM": "`2 veya daha fazla eşya gerekli. Daha fazla bilgi için .fast random komutunu gir.`",
             "SLEEP_DESC": "Kullanım Şekli: `.sleep [saniye]`",
             "SLEEPING": "`Horlayarak uyuyorum...`",
             "GOODMORNIN_YALL": "`Günaydın!`",
@@ -564,7 +564,7 @@
             "QUERY": "Sorgu",
             "RESULT": "Sonuç",
             "NOT_FOUND": "Bir şey bulunamadı",
-            "EXAMPLE": "`Bir örnek görmek için .cyber pip komutunu kullanın.`"
+            "EXAMPLE": "`Bir örnek görmek için .fast pip komutunu kullanın.`"
 
         },
 
