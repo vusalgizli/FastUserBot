@@ -307,8 +307,8 @@ async def _(fast):
     await fast.edit("`Qadağan olunmuş istifadəçiləri axtarıram...`")
     p = 0
     (await fast.get_chat()).title
-    async for i in cyber.client.iter_participants(
-        cyber.chat_id,
+    async for i in fast.client.iter_participants(
+        fast.chat_id,
 	filter=ChannelParticipantsKicked,
         aggressive=True,
     ):
