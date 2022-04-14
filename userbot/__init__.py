@@ -533,7 +533,7 @@ async def cyberasistan():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "cyber_" + (str(uid))[7:] + str(ran) + "_bot"
+        username = "fast_" + (str(uid))[7:] + str(ran) + "_bot"
         await bot.send_message(bf, username)
         time.sleep(3)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
