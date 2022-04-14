@@ -1,89 +1,65 @@
 <div align="center">
-  <a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg" width="500"></a>
+  <a href="https://t.me/FastSupp"><img src="https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg" width="500"></a>
   <h1> USΞRBOT  </h1>
 </div>
 <p align="center">
     UserBot is a project that simplifies the use of Telegram. All rights reserved.
     <br>
-        <a href="https://t.me/TheCyberUserBot">Yeniliklər kanalı.</a> |
-        <a href="https://t.me/TheCyberSupport">Support.</a> 
+        <a href="https://t.me/FastResmi">Yeniliklər kanalı📢.</a> |
+        <a href="https://t.me/FastSupp">Support🧑‍🔧.</a> 
     <br>
 </p>
 
-![Docker Pulls](https://img.shields.io/docker/pulls/cyberuserbot/cyberspaceaz?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/cyberuserbot/cyberspaceaz?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/fastuserbot/fastuserbot?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fastuserbot/fastuserbot?style=flat-square)
 
 ----
 
 
-### Automatic Setup
+### Avtomatik Qurulum Termux
 
-**Android:** open Termux paste this code: `bash <(curl -L https://bit.ly/cyberuserbot)`
+**Android📱:** Termuxu açıb kodu yapıştırın: `bash <(curl -L https://bit.ly/cyberuserbot)`
 
-**Online deploy** 
-                  [![Run on Repl.it](https://repl.it/badge/github/FaridDadashzade/CyberInstaller-)](https://repl.it/@FaridDadashzade/installer-1)
-
-
-## Manual Deploy - Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FaridDadashzade/CyberUserBot)
+**Online Qurulum Yaxında.❗** 
+                  [![Run on Repl.it](https://repl.it/badge/github//-)](https://repl.it/@/)
 
 
-### Hard way
+## Heroku Qurulumu 💻
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FastUserBot/FastUserBot)
+
+
+### Klonlama Tədbiri 🇦🇿
 
 ```python
-git clone https://github.com/CyberUserBot/CyberUserBot.git
-cd CyberUserBot
+git clone https://github.com/FastUserBot/FastUserBot.git
+cd FastUserBot
 pip install -r requirements.txt
 python3 main.py
 ```
 
-## String Session
+## String Session Almaq Üçün 🧑‍🔧
 
-[![Run on Repl.it](https://repl.it/badge/github/FaridDadashzade/Cyber)](https://repl.it/@FaridDadashzade/Cyber)
-
-
-## Example plugin
-
-```python
-from userbot.events import register
-from userbot.cmdhelp import CmdHelp 
-# <-- Let's note the imports
-
-@register(outgoing=True, pattern="^.test")
-async def test(event):
-    await event.edit('C Y B Ξ R UserBot')
-
-Help = CmdHelp('test') # Now let's note the information
-Help.add_command('test', # We write the order in this way.
-    None,
-    'Test edir', # Here we write the explanation of the order.
-    'test'
-    )
-Help.add_info('Plugin info')
-Help.add_warning('Xəbərdarlıq mesajı') # We are writing a warning message here.
-Help.add()
-```
+[![Run on Repl.it](https://repl.it/badge/github/Fast/Fast)](https://repl.it/@Fast/Fast)
 
 
-
-## Note
+## Diqqət❗❗ 
 
 ```
-     Associated with UserBot; Your Telegram account may be closed.
-     This is an open source project and we have no responsibility as C Y B Ξ R Owners and Administrators.
-     By setting up C Y B Ξ R, you are considered to have accepted these responsibilities.
+     UserBot ilə əlaqəli; Telegram hesabınız bağlana bilər. .
+     Bu açıq mənbə layihəsidir və [ F A S T ] Sahibləri və İnzibatçıları olaraq bizim heç bir məsuliyyətimiz yoxdur.
+     [ F A S T ]  qurmaqla siz bu məsuliyyətləri qəbul etmiş sayılırsınız.
      
 ```
 
 
-## Devs:
+## SAHİBİM 🤵🏻
 
-[FaridDadashzade](https://github.com/FaridDadashzade)
+[Sako](https://github.com/DeveloperSH)
 
-[WhoMiri](https://github.com/whomiri)
+[Təmkin](https://github.com/temkin99_99)
 
 
-## Credit
+## Dəsdək Olaq ❤️
 Thanks for;
 
 [Seden UserBot](https://github.com/TeamDerUntergang/Telegram-UserBot)
@@ -101,5 +77,6 @@ Thanks for;
 [The Ultroid](https://github.com/TeamUltroid/Ultroid)
 
 ----
-##### Regarding copyright, please contact cyberuserbot@gmail.com first.
+##### Müəllif hüququ ilə bağlı ilk olaraq fastuserbot@gmail.com ilə əlaqə saxlayın
+##### Regarding copyright, please contact fastuserbot@gmail.com first.
 ----
