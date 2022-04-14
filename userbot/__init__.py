@@ -1,7 +1,7 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Copyright (C) 2021-2022 FastUserBot
+# This file is a part of < https://www.github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://www.github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 import os
 import time
@@ -37,11 +37,11 @@ ASYNC_POOL = []
 
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
-        format="%(asctime)s - @TheCyberUserBot - %(levelname)s - %(message)s",
+        format="%(asctime)s - @FastSupp - %(levelname)s - %(message)s",
         level=DEBUG,
     )
 else:
-    basicConfig(format="%(asctime)s - @TheCyberUserBot - %(levelname)s - %(message)s",
+    basicConfig(format="%(asctime)s - @FastSupp - %(levelname)s - %(message)s",
                 level=INFO)
 LOGS = getLogger(__name__)
 
@@ -67,8 +67,8 @@ if LANGUAGE not in ["EN", "TR", "AZ", "UZ", "DEFAULT", "IN"]:
     LOGS.info("Bilinməyən bir dil yazdınız. Buna görə DEFAULT istifadə edilir.")
     LANGUAGE = "DEFAULT"
     
-# CYBER VERSION
-CYBER_VERSION = "v3.2"
+# FAST VERSION
+FAST_VERSION = "v3.2"
 
 # SUDO VERSION
 SUDO_VERSION = "v1.1"
@@ -76,7 +76,7 @@ SUDO_VERSION = "v1.1"
 # Asistan özəlliyi
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
-CYBER_BOT = os.environ.get("CYBER_BOT", None)
+FAST_BOT = os.environ.get("FAST_BOT", None)
 
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -111,13 +111,13 @@ async def get_call(event):
     xx = await event.client(getvc(mm.full_chat.call))
     return xx.call
 
-# .cyber əmri üçün
-CYBER_EMOJI = os.environ.get(
-    "CYBER_EMOJI") or "✦ "
+# .fast əmri üçün
+FAST_EMOJI = os.environ.get(
+    "FAST_EMOJI") or "✦ "
 
 # for .salive command
 ALIVE_TEXT = os.environ.get(
-    "ALIVE_TEXT") or "✦ C Y B Ξ R USERBOT ✦ "
+    "ALIVE_TEXT") or " F A S T  USERBOT  "
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
@@ -134,7 +134,7 @@ RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
 STABILITY = sb(os.environ.get("STABILITY", "True"))
 
 # Guncelleme ucun
-UPSTREAM_REPO_URL = "https://github.com/CyberUserBot/CyberUserBot.git" if not STABILITY else "https://github.com/FaridDadashzade/CyberUserBot.git"
+UPSTREAM_REPO_URL = "https://www.github.com/FastUserBot/FastUserBot.git" if not STABILITY else "https://www.github.com/FastUserBot/FastUserBot.git"
 UPSTREAM_BRANCH = os.environ.get(
     "UPSTREAM_BRANCH") or "master"
 
@@ -183,7 +183,7 @@ ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # SECURITY
-DANGERCONFIGS = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/bl_configs.json').json()
+DANGERCONFIGS = get('https://raw.githubusercontent.com/FastUserBot/deploy/main/bl_configs.json').json()
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
@@ -235,8 +235,8 @@ OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 
 # Whitelist and Patterns /
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/whitelist.json').json()
-SUPPORT = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/support.json').json()
+WHITELIST = get('https://raw.githubusercontent.com/FastUserBot/deploy/main/whitelist.json').json()
+SUPPORT = get('https://raw.githubusercontent.com/FastUserBot/deploy/main/support.json').json()
 
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
@@ -269,13 +269,13 @@ else:
 JARVIS = 1852686126
 JARVISUSERNAME = 'fjarvisbot'
 
-if os.path.exists("cyber.check"):
-    os.remove("cyber.check")
+if os.path.exists("fast.check"):
+    os.remove("fast.check")
 else:
     LOGS.info("Braincheck faylı yoxdur, yüklənir...")
 
-URL = 'https://raw.githubusercontent.com/FaridDadashzade/deploy/main/cyber.check'
-with open('cyber.check', 'wb') as load:
+URL = 'https://raw.githubusercontent.com/FastUserBot/deploy/main/cyber.check'
+with open('fast.check', 'wb') as load:
     load.write(get(URL).content)
 
 async def check_botlog_chatid():
@@ -331,9 +331,9 @@ def butonlastir(sayfa, moduller):
 with bot:
     if OTOMATIK_KATILMA:
         try:
-            bot(JoinChannelRequest("@TheCyberUserBot"))
-            bot(JoinChannelRequest("@TheCyberSupport"))
-            bot(JoinChannelRequest("@TheCyberPlugin"))
+            bot(JoinChannelRequest("@FastSupp"))
+            bot(JoinChannelRequest("@FastResmi"))
+            bot(JoinChannelRequest("@FastPlugins"))
         except:
             pass
   
@@ -347,9 +347,9 @@ with bot:
     bioqrafiya = bot(GetFullUserRequest(uid))
     DEFAULT_BIO = bioqrafiya.about
     ALIVE_NAME = DEFAULT_NAME
-    cyber_m = me.id
+    fast_m = me.id
     SAHIB_ID = me.id
-    cyber_mention = f"[{me}](tg://user?id={cyber_m})"
+    fast_mention = f"[{me}](tg://user?id={fast_m})"
     
     
     try:                            
@@ -358,12 +358,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query == "@TheCyberUserBot":
+            if event.query.user_id == uid and query == "@FastSupp":
                 rev_text = query[::-1]
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
-                result = await builder.article(
+                result = await builder.ar1ticle(
                     f"Xahiş edirəm sadəcə .help əmrini istifadə edin.",
-                    text=f"**C Y B Ξ R USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** 1/{veriler[0]}",
+                    text=f"**F A S T USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** 1/{veriler[0]}",
                     buttons=veriler[1],
                     link_preview=False
                 )
@@ -379,14 +379,14 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    "@TheCyberUserBot",
-                    text="""@TheCyberUserBot-u işlətməyi yoxlayın!
+                    "@FastSupp",
+                    text="""@FastSupp-u işlətməyi yoxlayın!
 Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz.""",
                     buttons=[
-                        [custom.Button.url("Kanala Qatıl", "https://t.me/TheCyberUserBot"), custom.Button.url(
-                            "Qrupa Qatıl", "https://t.me/TheCyberSupport")],
+                        [custom.Button.url("Kanala Daxil ol", "https://t.me/FastSupp"), custom.Button.url(
+                            "Qrupa Daxil ol", "https://t.me/FastSupp")],
                         [custom.Button.url(
-                            "GitHub", "https://github.com/FaridDadashzade/CyberUserBot")]
+                            "GitHubRepo", "https://www.github.com/FastUserBot/FastUserBot")]
                     ],
                     link_preview=False
                 )
@@ -395,11 +395,11 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"sayfa\((.+?)\)")))
         async def sayfa(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastSupp `a daxil Olara FAST USERBOT  qur.", cache_time=0, alert=True)
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
-                f"**C Y B Ξ R USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** {sayfa + 1}/{veriler[0]}",
+                f"**F A S T USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** {sayfa + 1}/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False
             )
@@ -407,7 +407,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"bilgi\[(\d*)\]\((.*)\)")))
         async def bilgi(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastSupp `a daxil olaraq FAST USERBOT qur.", cache_time=0, alert=True)
 
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             komut = event.data_match.group(2).decode("UTF-8")
@@ -427,7 +427,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"komut\[(.*)\[(\d*)\]\]\((.*)\)")))
         async def komut(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastSupp `a daxil olaraq FAST USERBOT qur.", cache_time=0, alert=True)
 
             cmd = event.data_match.group(1).decode("UTF-8")
             sayfa = int(event.data_match.group(2).decode("UTF-8"))
@@ -468,7 +468,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         LOGS.info(
             "Botunuzda inline dəstəyi deaktivdir. "
             "Aktivləşdirmək üçün bir bot token qeyd edin və botunuzda inline modunu aktivləşdirin. "
-            "Əgər bunun xaricində bir xəta olduğunu düşünürsünüzsə, bizə yazın t.me/TheCyberSupport."
+            "Əgər bunun xaricində bir xəta olduğunu düşünürsünüzsə, bizə yazın t.me/FastSupp."
         )
 
     try:
@@ -493,14 +493,14 @@ async def cyberasistan():
     if BOT_TOKEN:
         return
     await bot.start()
-    LOGS.info("C Y B Ξ R asistanı qurulur..")
+    LOGS.info("F A S T asistan qurulumu başladı..")
     DEFAULT_NAME + "-nin asistanı"
     usnm = ISTIFADECI_ADI
     name = DEFAULT_NAME
     if usnm:
         username = usnm + "_bot"
     else:
-        username = "cyber_" + (str(uid))[6:] + "_bot"
+        username = "fast_" + (str(uid))[6:] + "_bot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -519,7 +519,7 @@ async def cyberasistan():
     time.sleep(3)
     isdone = (await bot.get_messages(bf, limit=1))[0].text
     if not isdone.startswith("Good."):
-        await bot.send_message(bf, "My C Y B Ξ R Bot")
+        await bot.send_message(bf, "FAST USERBOT")
         time.sleep(3)
         isdone = (await bot.get_messages(bf, limit=1))[0].text
         if not isdone.startswith("Good."):
@@ -549,13 +549,13 @@ async def cyberasistan():
             time.sleep(3)
             await bot.send_message(bf, f"@{username}")
             time.sleep(3)
-            await bot.send_message(bf, "@TheCyberUserBot Asistan")
+            await bot.send_message(bf, "@FastSupp Asistanı")
             time.sleep(3)
             await bot.send_message(bf, "/setuserpic")
             time.sleep(3)
             await bot.send_message(bf, f"@{username}")
             time.sleep(3)
-            await bot.send_file(bf, "image/cyber.jpg")
+            await bot.send_file(bf, "image/fast.jpg")
             time.sleep(3)
             await bot.send_message(bf, "/setcommands") 
             time.sleep(3)
@@ -595,13 +595,13 @@ async def cyberasistan():
         time.sleep(3)
         await bot.send_message(bf, f"@{username}")
         time.sleep(3)
-        await bot.send_message(bf, "@TheCyberUserBot Asistan")
+        await bot.send_message(bf, "@FastSupp Asistanı")
         time.sleep(3)
         await bot.send_message(bf, "/setuserpic")
         time.sleep(3)
         await bot.send_message(bf, f"@{username}")
         time.sleep(3)
-        await bot.send_file(bf, "image/cyber.jpg") 
+        await bot.send_file(bf, "image/fast.jpg") 
         time.sleep(3)
         await bot.send_message(bf, "/setcommands") 
         time.sleep(3)
@@ -630,7 +630,7 @@ async def cyberasistan():
         )
         sys.exit(1)
 
-bot.loop.run_until_complete(cyberasistan())
+bot.loop.run_until_complete(fastasistan())
 
 # Dəyişgənlər
 MYID = uid
