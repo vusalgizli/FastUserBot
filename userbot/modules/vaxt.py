@@ -1,23 +1,23 @@
 # Copyright (C) 2021-2022 FastUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# This file is a part of < https://github.com/FastUserBot/FastUserBot/ >
 # Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# <https://github.com/FastUserBot/FastUserBot/blob/master/LICENSE/>.
 
 from asyncio import sleep
 from telethon.errors import rpcbaseerrors
 from userbot.cmdhelp import CmdHelp
 from userbot import BOTLOG, BOTLOG_CHATID, bot
-from userbot.events import register as cyber
+from userbot.events import register as fast
 
-@cyber(outgoing=True, pattern=r"^\.sd")
+@fast(outgoing=True, pattern=r"^\.sd")
 async def selfdestruct(destroy):
     message = destroy.text
     counter = int(message[4:6])
     text = str(destroy.text[6:])
     await destroy.delete()
-    cyber = await destroy.client.send_message(destroy.chat_id, text)
+    fast = await destroy.client.send_message(destroy.chat_id, text)
     await sleep(counter)
-    await cyber.delete()
+    await fast.delete()
 
     if BOTLOG:
         await destroy.client.send_message(BOTLOG_CHATID,
