@@ -1,7 +1,6 @@
 # Copyright (C) 2021-2022 FastUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
-# Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# This file is aic License v3.0 in
+
 
 from userbot.events import register
 from userbot import bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
