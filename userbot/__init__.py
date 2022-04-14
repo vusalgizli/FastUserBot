@@ -142,7 +142,7 @@ UPSTREAM_BRANCH = os.environ.get(
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 # SQL
-DB_URI = os.environ.get("DATABASE_URL", "sqlite:///cyber.db")
+DB_URI = os.environ.get("DATABASE_URL", "sqlite:///fast.db")
 
 # OCR API key
 OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", "04889b8e1488957")
@@ -196,7 +196,7 @@ TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
 # Last.fm modulu
-BIO_PREFIX = os.environ.get("BIO_PREFIX", "@TheCyberUserBot | ")
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "@FastSupp | ")
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
