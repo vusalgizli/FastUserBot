@@ -38,8 +38,8 @@
         },
         
         "__fast": {
-            "NEED_PLUGIN": "Zəhmət olmasa bir C Y B Ξ R modulu adı qeyd edin.",
-            "NEED_MODULE": "**C Y B Ξ R USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**İstifadəsi:** `.cyber <modul adı>`"
+            "NEED_PLUGIN": "Zəhmət olmasa bir F A S T modulu adı qeyd edin.",
+            "NEED_MODULE": "**F A S T USERBOT HELPER** \n▬▬▬▬▬▬▬▬▬▬▬▬\n**İstifadəsi:** `.fast <modul adı>`"
         },
 
         "__helpme": {
@@ -564,7 +564,7 @@
             "QUERY": "Sorğu",
             "RESULT": "Nəticə",
             "NOT_FOUND": "Heçnə tapılmadı",
-            "EXAMPLE": "`Bir nümunə görmək üçün .cyber pip əmrindən istifadə edin.`"
+            "EXAMPLE": "`Bir nümunə görmək üçün .fast pip əmrindən istifadə edin.`"
 
         },
 
