@@ -98,7 +98,7 @@ async def fastmusic(fast):
                 await fast.edit("`Musiqi yüklənir!\nBiraz gözləyin...`")
                 yukle = await rast.download_media()
                 await fast.edit("`Yüklənmə tamamlandı!\nFayl göndərilir...`")
-                await fast.client.send_file(cyber.chat_id, yukle, caption="@FastSupp sizin üçün `"+rast.description+" - "+rast.title+"` musiqisini seçdi\n\nXoş dinləmələr :)")
+                await fast.client.send_file(fast.chat_id, yukle, caption="@FastSupp sizin üçün `"+rast.description+" - "+rast.title+"` musiqisini seçdi\n\nXoş dinləmələr :)")
                 await event.delete()
                 os.remove(yukle)
                 netice = True
