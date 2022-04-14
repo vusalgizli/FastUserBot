@@ -19,7 +19,7 @@ dayandir = False
 msjcgr = None
 taglimit = 60
 
-@register(cyber=True, pattern="^.tag(?: |$)(.*)")
+@register(fast=True, pattern="^.tag(?: |$)(.*)")
 async def _(q):
 	global dayandir
 	global msjcgr
@@ -53,7 +53,7 @@ async def _(q):
 			sleep(2)
 
 
-@register(cyber=True, pattern="^.alladmin(?: |$)(.*)")
+@register(fast=True, pattern="^.alladmin(?: |$)(.*)")
 async def _(q):
 	global dayandir
 	global msjcgr
@@ -86,7 +86,7 @@ async def _(q):
 		if taglimit > 100:
 			sleep(2)
 
-@register(cyber=True, pattern="^.stop$")
+@register(fast=True, pattern="^.stop$")
 async def _(q):
 	global dayandir
 	if msjcgr == None:
@@ -97,7 +97,7 @@ async def _(q):
 	await q.edit("`Tag prosesi dayandırıldı!`")
 	
 
-@register(cyber=True, pattern=".taglimit(?: |$)(.*)$")
+@register(fast=True, pattern=".taglimit(?: |$)(.*)$")
 async def _(q):
 	global taglimit
 	if q.pattern_match.group(1):
