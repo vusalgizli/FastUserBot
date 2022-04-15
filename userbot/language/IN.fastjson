@@ -330,7 +330,7 @@
             "REPLY_TO_FILE": "`Reply to a file.`",
             "QUERY": "Query",
             "RESULT": "Result",
-            "NEED_MUCH_DATA_FOR_RANDOM": "`2 or more items are required. Enter the .cyber random command for more information.`",
+            "NEED_MUCH_DATA_FOR_RANDOM": "`2 or more items are required. Enter the .fast random command for more information.`",
             "SLEEP_DESC": "Usage: ` .sleep [saniye]`",
             "SLEEPING": "`I sleep with the snorkhead ...`",
             "GOODMORNIN_YALL": "`Good Morning!`",
@@ -522,7 +522,7 @@
             "QUERY": "Query",
             "RESULT": "Result",
             "NOT_FOUND": "Nothing found",
-            "EXAMPLE": "`Use the .cyber pip command to see an example. `"
+            "EXAMPLE": "`Use the .fast pip command to see an example. `"
         },
         "time": {
             "CLOCK": "Time here",
