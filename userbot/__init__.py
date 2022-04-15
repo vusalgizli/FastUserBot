@@ -1,7 +1,4 @@
-# Copyright (C) 2021-2022 CyberUserBot
-# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
-# Please read the GNU General Public License v3.0 in
-# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
+# Copyright (C) 2021-2022 FastUserBot
 
 import os
 import time
@@ -113,11 +110,11 @@ async def get_call(event):
 
 # .fast əmri üçün
 FAST_EMOJI = os.environ.get(
-    "FAST_EMOJI") or "❗ "
+    "FAST_EMOJI") or "♚ "
 
 # for .salive command
 ALIVE_TEXT = os.environ.get(
-    "ALIVE_TEXT") or "❗FAST❗"
+    "ALIVE_TEXT") or "♚ FAST♚ "
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
