@@ -67,8 +67,8 @@ if LANGUAGE not in ["EN", "TR", "AZ", "UZ", "DEFAULT", "IN"]:
     LOGS.info("Bilinməyən bir dil yazdınız. Buna görə DEFAULT istifadə edilir.")
     LANGUAGE = "DEFAULT"
     
-# CYBER VERSION
-CYBER_VERSION = "v3.2"
+# FAST VERSION
+FAST_VERSION = "v3.2"
 
 # SUDO VERSION
 SUDO_VERSION = "v1.1"
@@ -76,7 +76,7 @@ SUDO_VERSION = "v1.1"
 # Asistan özəlliyi
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
-CYBER_BOT = os.environ.get("CYBER_BOT", None)
+FAST_BOT = os.environ.get("FAST_BOT", None)
 
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -111,13 +111,13 @@ async def get_call(event):
     xx = await event.client(getvc(mm.full_chat.call))
     return xx.call
 
-# .cyber əmri üçün
-CYBER_EMOJI = os.environ.get(
-    "CYBER_EMOJI") or "✦ "
+# .fast əmri üçün
+FAST_EMOJI = os.environ.get(
+    "FAST_EMOJI") or "❗ "
 
 # for .salive command
 ALIVE_TEXT = os.environ.get(
-    "ALIVE_TEXT") or "✦ C Y B Ξ R USERBOT ✦ "
+    "ALIVE_TEXT") or "❗FAST❗"
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
@@ -134,9 +134,9 @@ RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
 STABILITY = sb(os.environ.get("STABILITY", "True"))
 
 # Guncelleme ucun
-UPSTREAM_REPO_URL = "https://github.com/CyberUserBot/CyberUserBot.git" if not STABILITY else "https://github.com/FaridDadashzade/CyberUserBot.git"
+UPSTREAM_REPO_URL = "https://github.com/FastUserBot/FastUserBot.git" if not STABILITY else "https://github.com/FastUserBot/FastUserBot.git"
 UPSTREAM_BRANCH = os.environ.get(
-    "UPSTREAM_BRANCH") or "master"
+    "UPSTREAM_BRANCH") or "main"
 
 # CONSOLE LOGGER VERBOSE
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -183,7 +183,7 @@ ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # SECURITY
-DANGERCONFIGS = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/bl_configs.json').json()
+DANGERCONFIGS = get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/bl_configs.json').json()
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
@@ -228,15 +228,15 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "@TheCyberUserBot Paketi")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "@FastUserBot Paketi")
 
 # Avtomatik qatılma
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 
 # Whitelist and Patterns /
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/whitelist.json').json()
-SUPPORT = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/support.json').json()
+WHITELIST = get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/whitelist.json').json()
+SUPPORT = get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/support.json').json()
 
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
@@ -269,13 +269,13 @@ else:
 JARVIS = 1852686126
 JARVISUSERNAME = 'fjarvisbot'
 
-if os.path.exists("cyber.check"):
-    os.remove("cyber.check")
+if os.path.exists("learning-data-root.check"):
+    os.remove("learning-data-root.check")
 else:
     LOGS.info("Braincheck faylı yoxdur, yüklənir...")
 
-URL = 'https://raw.githubusercontent.com/FaridDadashzade/deploy/main/cyber.check'
-with open('cyber.check', 'wb') as load:
+URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/learning-data-root.check'
+with open('learning-data-root.check', 'wb') as load:
     load.write(get(URL).content)
 
 async def check_botlog_chatid():
@@ -331,9 +331,9 @@ def butonlastir(sayfa, moduller):
 with bot:
     if OTOMATIK_KATILMA:
         try:
-            bot(JoinChannelRequest("@TheCyberUserBot"))
-            bot(JoinChannelRequest("@TheCyberSupport"))
-            bot(JoinChannelRequest("@TheCyberPlugin"))
+            bot(JoinChannelRequest("@FastSupp"))
+            bot(JoinChannelRequest("@FastPlugins"))
+            bot(JoinChannelRequest("@FastResmi"))
         except:
             pass
   
