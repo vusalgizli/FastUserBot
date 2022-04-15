@@ -52,14 +52,14 @@ noe2 = fast_time(notafk, False)
 NO_AFK_TIME = noe2
 
 ALIVE_STR = [
-    "`F A S T` {mention}-un `əmirlərinə hazırdır...`",
-    "`Hey` {mention} `narahat olma F A S T əla işləyir...`",
-    "✨ `F A S T` **{mention}**-in `əmirlərinə hazırdır...`",
-    "⛈️ {mention} `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
+    "`🇫​🇦​🇸​🇹​ 🇺​🇸​🇪​🇷​🇧​🇴​🇹​` {mention}-un `👤əmrlərini icra etməyə hazırdır👤`",
+    "`🇦🇿 Salam` {mention} `narahat olma 🇫​🇦​🇸​🇹​ 🇺​🇸​🇪​🇷​🇧​🇴​🇹​ əla işləyir...`",
+    "✨ `🇫​🇦​🇸​🇹​ 🇺​🇸​🇪​🇷​🇧​🇴​🇹​` **{mention}**-in `əmirlərini icra edir🌐`",
+    "✨ {mention} `əlimdən gələnin ən yaxşısını edəcəm✨`",
 ]
 
 LOGO_STR = [
-    "https://telegra.ph/file/c3e75eccaeb7f56dfae89.mp4",
+    "https://telegra.ph/file/263cc6bbc34d4eaeef71b.jpg",
 ]
 
 
@@ -71,41 +71,42 @@ KICKME_STR = [
 ]
 
 NON_AFK = [
-    f"`Artıq AFK deyiləm.`",
-    f"{FAST_NAME} `artıq AFK deyil.`",
-    f"{FAST_NAME} `buradadır!`",
-    f"{FAST_NAME} `gəldi!✨`",
-    f"{FAST_NAME} `artıq sizinlədir!`",
+    f"`ℹArtıq AFK deyiləm yaza bilərsinizℹ`",
+    f"{FAST_NAME} `☢artıq AFK deyil☢`",
+    f"{FAST_NAME} `♦buradadır♦`",
+    f"{FAST_NAME} `🥰Gəldim🥰`",
+    f"{FAST_NAME} `❤️artıq sizinlədir❤️",
 ]
 
 DIZCILIK_STR = [
-    "Stikeri oğurlayıram...",
-    "Bu stikeri çox bəyəndimmm...",
-    "Bu stikeri öz paketimə əlavə edirəm...",
-    "Bunu oğurlamalıyamm...",
-    "Hey bu əla stikerdir!\nElə indi oğurlayıram..",
+    "😎Stickeri fırladıram😎",
+    "⚡Sticker paketə əlavə edilir⚡",
+    "♥Bu sticker artıq mənimdir!♥",
+    "📩⛓Bunu stickerlərimə əlavə etməliyəm..",
+    "⛓Sticker həps edilir...",
     "Stikerini oğurladım\nhahaha.",
-    "Hey bura bax. (☉｡☉)!→\nMən bunu oğurlayarkən...",
-    "Bu stikeri paketimə əlavə edirəm...",
-    "Stiker paketə əlavə edilir...",
-    "Stikeri öz paketimə əlavə edirəm... ",
+    "▪▫Mən bir sticker oğrusuyam stickerin məndədi▫▪ ;D!",
+    "🖇Nə gözəl stickerdi bu!🖇"
+    "🔰Stiker paketə əlavə edilir🔰",
+    "🔰Stikeri öz paketimə əlavə edirəm🔰",
 ]
 
 AFKSTR = [
-    "İndi vacib işim var, daha sonra mesaj atsan olmaz? Onsuzda yenə gələcəm.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Hörmətli istifadəçi zəng etdiyiniz şəxs hazırda telefona cavab verə bilmir.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Bir neçə dəqiqə içində gələcəm lakin gəlməsəm...\nbiraz daha gözlə.\nSahibim `{last_seen_long}` aktiv idi.",
-    "İndi burada deyiləm..\nYəqin ki, başqa bir yerdəyəm..\nSahibim `{last_seen_long}` aktiv idi.",
-    "Sahibim hal-hazırda AFK-dır!\nSahibim `{last_seen_long}` aktiv idi.",
-    "Bəzən həyatdakı ən yaxşı şeylər gözləməyə dəyər…\nGələcəm.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Hal-hazırda sahibim burada deyil.\nXahiş edirəm biraz sonra əlaqə saxlayın.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Çox heyif ki sahibim burada deyil..\nSahibim `{last_seen_long}` aktiv idi.",
-    "İndi burada deyiləm..\nTezliklə qayıdacağam..\nSahibim `{last_seen_long}` aktiv idi.",
-    "Sahibim burada deyil..\nqayıdanda sizinlə əlaqə saxlayacaqdır.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Bir neçə dəqiqə içində gələcəm lakin gəlməsəm..\nbiraz daha gözlə.\nSahibim `{last_seen_long}` aktiv idi.",
-    "Hey, sahibim hal-hazırda burada deyil..\nqayıtdığında sizinlə əlaqə saxlayacaqdır.\nSahibim `{last_seen_long}` aktiv idi.",
+    "💫İndi vacib işimlərim var, gələndə yazacam🖤\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "🥲Birazdan gələcəm amma gəlməsəm...\nDarıxma😕.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "😡Ay xaam yeri get..\nistirahət elirəm:)\nbiraz daha gözlə.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "İndi burada deyiləm..\nYəqin ki, başqa bir yerdəyəm..\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Sahibim hal-hazırda AFK dı!\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "🎈həyatdakı ən yaxşı şeyləri gözləməyə dəyər…\nGələcəm.🎈\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Bəli❓\nGələcəm.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "▪▫Sahibim gəlir gözlə▫▪.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Hal-hazırda sahibim burada deyil❗\nXahiş edirəm biraz sonra əlaqə saxlayın.\nSahibim `{last_seen_long}` ℹ aktiv idiℹ ",
+    "💠Salam, uzaq mesajıma xoş gəldiniz💠, sizə necə kömək edə bilərəm?\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Mən sahibimin xüsusi botuyam!, sizdə bot istəyirsizsə: ⚜ @FastUserBot ⚜ qur.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Hal hazırda burdan çoox uzaqdayam.\nQışqırsan bəlkə eşitdim.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Bu tərəfə gedirəm 🔜.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "Mesajınızı Sahibim ə göndərirəm...\nbiraz daha gözlə.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
+    "✖Sahibim burda deyil mənə yazmağı kəs artıq.✖nqayıtdığında sizinlə əlaqə saxlayacaqdır.\nSahibim `{last_seen_long}` ℹ aktiv idi ℹ",
 ]
 
 UNAPPROVED_MSG = ("`Salam,` {mention} `\nBu bir avtomatik mesajdır.\nNarahat olma.\n\n`"
