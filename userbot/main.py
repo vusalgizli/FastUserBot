@@ -190,7 +190,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    fastbl = requests.get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/cyberbl.json').json()
+    fastbl = requests.get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/fastbl.json').json()
     if idim in fastbl:
         bot.send_message("me", "**FAST USERBOT adminləri tərəfindən botdan istifadə haqqınız alındı.**\n**Səbəb:** `None`")
         bot.disconnect()
