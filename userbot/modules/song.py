@@ -173,7 +173,7 @@ Mahnı adı - {}
         event.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
-        caption=f"**🎶 Musiqinin Adı:** `{rip_data['title']}`\n\n**Downloaded by** [C Y B Ξ R](https://t.me/thecyberuserbot)\n",
+        caption=f"**🎶 Musiqinin Adı:** `{rip_data['title']}`\n\n**⚒️Dəsdək Qrupumuz⚒️** [𝙵𝙰𝚂𝚃](https://t.me/FastSupp)\n",
         attributes=[
             DocumentAttributeAudio(
                 duration=int(rip_data["duration"]),
