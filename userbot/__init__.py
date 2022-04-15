@@ -381,8 +381,8 @@ with bot:
                     text="""@FastUserBot-u işlətməyi yoxlayın!
 Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz.""",
                     buttons=[
-                        [custom.Button.url("Rəsmi Kanal📢", "https://t.me/TheCyberUserBot"), custom.Button.url(
-                            "Dəsdək Qrupu🧑‍🔧", "https://t.me/TheCyberSupport")],
+                        [custom.Button.url("Rəsmi Kanal📢", "https://t.me/FastResmi"), custom.Button.url(
+                            "Dəsdək Qrupu🧑‍🔧", "https://t.me/FastSupp")],
                         [custom.Button.url(
                             "GitHub", "https://github.com/FastUserBot/FastUserBot")]
                     ],
