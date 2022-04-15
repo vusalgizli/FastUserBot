@@ -96,7 +96,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
 AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # UserBot log özəlliyi
-BOTLOG = sb(os.environ.get("BOTLOG", "False"))
+BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 BOTLOG_TAGGER = os.environ.get("BOTLOG_TAGGER", "DEAKTIV")
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "True"))
 
