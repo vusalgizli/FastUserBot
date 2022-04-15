@@ -55,9 +55,9 @@ noe2 = fast_time(notafk, False)
 NO_AFK_TIME = noe2
 
 ALIVE_STR = [
-    "`C Y B Ξ R` {mention}-un `əmirlərinə hazırdır...`",
-    "`Hey` {mention} `narahat olma C Y B Ξ R əla işləyir...`",
-    "✨ `C Y B Ξ R` **{mention}**-in `əmirlərinə hazırdır...`",
+    "`F A S T` {mention}-un `əmirlərinə hazırdır...`",
+    "`Hey` {mention} `narahat olma F A S T əla işləyir...`",
+    "✨ `F A S T` **{mention}**-in `əmirlərinə hazırdır...`",
     "⛈️ {mention} `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
 
