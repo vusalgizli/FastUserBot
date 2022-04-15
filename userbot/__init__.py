@@ -34,11 +34,11 @@ ASYNC_POOL = []
 
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
-        format="%(asctime)s - @TheCyberUserBot - %(levelname)s - %(message)s",
+        format="%(asctime)s - @FastUserBot - %(levelname)s - %(message)s",
         level=DEBUG,
     )
 else:
-    basicConfig(format="%(asctime)s - @TheCyberUserBot - %(levelname)s - %(message)s",
+    basicConfig(format="%(asctime)s - @FastUserBot - %(levelname)s - %(message)s",
                 level=INFO)
 LOGS = getLogger(__name__)
 
@@ -193,7 +193,7 @@ TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
 # Last.fm modulu
-BIO_PREFIX = os.environ.get("BIO_PREFIX", "@TheCyberUserBot | ")
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "@FastUserBot | ")
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -393,7 +393,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"sayfa\((.+?)\)")))
         async def sayfa(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastUserBot qur.", cache_time=0, alert=True)
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
@@ -405,7 +405,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"bilgi\[(\d*)\]\((.*)\)")))
         async def bilgi(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastUserBot qur.", cache_time=0, alert=True)
 
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             komut = event.data_match.group(2).decode("UTF-8")
@@ -425,7 +425,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"komut\[(.*)\[(\d*)\]\]\((.*)\)")))
         async def komut(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @TheCyberUserBot qur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! Mənim mesajlarımı dəyişməyə çalışma! Özünə bir @FastUserBot qur.", cache_time=0, alert=True)
 
             cmd = event.data_match.group(1).decode("UTF-8")
             sayfa = int(event.data_match.group(2).decode("UTF-8"))
@@ -466,7 +466,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
         LOGS.info(
             "Botunuzda inline dəstəyi deaktivdir. "
             "Aktivləşdirmək üçün bir bot token qeyd edin və botunuzda inline modunu aktivləşdirin. "
-            "Əgər bunun xaricində bir xəta olduğunu düşünürsünüzsə, bizə yazın t.me/TheCyberSupport."
+            "Əgər bunun xaricində bir xəta olduğunu düşünürsünüzsə, bizə yazın t.me/FastSupp."
         )
 
     try:
@@ -510,7 +510,7 @@ async def fastasistan():
     isdone = (await bot.get_messages(bf, limit=1))[0].text
     if isdone.startswith("That I cannot do."):
         LOGS.info(
-            "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən manual olaraq bot yaradın."
+            "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən bot yaradın."
         )
         sys.exit(1)
     await bot.send_message(bf, name)
@@ -522,7 +522,7 @@ async def fastasistan():
         isdone = (await bot.get_messages(bf, limit=1))[0].text
         if not isdone.startswith("Good."):
             LOGS.info(
-                "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən manual olaraq bot yaradın."
+                "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən bot yaradın."
             )
             sys.exit(1)
     await bot.send_message(bf, username)
@@ -578,7 +578,7 @@ async def fastasistan():
             LOGS.info(f"@{username} Asistanın Qurulumu Uğurlu📢.")
         else:
             LOGS.info(
-                "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən manual olaraq bot yaradın."
+                "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən bot yaradın."
             )
             sys.exit(1)
     elif isdone.startswith("Done!"):
