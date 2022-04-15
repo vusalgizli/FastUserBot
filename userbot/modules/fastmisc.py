@@ -436,7 +436,7 @@ async def sendbot(fast):
 
 		
 	
-Help = CmdHelp('cybermisc')
+Help = CmdHelp('fastmisc')
 Help.add_command('undelete', None, 'Bir qrupda silinmiş 10 mesajı göndərər.')
 Help.add_command('unbanall', None, 'Qrupda qadağan edilmiş bütün istifadəçilərin qadağasını silər.')
 Help.add_command('sendbot', '<@botun-istifadeci-adi> <mesaj>', 'Yazdığınız əmri qeyd etdiyiniz bota göndərər və botun cavabını atar')
