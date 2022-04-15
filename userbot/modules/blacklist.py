@@ -19,7 +19,7 @@ LANG = get_value("blacklist")
 
 # ████████████████████████████████ #
 
-SOYUSLER = get('https://raw.githubusercontent.com/FastUserBot/deploy/main/forbidden.json').json()
+SOYUSLER = get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/forbidden.json').json()
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def on_new_message(event):
