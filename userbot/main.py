@@ -34,7 +34,7 @@ import userbot.cmdhelp
 from userbot import DEFAULT_NAME, SAHIB_ID, SON_GORULME
 from time import time
 import userbot.events
-from userbot.events import start_cyber_assistant
+from userbot.events import start_fast_assistant
 
 FAST_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
 QRUP = BOTLOG_CHATID
@@ -326,7 +326,7 @@ async def asistan_aktiv_et():
             with open(name) as f:
                 path1 = Path(f.name)
                 shortname = path1.stem
-                start_cyber_assistant(shortname.replace(".py", ""))
+                start_fast_assistant(shortname.replace(".py", ""))
     else:
         print("Asistan qurularkən xəta baş verdi.")
 
@@ -336,9 +336,9 @@ for module_name in ALL_MODULES:
     
 
 loop = asyncio.get_event_loop()
-LOGS.info("C Y B Ξ R is working now.")
-LOGS.info("Köməyə ehtiyacınız olarsa, @TheCyberSupport qrupuna yazın.")
-LOGS.info(f"C Y B Ξ R Version: {CYBER_VERSION}")
+LOGS.info("FAST is working now.")
+LOGS.info("Köməyə ehtiyacınız olarsa, @FastSupp qrupuna yazın.")
+LOGS.info(f"FAST Version: {FAST_VERSION}")
 bot.loop.create_task(startupcyber())
 bot.loop.create_task(asistan_aktiv_et())
 bot.run_until_disconnected()
