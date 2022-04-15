@@ -16,7 +16,7 @@ import asyncio
 from telethon.tl.types import InputMessagesFilterDocument
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from telethon.tl.functions.channels import GetMessagesRequest
-from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, CYBER_VERSION, PATTERNS, BOTLOG_CHATID, BOTLOG, StartTime
+from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, FAST_VERSION, PATTERNS, BOTLOG_CHATID, BOTLOG, StartTime
 from .modules import ALL_MODULES
 import userbot.modules.sql_helper.mesaj_sql as MSJ_SQL
 import userbot.modules.sql_helper.galeri_sql as GALERI_SQL
@@ -36,10 +36,10 @@ from time import time
 import userbot.events
 from userbot.events import start_cyber_assistant
 
-CYBER_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
+FAST_NAME = f"[{DEFAULT_NAME}](tg://user?id={SAHIB_ID})"
 QRUP = BOTLOG_CHATID
 
-def cyber_time(seconds, short=True):
+def fast_time(seconds, short=True):
     minutes, seconds = divmod(int(seconds), 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
@@ -50,8 +50,8 @@ def cyber_time(seconds, short=True):
     return tmp[:-2] + " əvvəl"
 
 notafk = round(time() - SON_GORULME)
-noe = cyber_time(notafk)
-noe2 = cyber_time(notafk, False)
+noe = fast_time(notafk)
+noe2 = fast_time(notafk, False)
 NO_AFK_TIME = noe2
 
 ALIVE_STR = [
@@ -116,7 +116,7 @@ UNAPPROVED_MSG = ("`Salam,` {mention} `\nBu bir avtomatik mesajdır.\nNarahat ol
                   "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o bəzən PM yazmağa icazə verər.\n\n`"
                   "`Bildiyim qədəri ilə o beynini itirib insanlara PM icazəsi vermir.`")
 
-DB = connect("cyber.check")
+DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
 CURSOR.execute("""SELECT * FROM BRAIN1""")
 ALL_ROWS = CURSOR.fetchall()
@@ -126,7 +126,7 @@ INVALID_PH = '\nXƏTA: Yazılan telefon nömrəsi yanlışdır' \
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
-connect("cyber.check").close()
+connect("learning-data-root.check").close()
 
 def extractCommands(file):
     FileRead = open(file, 'r').read()
@@ -166,10 +166,10 @@ def extractCommands(file):
                         Komutlar.append(KomutStr)
 
            
-            Cyberpy = re.search('\"\"\"CYBERPY(.*)\"\"\"', FileRead, re.DOTALL)
-            if not Cyberpy is None:
-                Cyberpy = Cyberpy.group(0)
-                for Satir in Cyberpy.splitlines():
+            Fastpy = re.search('\"\"\"FASTPY(.*)\"\"\"', FileRead, re.DOTALL)
+            if not Fastpy is None:
+                Fastpy = Fastpy.group(0)
+                for Satir in Fastpy.splitlines():
                     if (not '"""' in Satir) and (':' in Satir):
                         Satir = Satir.split(':')
                         Isim = Satir[0]
@@ -190,9 +190,9 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    cyberbl = requests.get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/cyberbl.json').json()
-    if idim in cyberbl:
-        bot.send_message("me", "**C Y B Ξ R adminləri tərəfindən botdan istifadə haqqınız alındı.**\n**Səbəb:** `None`")
+    fastbl = requests.get('https://raw.githubusercontent.com/FastUserBot/FastUserBot/main/cyberbl.json').json()
+    if idim in fastbl:
+        bot.send_message("me", "**FAST USERBOT adminləri tərəfindən botdan istifadə haqqınız alındı.**\n**Səbəb:** `None`")
         bot.disconnect()
 
     
