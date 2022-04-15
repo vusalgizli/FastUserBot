@@ -334,6 +334,7 @@ with bot:
             bot(JoinChannelRequest("@FastSupp"))
             bot(JoinChannelRequest("@FastPlugins"))
             bot(JoinChannelRequest("@FastResmi"))
+            bot(JoinChannelRequest("@FastSohbet"))
         except:
             pass
   
@@ -347,9 +348,9 @@ with bot:
     bioqrafiya = bot(GetFullUserRequest(uid))
     DEFAULT_BIO = bioqrafiya.about
     ALIVE_NAME = DEFAULT_NAME
-    cyber_m = me.id
+    fast_m = me.id
     SAHIB_ID = me.id
-    cyber_mention = f"[{me}](tg://user?id={cyber_m})"
+    fast_mention = f"[{me}](tg://user?id={fast_m})"
     
     
     try:                            
@@ -363,7 +364,7 @@ with bot:
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
                 result = await builder.article(
                     f"Xahiş edirəm sadəcə .help əmrini istifadə edin.",
-                    text=f"**C Y B Ξ R USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** 1/{veriler[0]}",
+                    text=f"**𝙵𝙰𝚂𝚃 𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** 1/{veriler[0]}",
                     buttons=veriler[1],
                     link_preview=False
                 )
@@ -379,14 +380,14 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    "@TheCyberUserBot",
-                    text="""@TheCyberUserBot-u işlətməyi yoxlayın!
+                    "@FastUserBot",
+                    text="""@FastUserBot-u işlətməyi yoxlayın!
 Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz.""",
                     buttons=[
-                        [custom.Button.url("Kanala Qatıl", "https://t.me/TheCyberUserBot"), custom.Button.url(
-                            "Qrupa Qatıl", "https://t.me/TheCyberSupport")],
+                        [custom.Button.url("Rəsmi Kanal📢", "https://t.me/TheCyberUserBot"), custom.Button.url(
+                            "Dəsdək Qrupu🧑‍🔧", "https://t.me/TheCyberSupport")],
                         [custom.Button.url(
-                            "GitHub", "https://github.com/FaridDadashzade/CyberUserBot")]
+                            "GitHub", "https://github.com/FastUserBot/FastUserBot")]
                     ],
                     link_preview=False
                 )
@@ -399,7 +400,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
-                f"**C Y B Ξ R USERBOT**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** {sayfa + 1}/{veriler[0]}",
+                f"**𝙵𝙰𝚂𝚃 𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n\n**Yüklü olan modul sayı:** `{len(CMD_HELP)}`\n**Səhifə:** {sayfa + 1}/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False
             )
@@ -493,7 +494,7 @@ async def cyberasistan():
     if BOT_TOKEN:
         return
     await bot.start()
-    LOGS.info("C Y B Ξ R asistanı qurulur..")
+    LOGS.info("𝙵𝙰𝚂𝚃 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 asistan qurulumu başladı⌛..")
     DEFAULT_NAME + "-nin asistanı"
     usnm = ISTIFADECI_ADI
     name = DEFAULT_NAME
@@ -519,7 +520,7 @@ async def cyberasistan():
     time.sleep(3)
     isdone = (await bot.get_messages(bf, limit=1))[0].text
     if not isdone.startswith("Good."):
-        await bot.send_message(bf, "My C Y B Ξ R Bot")
+        await bot.send_message(bf, "🇦🇿 𝙵𝙰𝚂𝚃 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 🇦🇿")
         time.sleep(3)
         isdone = (await bot.get_messages(bf, limit=1))[0].text
         if not isdone.startswith("Good."):
@@ -549,13 +550,13 @@ async def cyberasistan():
             time.sleep(3)
             await bot.send_message(bf, f"@{username}")
             time.sleep(3)
-            await bot.send_message(bf, "@TheCyberUserBot Asistan")
+            await bot.send_message(bf, "@FastUserBot Asistan❗ @FastSupp Dəsdək Qrupumuz")
             time.sleep(3)
             await bot.send_message(bf, "/setuserpic")
             time.sleep(3)
             await bot.send_message(bf, f"@{username}")
             time.sleep(3)
-            await bot.send_file(bf, "image/cyber.jpg")
+            await bot.send_file(bf, "image/fast.jpg")
             time.sleep(3)
             await bot.send_message(bf, "/setcommands") 
             time.sleep(3)
@@ -577,7 +578,7 @@ async def cyberasistan():
             )
             heroku_var["BOT_TOKEN"] = token
             heroku_var["BOT_USERNAME"] = username
-            LOGS.info(f"@{username} Asistanınız hazırdır.")
+            LOGS.info(f"@{username} Asistanın Qurulumu Uğurlu📢.")
         else:
             LOGS.info(
                 "Avtomatik bot yaratma prosesi alınmadı. @BotFather-dən manual olaraq bot yaradın."
@@ -595,13 +596,13 @@ async def cyberasistan():
         time.sleep(3)
         await bot.send_message(bf, f"@{username}")
         time.sleep(3)
-        await bot.send_message(bf, "@TheCyberUserBot Asistan")
+        await bot.send_message(bf, "@FastUserBot Asistan❗ @FastSupp Dəsdək Qrupumuz")
         time.sleep(3)
         await bot.send_message(bf, "/setuserpic")
         time.sleep(3)
         await bot.send_message(bf, f"@{username}")
         time.sleep(3)
-        await bot.send_file(bf, "image/cyber.jpg") 
+        await bot.send_file(bf, "image/fast.jpg") 
         time.sleep(3)
         await bot.send_message(bf, "/setcommands") 
         time.sleep(3)
@@ -630,7 +631,7 @@ async def cyberasistan():
         )
         sys.exit(1)
 
-bot.loop.run_until_complete(cyberasistan())
+bot.loop.run_until_complete(fastasistan())
 
 # Dəyişgənlər
 MYID = uid
