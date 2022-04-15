@@ -45,7 +45,7 @@ LANG = get_value("song")
 
 
 
-@register(outgoing=True, pattern="^.deez(\d*|)(?: |$)(.*)")
+@register(outgoing=True, pattern="^.mfast(\d*|)(?: |$)(.*)")
 async def deezl(event):
     if event.fwd_from:
         return
@@ -63,7 +63,7 @@ async def deezl(event):
             await event.edit(LANG['GIVE_ME_SONG']) 
 
     await event.edit(LANG['SEARCHING'])
-    chat = "@DeezerMusicBot"
+    chat = "@CreatorMusicAZBot"
     async with bot.conversation(chat) as conv:
         try:     
             mesaj = await conv.send_message(str(randint(31,62)))
@@ -173,7 +173,7 @@ Mahnı adı - {}
         event.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
-        caption=f"**🎶 Mahnı adı:** `{rip_data['title']}`\n\n**Downloaded by** [C Y B Ξ R](https://t.me/thecyberuserbot)\n",
+        caption=f"**🎶 Musiqinin Adı:** `{rip_data['title']}`\n\n**Downloaded by** [C Y B Ξ R](https://t.me/thecyberuserbot)\n",
         attributes=[
             DocumentAttributeAudio(
                 duration=int(rip_data["duration"]),
@@ -229,7 +229,7 @@ async def songpl(event):
 
 
 CmdHelp('song').add_command(
-    'deez', '<musiqi adı/youtube/spotify/soundcloud>', 'Birçox saytdan musiqini axtarıb, yükləyər.'
+    'mfast', '<musiqi adı/youtube/spotify/soundcloud>', 'Birçox saytdan musiqini axtarıb, yükləyər.'
 ).add_command(
     'song', '<musiqi adı/youtube/spotify>', 'Musiqi yükləyər.'
 ).add_command(
