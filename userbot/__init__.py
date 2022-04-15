@@ -490,7 +490,7 @@ if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None:
 else:
     app = None
      
-async def cyberasistan():
+async def fastasistan():
     if BOT_TOKEN:
         return
     await bot.start()
@@ -501,7 +501,7 @@ async def cyberasistan():
     if usnm:
         username = usnm + "_bot"
     else:
-        username = "cyber_" + (str(uid))[6:] + "_bot"
+        username = "fast_" + (str(uid))[6:] + "_bot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
