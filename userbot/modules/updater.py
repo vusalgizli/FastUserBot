@@ -390,7 +390,7 @@ async def jarvis_update(ups):
         return
 
 CmdHelp('update').add_command(
-    'update', None, 'C Y B Ξ R-i quraşdırdıqdan sonra hər hansı bir yenilənmə gəlib gəlmədiyini yoxlayar.'
+    'update', None, 'F A S T -a gələn yeniələməri yoxlamaq üçün hər yerdə keçərlidir.'
 ).add_command(
-    'update now', None, 'C Y B Ξ R-i yeniləyər.'
+    'update now', None, 'F A S T-ı yeniləyər.'
 ).add()
