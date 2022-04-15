@@ -113,6 +113,6 @@ Help.add_command('ses',
     'Əgər bu əmri mp3ü yanıtlayaraq etsəniz yanıtladığınız mp3ü səsli mesaj olaraq atar',
     'ses'
     )
-Help.add_warning('@FastSupp
+Help.add_warning('@FastSupp')
 Help.add_info('()')
 Help.add()
